@@ -1,0 +1,43 @@
+
+Headings:
+A line consisting solely of the given strings:
+"= 1 Heading ="  ->  "<h1>1 Heading</h1>"
+"== 1.3 Heading ==" -> "<h2>1.3 Heading</h2>"
+
+The numbering must be strictly increasing. I.e. the following numbering is allowed:
+= 1 Heading =
+== 1.1 Sub Heading ==
+== 1.2 Sub Heading ==
+== 1.2a Sub Heading ==
+== 1.3 Sub Heading ==
+= 2 Heading =
+
+Removing any line except the "1.3" one will make this numbering invalid.
+In the following numbering all transitions are not allowed.
+
+// starting not with 0 or 1
+= 2. Heading =
+// Sub Heading starting not with 0 or one
+== 2.2 Sub Heading ==
+// letters don't start with 'a'
+== 2.2b Sub Heading ==
+// sub heading 2.3 missing
+== 2.3a Sub Heading ==
+
+
+Lists
+Ordered list:
+#1. Item 1
+#2. Item 2
+
+Unordered List
+* Item 1
+* Item 2
+** Sub-item to item 2
+* Item 3
+
+
+Links:
+
+{&CCA} short link to official Document e.g. "CCA [<a href='/policy/CAcertCommunityAgreement.html'>COD9</a>]"
+{&&CCA} long link to official Document e.g. "CAcert Community Agreement (CCA [<a href='/policy/CAcertCommunityAgreement.html'>COD9</a>])"

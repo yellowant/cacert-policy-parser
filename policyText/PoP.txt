@@ -1,0 +1,10 @@
+id=1
+abbrev=PoP
+name=Policy On Policy 
+link=https://www.cacert.org/policy/PolicyOnPolicy.html
+status=POLICY
+change=m20070919.4(https://wiki.cacert.org/TopMinutes-20070917#m20070919.4)
+change=20100507
+change=20130223
+change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+editor=Iang(https://wiki.cacert.org/Iang)
