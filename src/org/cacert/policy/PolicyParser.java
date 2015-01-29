@@ -3,6 +3,10 @@ package org.cacert.policy;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Parses a given Policy document and delivers it to the given
+ * {@link #PolicyParser(PolicyTarget)}
+ */
 public class PolicyParser {
 	PolicyTarget out;
 	int number;
@@ -10,10 +14,24 @@ public class PolicyParser {
 			Pattern.compile("([0-9]+[a-z]?)"),
 			Pattern.compile("([0-9]+[a-z]?)\\.([0-9]+[a-z]?)"),
 			Pattern.compile("([0-9]+[a-z]?)\\.([0-9]+[a-z]?)\\.([0-9]+[a-z]?)")};
-	String[] hCounter = new String[3];
+	String[] headingCounter = new String[3];
+
+	/**
+	 * Creates a new PolicyParser.
+	 * 
+	 * @param out
+	 *            the target to deliver the document to.
+	 */
 	public PolicyParser(PolicyTarget out) {
 		this.out = out;
 	}
+
+	/**
+	 * Parses the given document. Only use once per instance.
+	 * 
+	 * @param templateDoc
+	 *            the content of the document to process
+	 */
 	public void parse(String templateDoc) {
 		String[] lines = templateDoc.split("\n");
 		for (int i = 0; i < lines.length; i++) {
@@ -80,23 +98,24 @@ public class PolicyParser {
 		if (!m.matches()) {
 			throw new Error("Malformed Heading in line: " + lineN);
 		}
-		for (int j = 0; j < hCounter.length; j++) {
+		for (int j = 0; j < headingCounter.length; j++) {
 			String group = j < level ? m.group(j + 1) : null;
 			if (j < level - 1) {
-				if (!hCounter[j].equals(group)) {
+				if (!headingCounter[j].equals(group)) {
 					throw new Error("Invalid numbering in line: " + lineN
-							+ " got " + group + " expected " + hCounter[j]);
+							+ " got " + group + " expected "
+							+ headingCounter[j]);
 				}
 			} else if (j == level - 1) {
-				if (!isAllowedAfter(hCounter[j], group)) {
+				if (!isAllowedAfter(headingCounter[j], group)) {
 					throw new Error("Invalid numbering in line: " + lineN
 							+ " got " + group
 							+ " expected a possible successor of "
-							+ hCounter[j]);
+							+ headingCounter[j]);
 				}
-				hCounter[j] = group;
+				headingCounter[j] = group;
 			} else {
-				hCounter[j] = null;
+				headingCounter[j] = null;
 			}
 		}
 		out.emitHeading(level, content, parts[0]);

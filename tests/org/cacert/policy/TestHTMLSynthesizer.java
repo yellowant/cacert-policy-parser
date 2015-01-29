@@ -74,6 +74,18 @@ public class TestHTMLSynthesizer {
 	}
 
 	@Test
+	public void testUnorderedSplitlist() {
+		hs.emitContent("a");
+		hs.emitUnorderedListItem("li", 1);
+		hs.endParagraph();
+		hs.emitUnorderedListItem("li2<", 1);
+		hs.emitUnorderedListItem("li3", 1);
+		hs.endParagraph();
+		hs.emitContent("b");
+		finish("<p>a</p><ul>  <li>li</li></ul><ul>  <li>li2&lt;</li>  <li>li3</li></ul><p>b</p>");
+	}
+
+	@Test
 	public void testSimpleTable() {
 		hs.emitContent("a");
 		hs.startTable();

@@ -5,6 +5,9 @@ import java.io.StringWriter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Outputs a policy document as HTML.
+ */
 public class HTMLSynthesizer implements PolicyTarget {
 	static class Link {
 		String name;
@@ -70,9 +73,7 @@ public class HTMLSynthesizer implements PolicyTarget {
 			case EMPTY :
 				break;
 			case OL :
-				if (listCounter != 0) {
-					out.println("</ol>");
-				}
+				out.println("</ol>");
 				listCounter = 0;
 				break;
 			case PARAGRAPH :
