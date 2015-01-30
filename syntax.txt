@@ -37,6 +37,16 @@ Unordered List
 * Item 3
 
 
+Table: (newlines required)
+
+{|
+|I am cell 1,1
+|I am cell 1,2
+|-
+|I am cell 2,1
+|I am cell 2,2
+|}
+
 Links:
 
 {&CCA} short link to official Document e.g. "CCA [<a href='/policy/CAcertCommunityAgreement.html'>COD9</a>]"
