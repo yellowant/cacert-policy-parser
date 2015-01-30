@@ -67,7 +67,7 @@ public class COD extends Entity {
 		out.println("<a href=\""
 				+ HTMLSynthesizer.escape(PolicyGenerator.getCODs().get("PoP")
 						.getLink()) + "\">");
-		out.println("  <img src=\"http://cacert.org/policy/images/cacert-"
+		out.println("  <img src=\"//cacert.org/policy/images/cacert-"
 				+ status.toLowerCase()
 				+ ".png\" alt=\"PoP Status - "
 				+ status
