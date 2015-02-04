@@ -32,6 +32,7 @@ public class PolicyGenerator {
 	public static void main(String[] args) throws IOException {
 		try {
 			initEntities();
+			CODListGenerator.generateIndexDocument();
 			convert("AP");
 			convert("AP/PoJAM", "PoJAM");
 			convert("AP/TTP", "TTP");

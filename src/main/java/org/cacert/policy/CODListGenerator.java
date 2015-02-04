@@ -85,7 +85,7 @@ public class CODListGenerator {
 		}
 		target.endTable();
 	}
-	public static void main(String[] args) throws IOException {
+	public static void generateIndexDocument() throws IOException {
 		PolicyGenerator.initEntities();
 		new CODListGenerator(new HTMLSynthesizer(new PrintWriter(
 				"target/index.html"), new COD("CDL",
