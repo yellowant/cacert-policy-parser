@@ -1,11 +1,11 @@
-id=13
-abbrev=AP
-name=Assurance Policy
-link=https://www.cacert.org/policy/AssurancePolicy.html
-status=POLICY
-change=p20080712.1(https://wiki.cacert.org/PolicyDecisions#p20080712.1)
-change=p20090105.2(https://wiki.cacert.org/PolicyDecisions#p20090105.2)
-editor=Teus(https://wiki.cacert.org/TeusHagen)
+Id: 13
+Abbrev: AP
+Name: Assurance Policy
+Link: https://www.cacert.org/policy/AssurancePolicy.html
+Status: POLICY
+Change: p20080712.1(https://wiki.cacert.org/PolicyDecisions#p20080712.1)
+Change: p20090105.2(https://wiki.cacert.org/PolicyDecisions#p20090105.2)
+Editor: Teus(https://wiki.cacert.org/TeusHagen)
 
 
 = 0 Preamble =

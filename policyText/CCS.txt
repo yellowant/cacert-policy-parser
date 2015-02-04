@@ -1,11 +1,11 @@
-id=2
-abbrev=CCS
-name=Configuration-Control Specification
-link=https://www.cacert.org/policy/ConfigurationControlSpecification.html
-status=POLICY
-change=p20100426(https://wiki.cacert.org/PolicyDecisions#p20100426)
-change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
-editor=Iang(https://wiki.cacert.org/Iang)
+Id: 2
+Abbrev: CCS
+Name: Configuration-Control Specification
+Link: https://www.cacert.org/policy/ConfigurationControlSpecification.html
+Status: POLICY
+Change: p20100426(https://wiki.cacert.org/PolicyDecisions#p20100426)
+Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+Editor: Iang(https://wiki.cacert.org/Iang)
 
 
 = 0 Introduction =

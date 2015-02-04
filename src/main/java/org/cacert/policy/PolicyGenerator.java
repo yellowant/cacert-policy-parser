@@ -147,10 +147,11 @@ public class PolicyGenerator {
 			if (line.isEmpty()) {
 				break;
 			}
-			String[] parts = line.split("=", 2);
+			String[] parts = line.split(": ", 2);
 			if (parts.length != 2) {
 				throw new Error("Invalid CODList line");
 			}
+			parts[0] = parts[0].toLowerCase();
 			switch (parts[0]) {
 				case "id" :
 					id = parts[1];

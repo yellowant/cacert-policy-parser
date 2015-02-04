@@ -1,11 +1,11 @@
-id=7
-abbrev=DRP
-name=Dispute Resolution Policy
-link=https://www.cacert.org/policy/DisputeResolutionPolicy.html
-status=POLICY
-change=m20070919.3(https://wiki.cacert.org/TopMinutes-20070917#m20070919.3)
-change=p20110108
-change=p20121213
-change=p20130116 
-change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
-editor=Teus(https://wiki.cacert.org/TeusHagen)
+Id: 7
+Abbrev: DRP
+Name: Dispute Resolution Policy
+Link: https://www.cacert.org/policy/DisputeResolutionPolicy.html
+Status: POLICY
+Change: m20070919.3(https://wiki.cacert.org/TopMinutes-20070917#m20070919.3)
+Change: p20110108
+Change: p20121213
+Change: p20130116 
+Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+Editor: Teus(https://wiki.cacert.org/TeusHagen)

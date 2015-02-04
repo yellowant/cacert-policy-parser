@@ -1,8 +1,8 @@
-id=8
-abbrev=SP
-name=Security Policy
-link=https://www.cacert.org/policy/SecurityPolicy.html
-status=POLICY
-change=p20100510(https://wiki.cacert.org/PolicyDecisions#p20100510)
-change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
-editor=Iang(https://wiki.cacert.org/Iang)
+Id: 8
+Abbrev: SP
+Name: Security Policy
+Link: https://www.cacert.org/policy/SecurityPolicy.html
+Status: POLICY
+Change: p20100510(https://wiki.cacert.org/PolicyDecisions#p20100510)
+Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+Editor: Iang(https://wiki.cacert.org/Iang)

@@ -1,8 +1,8 @@
-id=11
-abbrev=OAP
-name=Organisation Assurance Policy
-link=https://www.cacert.org/policy/OrganisationAssurancePolicy.html
-status=POLICY
-change=m20070918.x(https://wiki.cacert.org/TopMinutes-20070917)
-change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
-editor=Jens Paul
+Id: 11
+Abbrev: OAP
+Name: Organisation Assurance Policy
+Link: https://www.cacert.org/policy/OrganisationAssurancePolicy.html
+Status: POLICY
+Change: m20070918.x(https://wiki.cacert.org/TopMinutes-20070917)
+Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+Editor: Jens Paul

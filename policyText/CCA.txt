@@ -1,11 +1,11 @@
-id=9
-abbrev=CCA
-name=CAcert Community Agreement
-link=https://www.cacert.org/policy/CAcertCommunityAgreement.html
-status=POLICY
-change=m20070918.4(https://wiki.cacert.org/TopMinutes-20070917#m20070918.4)
-change=p20141008(https://wiki.cacert.org/PolicyDecisions#p20141008)
-editor=Benedikt(https://wiki.cacert.org/Community/HomePagesMembers/BenediktHeintel)
+Id: 9
+Abbrev: CCA
+Name: CAcert Community Agreement
+Link: https://www.cacert.org/policy/CAcertCommunityAgreement.html
+Status: POLICY
+Change: m20070918.4(https://wiki.cacert.org/TopMinutes-20070917#m20070918.4)
+Change: p20141008(https://wiki.cacert.org/PolicyDecisions#p20141008)
+Editor: Benedikt(https://wiki.cacert.org/Community/HomePagesMembers/BenediktHeintel)
 
 = 0 Introduction =
 

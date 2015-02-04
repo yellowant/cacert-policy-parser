@@ -1,11 +1,11 @@
-id=13.2
-abbrev=TTP
-name=TTP-Assisted Assurance Policy
-link=https://www.cacert.org/policy/TTPAssistedAssurancePolicy.html
-status=POLICY
-change=p20100913(https://wiki.cacert.org/PolicyDecisions#p20100913)
-change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
-editor=Ulrich Schroeter(https://wiki.cacert.org/UlrichSchroeter)
+Id: 13.2
+Abbrev: TTP
+Name: TTP-Assisted Assurance Policy
+Link: https://www.cacert.org/policy/TTPAssistedAssurancePolicy.html
+Status: POLICY
+Change: p20100913(https://wiki.cacert.org/PolicyDecisions#p20100913)
+Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+Editor: Ulrich Schroeter(https://wiki.cacert.org/UlrichSchroeter)
 
 = 0 Preliminaries =
 

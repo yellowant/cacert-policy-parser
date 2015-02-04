@@ -27,8 +27,8 @@ public class CODListGenerator {
 				new FileInputStream("CODList.txt"), "UTF-8"))) {
 			boolean inHeader = true;
 			while ((line = br.readLine()) != null) {
-				if (line.startsWith("comment-") && inHeader) {
-					String[] parts = line.substring(8).split("=", 2);
+				if (line.startsWith("Comment-") && inHeader) {
+					String[] parts = line.substring(8).split(": ", 2);
 					comments.put(parts[0], parts[1]);
 				}
 				if (line.isEmpty() && inHeader) {

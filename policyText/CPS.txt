@@ -1,7 +1,7 @@
-id=6
-abbrev=CPS
-name=Certification Practice Statement
-link=https://www.cacert.org/policy/CertificationPracticeStatement.html
-status=POLICY
-change=p20090706(https://wiki.cacert.org/PolicyDecisions#p20090706)
-change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+Id: 6
+Abbrev: CPS
+Name: Certification Practice Statement
+Link: https://www.cacert.org/policy/CertificationPracticeStatement.html
+Status: POLICY
+Change: p20090706(https://wiki.cacert.org/PolicyDecisions#p20090706)
+Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)

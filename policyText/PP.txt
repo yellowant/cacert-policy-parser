@@ -1,6 +1,6 @@
-id=5
-abbrev=PP
-name=Privacy Policy
-link=https://www.cacert.org/policy/PrivacyPolicy.html
-status=POLICY
-change=m20060629(https://svn.cacert.org/CAcert/CAcert_Inc/Board/board_review_actions_20040820_20070525.html#m20060629)
+Id: 5
+Abbrev: PP
+Name: Privacy Policy
+Link: https://www.cacert.org/policy/PrivacyPolicy.html
+Status: POLICY
+Change: m20060629(https://svn.cacert.org/CAcert/CAcert_Inc/Board/board_review_actions_20040820_20070525.html#m20060629)

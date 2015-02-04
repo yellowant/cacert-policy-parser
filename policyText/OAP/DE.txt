@@ -1,11 +1,11 @@
-id=11.DE
-abbrev=OAP-DE
-name=Organisation Assurance - sub-policy for Germany
-link=https://www.cacert.org/policy/OrganisationAssurancePolicy_Germany.html
-status=POLICY
-change=p20071022(https://wiki.cacert.org/PolicyDecisions#p20071022)
-change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
-editor=Jens Paul
+Id: 11.DE
+Abbrev: OAP-DE
+Name: Organisation Assurance - sub-policy for Germany
+Link: https://www.cacert.org/policy/OrganisationAssurancePolicy_Germany.html
+Status: POLICY
+Change: p20071022(https://wiki.cacert.org/PolicyDecisions#p20071022)
+Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+Editor: Jens Paul
 
 = 0 Preliminaries =
 This sub-policy describes how Organisation Assurers ("OAs") conduct assurances on German organisations. It fits within the overall web-of-trust or assurance process and the Organisation Assurance Policy (OAP) of CAcert.
