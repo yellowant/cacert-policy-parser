@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.cacert.policy.HTMLSynthesizer.Link;
 
@@ -25,23 +26,32 @@ public class PolicyGenerator {
 		out.close();
 	}
 	private static Map<String, Entity> cods;
+    private static Logger LOG = Logger.getLogger(PolicyGenerator.class.getCanonicalName());
 
 	public static void main(String[] args) throws IOException {
-		initEntities();
-		convert("AP");
-		convert("AP/PoJAM", "PoJAM");
-		convert("AP/TTP", "TTP");
+        try {
+            initEntities();
+            convert("AP");
+            convert("AP/PoJAM", "PoJAM");
+            convert("AP/TTP", "TTP");
 
-		convert("OAP/DE", "OAP-DE");
-		convert("OAP/AU", "OAP-AU");
-		convert("CCA");
-		convert("CCS");
+            convert("OAP/DE", "OAP-DE");
+            convert("OAP/AU", "OAP-AU");
+            convert("CCA");
+            convert("CCS");
+        } catch (AssertionError ae) {
+            LOG.severe(String.format("unexpected runtime condition: %s", ae.getMessage()));
+        }
 	}
 	public static void initEntities() {
 		if (cods != null) {
 			return;
 		}
-		File[] policies = new File("policyText").listFiles();
+        File policyDir = new File("policyText");
+        if (!policyDir.isDirectory()) {
+            throw new AssertionError("no directory policyText found, probably started from the wrong directory.");
+        }
+		File[] policies = policyDir.listFiles();
 		HashMap<String, Entity> codsm = new HashMap<>();
 		for (File policy : policies) {
 			try {
