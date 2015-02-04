@@ -6,3 +6,12 @@ comment-AP=See §4 for Subsidiary Policies under AP.
 comment-OAP=See §3 for Subsidiary Policies under OAP. Decision not properly recorded in TOP minutes.
 comment-RDL=Agreement for distribution of Root
 comment-OAP.EU=This is not for the European Union, but Europe region.
+
+The {&&CCS} mandates the creation and management of a list of all 
+documents controlled for formal audit and policy purposes ({&CCS#2.1}).
+This list is located at svn.cacert.org/CAcert/Policies/ControlledDocumentList.html.
+
+This list is managed by the Policy Officer according to the Change provisions of {&CCS#2.2}.
+
+In this list, CAcert Official Document (or "COD") numbers are allocated, see 1st column below.
+The allocation of a COD number indicates the document is on POLICY track, and plays a part in the overall CCS framework. 

@@ -12,7 +12,8 @@ import org.junit.Test;
 
 public class TestHTMLSynthesizer {
 	StringWriter sw = new StringWriter();
-	PolicyTarget hs = new HTMLSynthesizer(new PrintWriter(sw), "CCA");
+	PolicyTarget hs = new HTMLSynthesizer(new PrintWriter(sw),
+			(COD) PolicyGenerator.getEntities().get("CCA"));
 	@BeforeClass
 	public static void setClassUp() {
 		PolicyGenerator.initEntities();

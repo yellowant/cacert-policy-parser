@@ -76,9 +76,13 @@ public class COD extends Entity {
 		out.println("</a>");
 		out.println("</td></tr></tbody></table>");
 
+		emitBigTitle(out);
+
+	}
+
+	protected void emitBigTitle(PrintWriter out) {
 		out.println("<h1>" + generateTitle()
 				+ "</h1><h2>Table of Contents</h2>");
-
 	}
 	public String generateTitle() {
 		return HTMLSynthesizer.escape(getName()) + " ("

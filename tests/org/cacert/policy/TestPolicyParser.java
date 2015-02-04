@@ -73,6 +73,7 @@ public class TestPolicyParser {
 	DummyTarget dt = new DummyTarget();
 	PolicyParser pp = new PolicyParser(dt);
 	private void finish(String string) {
+		dt.close();
 		assertEquals(string, dt.buffer.toString());
 	}
 

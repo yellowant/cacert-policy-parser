@@ -19,7 +19,7 @@ editor=Teus(https://wiki.cacert.org/TeusHagen)
 
 == 0.2 The CAcert Web of Trust ==
 
-In face-to-face meetings, an Assurer allocates a number of Assurance Points to the Member being Assured. CAcert combines the Assurance Points into a global /Web-of-Trust/ (or "WoT").
+In face-to-face meetings, an Assurer allocates a number of Assurance Points to the Member being Assured. CAcert combines the Assurance Points into a global [i]Web-of-Trust[/i] (or "WoT").
 
 CAcert explicitly chooses to meet its various goals by construction of a Web-of-Trust of all Members.
 == 0.3 Related Documentation ==
@@ -149,7 +149,7 @@ An Assurer can allocate a number of Assurance Points to the Member according to 
 * Assurer's familiarity with identity documents;
 * The Assurance Statement is confirmed.
 
-Any lesser confidence should result in less Assurance Points for a Name. If the Assurer has no confidence in the information presented, then /zero/ Assurance Points may be allocated by the Assurer. For example, this may happen if the identity documents are totally unfamiliar to the Assurer. The number of Assurance Points from /zero/ to /maximum/ is guided by the {&&AH} and the judgement of the Assurer. If there is negative confidence the Assurer should consider filing a dispute.
+Any lesser confidence should result in less Assurance Points for a Name. If the Assurer has no confidence in the information presented, then [i]zero[/i] Assurance Points may be allocated by the Assurer. For example, this may happen if the identity documents are totally unfamiliar to the Assurer. The number of Assurance Points from [i]zero[/i] to [i]maximum[/i] is guided by the {&&AH} and the judgement of the Assurer. If there is negative confidence the Assurer should consider filing a dispute.
 
 Multiple Names should be allocated Assurance Points independently within a single Assurance.
 

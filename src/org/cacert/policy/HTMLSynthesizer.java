@@ -64,11 +64,11 @@ public class HTMLSynthesizer implements PolicyTarget {
 
 	private COD myDoc;
 
-	public HTMLSynthesizer(PrintWriter out, String doc) {
+	public HTMLSynthesizer(PrintWriter out, COD doc) {
 		this.realOut = out;
 		this.out = new PrintWriter(content = new StringWriter());
 		this.headS = new PrintWriter(head = new StringWriter());
-		myDoc = (COD) PolicyGenerator.getEntities().get(doc);
+		myDoc = doc;
 	}
 	private boolean state(State state) {
 		if (state == s) {

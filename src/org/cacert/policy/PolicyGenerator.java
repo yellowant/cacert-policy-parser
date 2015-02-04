@@ -17,11 +17,12 @@ import java.util.Map;
 import org.cacert.policy.HTMLSynthesizer.Link;
 
 public class PolicyGenerator {
-	public PolicyGenerator(String templateDoc, String target, String name)
+	public PolicyGenerator(String templateDoc, String target, COD doc)
 			throws IOException {
-		PolicyTarget out = new HTMLSynthesizer(new PrintWriter(target), name);
+		PolicyTarget out = new HTMLSynthesizer(new PrintWriter(target), doc);
 		PolicyParser parser = new PolicyParser(out);
 		parser.parse(templateDoc);
+		out.close();
 	}
 	private static Map<String, Entity> cods;
 
@@ -174,7 +175,8 @@ public class PolicyGenerator {
 		int firstEmptyLine = buf.indexOf("\n\n");
 		buf.delete(0, firstEmptyLine + 2);
 		String document = buf.toString();
-		new PolicyGenerator(document, name + ".html", name);
+		new PolicyGenerator(document, name + ".html", (COD) PolicyGenerator
+				.getEntities().get(name));
 		r.close();
 	}
 }

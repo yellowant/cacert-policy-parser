@@ -84,8 +84,6 @@ public class PolicyParser {
 				out.emitContent(line);
 			}
 		}
-		out.close();
-
 	}
 	private String handleHeading(String line, int level, int lineN) {
 		String content = line.substring(level + 1, line.length() - level - 1);
