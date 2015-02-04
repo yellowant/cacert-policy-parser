@@ -67,7 +67,10 @@ public class PolicyParser {
 						parts[0].length() - 1));
 				parts[1] = parts[1].trim();
 				if (num != out.getListCounter(depth) + 1) {
-					throw new Error("Invalid numbering in line " + i);
+					System.out.println(line);
+					throw new Error("Invalid numbering in line " + i + " is "
+							+ num + " should be "
+							+ (out.getListCounter(depth) + 1));
 				}
 				out.emitOrderedListItem(parts[1], depth);
 			} else if (line.startsWith("* ")) {

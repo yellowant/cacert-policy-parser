@@ -33,6 +33,7 @@ public class PolicyGenerator {
 		convert("AP/TTP", "TTP");
 
 		convert("OAP/DE", "OAP-DE");
+		convert("OAP/AU", "OAP-AU");
 		convert("CCA");
 		convert("CCS");
 	}

@@ -166,9 +166,13 @@ public class HTMLSynthesizer implements PolicyTarget {
 						.getShortLink(anchor, hrefName);
 			}
 		} else if (content.matches("[a-z]+://[^ ]+ .*")) {
-			System.out.println("WARNING, Unchecked external link: " + content);
 			String[] parts = content.split(" ", 2);
+			System.out.println("WARNING, Unchecked external link: " + parts[0]
+					+ "=>" + parts[1]);
 			return new Link(parts[1], parts[0]).toString();
+		} else if (content.matches("[a-z]+://[^ ]+")) {
+			System.out.println("WARNING, Unchecked plain link: " + content);
+			return "[" + new Link(content, content).toString() + "]";
 		}
 		return "-- INVALID -- ";
 	}
@@ -199,6 +203,7 @@ public class HTMLSynthesizer implements PolicyTarget {
 		}
 		while (listDepth > lvl) {
 			listDepth--;
+			listCounter[listDepth] = 0;
 			out.println("</ol>");
 		}
 		listCounter[listDepth - 1]++;
