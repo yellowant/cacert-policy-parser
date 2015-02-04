@@ -162,6 +162,10 @@ public class HTMLSynthesizer implements PolicyTarget {
 				return PolicyGenerator.getEntities().get(parts[0].substring(1))
 						.getShortLink(anchor, hrefName);
 			}
+		} else if (content.matches("[a-z]+://[^ ]+ .*")) {
+			System.out.println("WARNING, Unchecked external link: " + content);
+			String[] parts = content.split(" ", 2);
+			return new Link(parts[1], parts[0]).toString();
 		}
 		return "-- INVALID -- ";
 	}

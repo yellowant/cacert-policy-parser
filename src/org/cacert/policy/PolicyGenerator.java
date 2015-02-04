@@ -30,6 +30,7 @@ public class PolicyGenerator {
 		initEntities();
 		convert("AP");
 		convert("AP/PoJAM", "PoJAM");
+		convert("AP/TTP", "TTP");
 		convert("CCA");
 		convert("CCS");
 	}

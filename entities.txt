@@ -2,3 +2,4 @@ AH;Assurance Handbook;https://wiki.cacert.org/AssuranceHandbook2
 CAP;CAcert Assurance Programme;https://www.cacert.org/cap.php
 ControlledDocumentList;Controlled Document List;https://svn.cacert.org/CAcert/Policies/ControlledDocumentList.html
 Principles;Principles of the Community;http://svn.cacert.org/CAcert/principles.html
+SeniorAssurer;Senior Assurer;https://wiki.cacert.org/SeniorAssurer
