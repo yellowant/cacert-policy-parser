@@ -10,9 +10,11 @@ table.codList td{
 	border-left: 0;
 	border-right: 0;
 	border-bottom:0;
+	background: #ececec;
 }
 table.codList tr:nth-child(even) td{
 	border-top:0;
+	background: #ffffff;
 }
 table.codList tr:nth-child(even) td:nth-child(4){
 	font-style: italic;
