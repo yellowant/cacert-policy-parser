@@ -9,18 +9,16 @@ import org.cacert.policy.HTMLSynthesizer.Link;
 public class COD extends Entity {
 	private String COD;
 
-	private String comment;
 	private String status;
 	private LinkedList<Link> changes;
 	private Link editor;
 	public COD(String abbrev, String name, String COD, String link,
-			String comment, String status, LinkedList<Link> changes, Link editor) {
+			String status, LinkedList<Link> changes, Link editor) {
 		super(abbrev, name, link);
 		if (!status.equals("POLICY") && !status.equals("DRAFT")) {
 			throw new Error("Invalid status of COD " + abbrev + ": " + status);
 		}
 		this.COD = COD;
-		this.comment = comment;
 		this.status = status;
 		this.changes = changes;
 		this.editor = editor;

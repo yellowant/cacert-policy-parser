@@ -88,8 +88,8 @@ public class CODListGenerator {
 	public static void main(String[] args) throws IOException {
 		PolicyGenerator.initEntities();
 		new CODListGenerator(new HTMLSynthesizer(new PrintWriter("index.html"),
-				new COD("CDL", "Controlled Document List", "", "", "",
-						"POLICY", new LinkedList<Link>(), null) {
+				new COD("CDL", "Controlled Document List", "", "", "POLICY",
+						new LinkedList<Link>(), null) {
 					@Override
 					public void printHeader(PrintWriter out) {
 						emitBigTitle(out);

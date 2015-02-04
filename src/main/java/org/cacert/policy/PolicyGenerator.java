@@ -26,31 +26,34 @@ public class PolicyGenerator {
 		out.close();
 	}
 	private static Map<String, Entity> cods;
-    private static Logger LOG = Logger.getLogger(PolicyGenerator.class.getCanonicalName());
+	private static Logger LOG = Logger.getLogger(PolicyGenerator.class
+			.getCanonicalName());
 
 	public static void main(String[] args) throws IOException {
-        try {
-            initEntities();
-            convert("AP");
-            convert("AP/PoJAM", "PoJAM");
-            convert("AP/TTP", "TTP");
+		try {
+			initEntities();
+			convert("AP");
+			convert("AP/PoJAM", "PoJAM");
+			convert("AP/TTP", "TTP");
 
-            convert("OAP/DE", "OAP-DE");
-            convert("OAP/AU", "OAP-AU");
-            convert("CCA");
-            convert("CCS");
-        } catch (AssertionError ae) {
-            LOG.severe(String.format("unexpected runtime condition: %s", ae.getMessage()));
-        }
+			convert("OAP/DE", "OAP-DE");
+			convert("OAP/AU", "OAP-AU");
+			convert("CCA");
+			convert("CCS");
+		} catch (AssertionError ae) {
+			LOG.severe(String.format("unexpected runtime condition: %s",
+					ae.getMessage()));
+		}
 	}
 	public static void initEntities() {
 		if (cods != null) {
 			return;
 		}
-        File policyDir = new File("policyText");
-        if (!policyDir.isDirectory()) {
-            throw new AssertionError("no directory policyText found, probably started from the wrong directory.");
-        }
+		File policyDir = new File("policyText");
+		if (!policyDir.isDirectory()) {
+			throw new AssertionError(
+					"no directory policyText found, probably started from the wrong directory.");
+		}
 		File[] policies = policyDir.listFiles();
 		HashMap<String, Entity> codsm = new HashMap<>();
 		for (File policy : policies) {
@@ -135,7 +138,7 @@ public class PolicyGenerator {
 
 	public static COD parseHeader(BufferedReader br) throws IOException, Error {
 		String id = null;
-		String abbrev = null, name = null, link = null, comment = null, status = null;
+		String abbrev = null, name = null, link = null, status = null;
 		LinkedList<Link> changes = new LinkedList<>();
 		Link editor = null;
 
@@ -174,8 +177,7 @@ public class PolicyGenerator {
 
 			}
 		}
-		COD fixedLink = new COD(abbrev, name, id, link, comment, status,
-				changes, editor);
+		COD fixedLink = new COD(abbrev, name, id, link, status, changes, editor);
 		return fixedLink;
 	}
 	private static void convert(String name) throws IOException {
