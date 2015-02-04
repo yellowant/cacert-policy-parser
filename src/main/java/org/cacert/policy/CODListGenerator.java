@@ -71,15 +71,15 @@ public class CODListGenerator {
 		target.startTable("codList");
 		target.emitTableCell("#");
 		target.emitTableCell("Abbrev");
-		target.emitTableCell("Since");
-		target.emitTableCell("Name");
+		target.emitTableCell("official Link");
 		target.emitTableCell("Editor");
+		target.emitTableCell("Since");
 		target.newTableRow();
 		target.emitTableCell("");
-		target.emitTableCell("official Link");
-		target.emitTableCell("last Update");
+		target.emitTableCell("Name");
 		target.emitTableCell("comment");
 		target.emitTableCell("");
+		target.emitTableCell("last Update");
 		for (COD cod : cods) {
 			cod.emitCODIndexLines(target, comments);
 		}
@@ -87,13 +87,14 @@ public class CODListGenerator {
 	}
 	public static void main(String[] args) throws IOException {
 		PolicyGenerator.initEntities();
-		new CODListGenerator(new HTMLSynthesizer(new PrintWriter("index.html"),
-				new COD("CDL", "Controlled Document List", "", "", "POLICY",
-						new LinkedList<Link>(), null) {
-					@Override
-					public void printHeader(PrintWriter out) {
-						emitBigTitle(out);
-					}
-				}));
+		new CODListGenerator(new HTMLSynthesizer(new PrintWriter(
+				"target/index.html"), new COD("CDL",
+				"Controlled Document List", "", "", "POLICY",
+				new LinkedList<Link>(), null) {
+			@Override
+			public void printHeader(PrintWriter out) {
+				emitBigTitle(out);
+			}
+		}));
 	}
 }

@@ -92,17 +92,16 @@ public class COD extends Entity {
 		target.newTableRow();
 		target.emitTableCell("" + COD);
 		target.emitTableCell(getAbbrev());
-		target.emitTableCellLink(changes.get(0));
-		target.emitTableCell(getName());
+		target.emitTableCellLink(new Link(getLink(), getLink()));
 		if (editor != null) {
 			target.emitTableCellLink(editor);
 		} else {
 			target.emitTableCell("");
 		}
+		target.emitTableCellLink(changes.get(0));
 		target.newTableRow();
 		target.emitTableCell("");
-		target.emitTableCellLink(new Link(getLink(), getLink()));
-		target.emitTableCellLink(changes.get(changes.size() - 1));
+		target.emitTableCell(getName());
 		String comment = comments.get(getAbbrev());
 		if (comment != null) {
 			target.emitTableCell(comment);
@@ -110,6 +109,7 @@ public class COD extends Entity {
 			target.emitTableCell("");
 		}
 		target.emitTableCell(""); // TODO maybe colspan?
+		target.emitTableCellLink(changes.get(changes.size() - 1));
 
 	}
 
