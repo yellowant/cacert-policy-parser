@@ -75,7 +75,7 @@ public class CODListGenerator {
 		target.emitTableCell("Editor");
 		target.emitTableCell("Since");
 		target.newTableRow();
-		target.emitTableCell("");
+		target.emitTableCell("Status");
 		target.emitTableCell("Name");
 		target.emitTableCell("comment");
 		target.emitTableCell("");

@@ -100,7 +100,7 @@ public class COD extends Entity {
 		}
 		target.emitTableCellLink(changes.get(0));
 		target.newTableRow();
-		target.emitTableCell("");
+		target.emitTableCell(status);
 		target.emitTableCell(getName());
 		String comment = comments.get(getAbbrev());
 		if (comment != null) {
