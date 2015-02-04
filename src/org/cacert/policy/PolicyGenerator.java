@@ -17,7 +17,7 @@ import java.util.Map;
 import org.cacert.policy.HTMLSynthesizer.Link;
 
 public class PolicyGenerator {
-	public PolicyGenerator(String templateDoc, String target, COD doc)
+	public PolicyGenerator(String templateDoc, File target, COD doc)
 			throws IOException {
 		PolicyTarget out = new HTMLSynthesizer(new PrintWriter(target), doc);
 		PolicyParser parser = new PolicyParser(out);
@@ -31,6 +31,8 @@ public class PolicyGenerator {
 		convert("AP");
 		convert("AP/PoJAM", "PoJAM");
 		convert("AP/TTP", "TTP");
+
+		convert("OAP/DE", "OAP-DE");
 		convert("CCA");
 		convert("CCS");
 	}
@@ -180,7 +182,9 @@ public class PolicyGenerator {
 		int firstEmptyLine = buf.indexOf("\n\n");
 		buf.delete(0, firstEmptyLine + 2);
 		String document = buf.toString();
-		new PolicyGenerator(document, path + ".html", (COD) PolicyGenerator
+		File target = new File(path + ".html");
+		target.getAbsoluteFile().getParentFile().mkdirs();
+		new PolicyGenerator(document, target, (COD) PolicyGenerator
 				.getEntities().get(name));
 		r.close();
 	}

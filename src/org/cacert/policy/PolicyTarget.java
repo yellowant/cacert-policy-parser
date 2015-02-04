@@ -57,7 +57,7 @@ public interface PolicyTarget {
 	 * 
 	 * @param content
 	 */
-	public abstract void emitOrderedListItem(String content);
+	public abstract void emitOrderedListItem(String content, int lvl);
 
 	public abstract void startTable(String clas);
 
@@ -69,7 +69,7 @@ public interface PolicyTarget {
 
 	public abstract void endTable();
 
-	public abstract int getListCounter();
+	public abstract int getListCounter(int lvl);
 
 	public abstract String close();
 

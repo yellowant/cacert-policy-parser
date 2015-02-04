@@ -56,8 +56,8 @@ public class TestHTMLSynthesizer {
 	@Test
 	public void testList() {
 		hs.emitContent("a");
-		hs.emitOrderedListItem("li");
-		hs.emitOrderedListItem("li2<");
+		hs.emitOrderedListItem("li", 1);
+		hs.emitOrderedListItem("li2<", 1);
 		hs.endParagraph();
 		hs.emitContent("b");
 		finish("<p>a</p><ol>  <li>li</li>  <li>li2&lt;</li></ol><p>b</p>");

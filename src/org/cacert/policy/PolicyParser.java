@@ -54,13 +54,22 @@ public class PolicyParser {
 				if (parts.length != 2 || !parts[0].endsWith(".")) {
 					throw new Error("Invalid numbering in line " + i);
 				}
-				int num = Integer.parseInt(parts[0].substring(1,
+				int depth = 0;
+				while (parts[0].startsWith("#")) {
+					depth++;
+					parts[0] = parts[0].substring(1);
+				}
+				if (depth > 2) {
+					throw new Error(
+							"lists with depth grater than 2 for sanity not supported.");
+				}
+				int num = Integer.parseInt(parts[0].substring(0,
 						parts[0].length() - 1));
 				parts[1] = parts[1].trim();
-				if (num != out.getListCounter() + 1) {
+				if (num != out.getListCounter(depth) + 1) {
 					throw new Error("Invalid numbering in line " + i);
 				}
-				out.emitOrderedListItem(parts[1]);
+				out.emitOrderedListItem(parts[1], depth);
 			} else if (line.startsWith("* ")) {
 				out.emitUnorderedListItem(line.substring(2), 1);
 			} else if (line.startsWith("** ")) {

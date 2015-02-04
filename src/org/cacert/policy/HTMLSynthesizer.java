@@ -59,7 +59,7 @@ public class HTMLSynthesizer implements PolicyTarget {
 	private StringWriter head;
 
 	private int listDepth = 0;
-	private int listCounter = 0;
+	private int[] listCounter = new int[2];
 	private State s = State.EMPTY;
 
 	private COD myDoc;
@@ -78,8 +78,11 @@ public class HTMLSynthesizer implements PolicyTarget {
 			case EMPTY :
 				break;
 			case OL :
-				out.println("</ol>");
-				listCounter = 0;
+				while (listDepth > 0) {
+					listCounter[listDepth - 1] = 0;
+					listDepth--;
+					out.println("</ol>");
+				}
 				break;
 			case PARAGRAPH :
 				out.println("</p>");
@@ -188,11 +191,17 @@ public class HTMLSynthesizer implements PolicyTarget {
 		out.println("  <li>" + formatContent(content) + "</li>");
 	}
 	@Override
-	public void emitOrderedListItem(String content) {
-		if (state(State.OL)) {
+	public void emitOrderedListItem(String content, int lvl) {
+		state(State.OL);
+		while (listDepth < lvl) {
+			listDepth++;
 			out.println("<ol>");
 		}
-		listCounter++;
+		while (listDepth > lvl) {
+			listDepth--;
+			out.println("</ol>");
+		}
+		listCounter[listDepth - 1]++;
 		out.println("  <li>" + formatContent(content) + "</li>");
 	}
 
@@ -225,8 +234,8 @@ public class HTMLSynthesizer implements PolicyTarget {
 	}
 
 	@Override
-	public int getListCounter() {
-		return listCounter;
+	public int getListCounter(int lvl) {
+		return listCounter[lvl - 1];
 	}
 	@Override
 	public String close() {

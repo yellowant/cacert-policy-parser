@@ -29,7 +29,7 @@ public class TestPolicyParser {
 		}
 
 		@Override
-		public void emitOrderedListItem(String content) {
+		public void emitOrderedListItem(String content, int lvl) {
 			buffer.append(",ol" + content);
 		}
 
@@ -54,7 +54,7 @@ public class TestPolicyParser {
 		}
 
 		@Override
-		public int getListCounter() {
+		public int getListCounter(int lvl) {
 			return 0;
 		}
 
