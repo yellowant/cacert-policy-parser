@@ -1,18 +1,19 @@
 package org.cacert.policy;
 
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 import org.cacert.policy.HTMLSynthesizer.Link;
 
 public class COD extends Entity {
-	private int COD;
+	private String COD;
 
 	private String comment;
 	private String status;
 	private LinkedList<Link> changes;
 	private Link editor;
-	public COD(String abbrev, String name, int COD, String link,
+	public COD(String abbrev, String name, String COD, String link,
 			String comment, String status, LinkedList<Link> changes, Link editor) {
 		super(abbrev, name, link);
 		if (!status.equals("POLICY") && !status.equals("DRAFT")) {
@@ -65,8 +66,8 @@ public class COD extends Entity {
 				+ "More at wiki.cacert.org/Policy\">CC-by-sa+DRP</a>");
 		out.println("</td><td align=\"right\" valign=\"top\">");
 		out.println("<a href=\""
-				+ HTMLSynthesizer.escape(PolicyGenerator.getCODs().get("PoP")
-						.getLink()) + "\">");
+				+ HTMLSynthesizer.escape(PolicyGenerator.getEntities()
+						.get("PoP").getLink()) + "\">");
 		out.println("  <img src=\"//cacert.org/policy/images/cacert-"
 				+ status.toLowerCase()
 				+ ".png\" alt=\"PoP Status - "
@@ -82,5 +83,35 @@ public class COD extends Entity {
 	public String generateTitle() {
 		return HTMLSynthesizer.escape(getName()) + " ("
 				+ HTMLSynthesizer.escape(getAbbrev()) + ")";
+	}
+
+	public void emitCODIndexLines(PolicyTarget target,
+			HashMap<String, String> comments) {
+		target.newTableRow();
+		target.emitTableCell("" + COD);
+		target.emitTableCell(getAbbrev());
+		target.emitTableCellLink(changes.get(0));
+		target.emitTableCell(getName());
+		if (editor != null) {
+			target.emitTableCellLink(editor);
+		} else {
+			target.emitTableCell("");
+		}
+		target.newTableRow();
+		target.emitTableCell("");
+		target.emitTableCellLink(new Link(getLink(), getLink()));
+		target.emitTableCellLink(changes.get(changes.size() - 1));
+		String comment = comments.get(getAbbrev());
+		if (comment != null) {
+			target.emitTableCell(comment);
+		} else {
+			target.emitTableCell("");
+		}
+		target.emitTableCell(""); // TODO maybe colspan?
+
+	}
+
+	public String getId() {
+		return COD;
 	}
 }

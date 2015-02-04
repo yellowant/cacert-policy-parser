@@ -1,0 +1,9 @@
+id=11.AU
+abbrev=OAP-AU
+name=Organisation Assurance - sub-policy for Australia
+link=https://www.cacert.org/policy/OrganisationAssurancePolicy_Australia.html
+status=POLICY
+change=p20080402.1(https://wiki.cacert.org/PolicyDecisions#p20080402.1)
+change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+editor=Sam Johnston
+

@@ -2,3 +2,15 @@
 	width: 100%;
 	color: steelblue;
 }
+table.codList{
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+table.codList td{
+	border-left: 0;
+	border-right: 0;
+	border-bottom:0;
+}
+table.codList tr:nth-child(even) td{
+	border-top:0;
+}

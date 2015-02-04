@@ -1,5 +1,7 @@
 package org.cacert.policy;
 
+import org.cacert.policy.HTMLSynthesizer.Link;
+
 /**
  * This is the Interface where policy documents can be parsed to.
  */
@@ -57,9 +59,11 @@ public interface PolicyTarget {
 	 */
 	public abstract void emitOrderedListItem(String content);
 
-	public abstract void startTable();
+	public abstract void startTable(String clas);
 
 	public abstract void emitTableCell(String content);
+
+	public abstract void emitTableCellLink(Link string);
 
 	public abstract void newTableRow();
 

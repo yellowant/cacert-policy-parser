@@ -2,6 +2,7 @@ package org.cacert.policy;
 
 import static org.junit.Assert.assertEquals;
 
+import org.cacert.policy.HTMLSynthesizer.Link;
 import org.junit.Test;
 
 public class TestPolicyParser {
@@ -33,7 +34,7 @@ public class TestPolicyParser {
 		}
 
 		@Override
-		public void startTable() {
+		public void startTable(String clas) {
 			buffer.append(",st");
 		}
 
@@ -61,6 +62,11 @@ public class TestPolicyParser {
 		public String close() {
 			buffer.append(",l");
 			return "";
+		}
+
+		@Override
+		public void emitTableCellLink(Link string) {
+
 		}
 
 	}

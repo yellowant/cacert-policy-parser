@@ -1,0 +1,8 @@
+id=11.EU
+abbrev=OAP-EU
+name=Organisation Assurance - sub-policy for countries in Europe
+link=https://www.cacert.org/policy/OrganisationAssurancePolicy_Europe.html
+status=POLICY
+change=p20080920(https://wiki.cacert.org/PolicyDecisions#p20080920)
+change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+editor=Teus(https://wiki.cacert.org/TeusHagen)

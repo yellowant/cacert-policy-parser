@@ -14,6 +14,11 @@ public class HTMLSynthesizer implements PolicyTarget {
 		String link;
 		private static final Pattern p = Pattern
 				.compile("([^(]+)\\(([^)]+)\\)");
+		public Link(String text, String target) {
+			name = text;
+			link = target;
+
+		}
 		public Link(String string) {
 			Matcher m = p.matcher(string);
 			if (m.matches()) {
@@ -63,7 +68,7 @@ public class HTMLSynthesizer implements PolicyTarget {
 		this.realOut = out;
 		this.out = new PrintWriter(content = new StringWriter());
 		this.headS = new PrintWriter(head = new StringWriter());
-		myDoc = (COD) PolicyGenerator.getCODs().get(doc);
+		myDoc = (COD) PolicyGenerator.getEntities().get(doc);
 	}
 	private boolean state(State state) {
 		if (state == s) {
@@ -139,7 +144,7 @@ public class HTMLSynthesizer implements PolicyTarget {
 		return resolved.toString();
 	}
 	private String formatPlain(String escape) {
-		return escape.replaceAll("/([^/]+)/", "<i>$1</i>");
+		return escape.replaceAll("\\[i\\]([^\\[]+)\\[/i\\]", "<i>$1</i>");
 	}
 	private String resolveLink(String content) {
 		if (content.startsWith("&")) {
@@ -151,10 +156,10 @@ public class HTMLSynthesizer implements PolicyTarget {
 				hrefName = " Section " + parts[1];
 			}
 			if (content.startsWith("&&")) {
-				return PolicyGenerator.getCODs().get(parts[0].substring(2))
+				return PolicyGenerator.getEntities().get(parts[0].substring(2))
 						.getLongLink(anchor, hrefName);
 			} else {
-				return PolicyGenerator.getCODs().get(parts[0].substring(1))
+				return PolicyGenerator.getEntities().get(parts[0].substring(1))
 						.getShortLink(anchor, hrefName);
 			}
 		}
@@ -188,13 +193,21 @@ public class HTMLSynthesizer implements PolicyTarget {
 	}
 
 	@Override
-	public void startTable() {
+	public void startTable(String clas) {
 		state(State.TABLE);
-		out.println("<table border='1'><tr>");
+		if (clas != null) {
+			out.println("<table border='1' class='" + escape(clas) + "'><tr>");
+		} else {
+			out.println("<table border='1'><tr>");
+		}
 	}
 	@Override
 	public void emitTableCell(String content) {
 		out.println("<td>" + formatContent(content) + "</td>");
+	}
+	@Override
+	public void emitTableCellLink(Link content) {
+		out.println("<td>" + content + "</td>");
 	}
 	@Override
 	public void newTableRow() {

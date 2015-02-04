@@ -5,3 +5,4 @@ comment-CCA=Agreement for Subscribers and Relying Parties ("RPA")
 comment-AP=See §4 for Subsidiary Policies under AP.
 comment-OAP=See §3 for Subsidiary Policies under OAP. Decision not properly recorded in TOP minutes.
 comment-RDL=Agreement for distribution of Root
+comment-OAP.EU=This is not for the European Union, but Europe region.

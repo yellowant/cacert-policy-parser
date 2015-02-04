@@ -11,6 +11,7 @@ import java.io.Reader;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import org.cacert.policy.HTMLSynthesizer.Link;
@@ -38,15 +39,52 @@ public class PolicyGenerator {
 		HashMap<String, Entity> codsm = new HashMap<>();
 		for (File policy : policies) {
 			try {
-				BufferedReader br = new BufferedReader(new InputStreamReader(
-						new FileInputStream(policy), "UTF-8"));
+				if (policy.isDirectory()) {
+					for (File subpolicy : policy.listFiles()) {
+						BufferedReader br = new BufferedReader(
+								new InputStreamReader(new FileInputStream(
+										subpolicy), "UTF-8"));
 
-				COD doc = parseHeader(br);
-				if (!(doc.getAbbrev() + ".txt").equals(policy.getName())) {
-					System.err.println("Policy in wrong file: in "
-							+ policy.getName() + " is " + doc.getAbbrev());
+						COD doc = parseHeader(br);
+						String pref = "";
+						if (policy.getName().equals("OAP")) {
+							pref = "OAP-";
+							if (!doc.getId().startsWith("11.")) {// OAP COD
+																	// number
+								System.err
+										.println("Policy with wrong COD reference "
+												+ policy.getName());
+							}
+						} else if (policy.getName().equals("AP")) {
+							Integer.parseInt(doc.getId().substring(3));
+							if (!doc.getId().startsWith("13.")) {// AP COD
+								// number
+								System.err
+										.println("Policy with wrong COD reference "
+												+ policy.getName());
+							}
+						}
+						if (!(doc.getAbbrev() + ".txt").equals(pref
+								+ subpolicy.getName())) {
+							System.err.println("Policy in wrong file: in "
+									+ subpolicy.getName() + " is "
+									+ doc.getAbbrev());
+						}
+						codsm.put(doc.getAbbrev(), doc);
+					}
+				} else {
+					BufferedReader br = new BufferedReader(
+							new InputStreamReader(new FileInputStream(policy),
+									"UTF-8"));
+
+					COD doc = parseHeader(br);
+					Integer.parseInt(doc.getId());
+					if (!(doc.getAbbrev() + ".txt").equals(policy.getName())) {
+						System.err.println("Policy in wrong file: in "
+								+ policy.getName() + " is " + doc.getAbbrev());
+					}
+					codsm.put(doc.getAbbrev(), doc);
 				}
-				codsm.put(doc.getAbbrev(), doc);
 			} catch (Throwable t) {
 				t.printStackTrace();
 			}
@@ -65,12 +103,22 @@ public class PolicyGenerator {
 		}
 		cods = Collections.unmodifiableMap(codsm);
 	}
-	public static Map<String, Entity> getCODs() {
+	public static Map<String, Entity> getEntities() {
 		return cods;
 	}
 
+	public static List<COD> getCODs() {
+		LinkedList<COD> c = new LinkedList<>();
+		for (Entity e : cods.values()) {
+			if (e instanceof COD) {
+				c.add((COD) e);
+			}
+		}
+		return Collections.unmodifiableList(c);
+	}
+
 	public static COD parseHeader(BufferedReader br) throws IOException, Error {
-		int id = -1;
+		String id = null;
 		String abbrev = null, name = null, link = null, comment = null, status = null;
 		LinkedList<Link> changes = new LinkedList<>();
 		Link editor = null;
@@ -86,7 +134,7 @@ public class PolicyGenerator {
 			}
 			switch (parts[0]) {
 				case "id" :
-					id = Integer.parseInt(parts[1]);
+					id = parts[1];
 					break;
 				case "abbrev" :
 					abbrev = parts[1];

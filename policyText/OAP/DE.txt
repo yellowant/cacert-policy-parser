@@ -1,0 +1,9 @@
+id=11.DE
+abbrev=OAP-DE
+name=Organisation Assurance - sub-policy for Germany
+link=https://www.cacert.org/policy/OrganisationAssurancePolicy_Germany.html
+status=POLICY
+change=p20071022(https://wiki.cacert.org/PolicyDecisions#p20071022)
+change=p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+editor=Jens Paul
+

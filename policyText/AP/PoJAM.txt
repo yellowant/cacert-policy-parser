@@ -1,0 +1,9 @@
+id=13.1
+abbrev=PoJAM
+name=Policy On Junior Assurers / Members
+link=https://www.cacert.org/policy/PolicyOnJuniorAssurersMembers.html
+status=POLICY
+change=p20100119(https://wiki.cacert.org/PolicyDecisions#p20100119)
+change=p20130222(https://wiki.cacert.org/PolicyDecisions#p20130222)
+editor=Iang(https://wiki.cacert.org/Iang)
+

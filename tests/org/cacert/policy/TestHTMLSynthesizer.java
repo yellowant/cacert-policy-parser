@@ -88,7 +88,7 @@ public class TestHTMLSynthesizer {
 	@Test
 	public void testSimpleTable() {
 		hs.emitContent("a");
-		hs.startTable();
+		hs.startTable(null);
 		hs.emitTableCell("a1<");
 		hs.emitTableCell("a2");
 		hs.newTableRow();

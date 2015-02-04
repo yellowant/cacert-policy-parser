@@ -66,7 +66,7 @@ public class PolicyParser {
 			} else if (line.startsWith("** ")) {
 				out.emitUnorderedListItem(line.substring(2), 2);
 			} else if (line.startsWith("{|")) {
-				out.startTable();
+				out.startTable(null);
 				for (int j = i + 1; j < lines.length; j++) {
 					line = lines[j];
 					line = line.trim();
