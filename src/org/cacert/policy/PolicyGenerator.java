@@ -29,6 +29,7 @@ public class PolicyGenerator {
 	public static void main(String[] args) throws IOException {
 		initEntities();
 		convert("AP");
+		convert("AP/PoJAM", "PoJAM");
 		convert("CCA");
 		convert("CCS");
 	}
@@ -164,8 +165,11 @@ public class PolicyGenerator {
 		return fixedLink;
 	}
 	private static void convert(String name) throws IOException {
+		convert(name, name);
+	}
+	private static void convert(String path, String name) throws IOException {
 		Reader r = new InputStreamReader(new FileInputStream(new File(
-				"policyText/" + name + ".txt")), "UTF-8");
+				"policyText/" + path + ".txt")), "UTF-8");
 		StringBuffer buf = new StringBuffer();
 		char[] buffer = new char[4096];
 		int len;
@@ -175,7 +179,7 @@ public class PolicyGenerator {
 		int firstEmptyLine = buf.indexOf("\n\n");
 		buf.delete(0, firstEmptyLine + 2);
 		String document = buf.toString();
-		new PolicyGenerator(document, name + ".html", (COD) PolicyGenerator
+		new PolicyGenerator(document, path + ".html", (COD) PolicyGenerator
 				.getEntities().get(name));
 		r.close();
 	}
