@@ -11,6 +11,7 @@ table.codList td{
 	border-right: 0;
 	border-bottom:0;
 	background: #ececec;
+	padding: 5px;
 }
 table.codList tr:nth-child(even) td{
 	border-top:0;
