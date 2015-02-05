@@ -32,6 +32,7 @@ public class PolicyGenerator {
 	public static void main(String[] args) throws IOException {
 		try {
 			initEntities();
+			new File("policy").mkdir();
 			CODListGenerator.generateIndexDocument();
 			convert("AP");
 			convert("AP/PoJAM", "PoJAM");
@@ -197,7 +198,7 @@ public class PolicyGenerator {
 		int firstEmptyLine = buf.indexOf("\n\n");
 		buf.delete(0, firstEmptyLine + 2);
 		String document = buf.toString();
-		File target = new File("target/" + path + ".html");
+		File target = new File("policy/" + path + ".html");
 		target.getAbsoluteFile().getParentFile().mkdirs();
 		new PolicyGenerator(document, target, (COD) PolicyGenerator
 				.getEntities().get(name));
