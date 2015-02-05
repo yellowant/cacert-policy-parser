@@ -56,21 +56,62 @@ public interface PolicyTarget {
 	 * keep reference of the number, the new item got assigned.
 	 * 
 	 * @param content
+	 *            The text that is in this list item.
+	 * @param lvl
+	 *            The level of the item (1 of top level and incresing)
 	 */
 	public abstract void emitOrderedListItem(String content, int lvl);
 
+	/**
+	 * Begins a table.
+	 * 
+	 * @param clas
+	 *            the class to style the table with.
+	 */
 	public abstract void startTable(String clas);
 
+	/**
+	 * Emits a table cell.
+	 * 
+	 * @param content
+	 *            Its plain content.
+	 */
 	public abstract void emitTableCell(String content);
 
-	public abstract void emitTableCellLink(Link string);
+	/**
+	 * Emits a table cell containing a link, and not plain content(
+	 * {@link #emitContent(String)})
+	 * 
+	 * @param link
+	 *            the link to display in the table cell
+	 */
+	public abstract void emitTableCellLink(Link link);
 
+	/**
+	 * Emits a "line break" in table rows.
+	 */
 	public abstract void newTableRow();
 
+	/**
+	 * Ends a table.
+	 */
 	public abstract void endTable();
 
+	/**
+	 * Gets the current counter for numbered list (
+	 * {@link #emitOrderedListItem(String, int)})
+	 * 
+	 * @param lvl
+	 *            the level to check the content (1 and increasing)
+	 * @return the current counter
+	 */
 	public abstract int getListCounter(int lvl);
 
+	/**
+	 * Ends this target's output. (Emitting table of contents, and others)
+	 * 
+	 * @return the real content.
+	 */
 	public abstract String close();
 
 }
