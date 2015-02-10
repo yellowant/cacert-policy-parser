@@ -2,8 +2,10 @@ package org.cacert.policy;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -88,13 +90,14 @@ public class CODListGenerator {
 	public static void generateIndexDocument() throws IOException {
 		PolicyGenerator.initEntities();
 		new CODListGenerator(new HTMLSynthesizer(new PrintWriter(
-				"policy/index.html"), new COD("CDL",
-				"Controlled Document List", "", "", "POLICY",
-				new LinkedList<Link>(), null) {
-			@Override
-			public void printHeader(PrintWriter out) {
-				emitBigTitle(out);
-			}
-		}));
+				new OutputStreamWriter(
+						new FileOutputStream("policy/index.html"), "UTF-8")),
+				new COD("CDL", "Controlled Document List", "", "", "POLICY",
+						new LinkedList<Link>(), null) {
+					@Override
+					public void printHeader(PrintWriter out) {
+						emitBigTitle(out);
+					}
+				}));
 	}
 }
