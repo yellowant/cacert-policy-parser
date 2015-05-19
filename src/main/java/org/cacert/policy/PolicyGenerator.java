@@ -46,6 +46,7 @@ public class PolicyGenerator {
 			convert("OAP/AU", "OAP-AU");
 			convert("CCA");
 			convert("CCS");
+			convert("DRP");
 		} catch (AssertionError ae) {
 			LOG.severe(String.format("unexpected runtime condition: %s",
 					ae.getMessage()));
