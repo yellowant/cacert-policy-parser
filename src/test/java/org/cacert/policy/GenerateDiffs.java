@@ -1,10 +1,12 @@
 package org.cacert.policy;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.io.Reader;
 import java.net.URL;
 import java.util.HashMap;
@@ -12,6 +14,7 @@ import java.util.Map.Entry;
 
 public class GenerateDiffs {
 	public static void main(String[] args) throws IOException {
+		System.setProperty("line.separator", "\n");
 
 		// wdiff -n -w $'\033[30;41m' -x $'\033[0m' -y $'\033[30;42m' -z $'\033[0m' DRP.{old,new} | less -R
 		// wdiff -n -w $'<span style=\'background-color:#FFBBBB\'>' -x $'</span>' -y $'<span style=\'background-color: #BBFFBB\'>' -z $'</span>' DRP.{old,new} | sed "s_\$_<br/>\n_"
@@ -33,6 +36,27 @@ public class GenerateDiffs {
 			clean(new FileReader("policy/" + entry.getKey() + ".html"),
 					new FileWriter(
 							new File(target, entry.getKey() + ".new.txt")));
+			Process p = Runtime.getRuntime().exec(
+					new String[]{"wdiff", "-n", "-w",
+							"<span style='background-color:#FFBBBB'>", "-x",
+							"</span>", "-y",
+							"<span style='background-color: #BBFFBB'>", "-z",
+							"</span>", entry.getKey() + ".old.txt",
+							entry.getKey() + ".new.txt"}, null, target);
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					p.getInputStream()));
+
+			PrintWriter out = new PrintWriter(new File(target, entry.getKey()
+					+ ".html"));
+			out.println("<!Doctype html><html><head><title>diff of "
+					+ entry.getKey() + "</title></head><body>");
+			String s;
+			while ((s = br.readLine()) != null) {
+				out.println(s + "<br/>");
+			}
+			out.println("</body></html>");
+			out.close();
+
 		}
 	}
 
