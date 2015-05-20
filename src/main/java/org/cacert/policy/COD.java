@@ -14,7 +14,7 @@ public class COD extends Entity {
 	private Link editor;
 	public COD(String abbrev, String name, String COD, String link,
 			String status, LinkedList<Link> changes, Link editor) {
-		super(abbrev, name, link);
+		super(abbrev, name, abbrev + ".html");
 		if (!status.equals("POLICY") && !status.equals("DRAFT")) {
 			throw new Error("Invalid status of COD " + abbrev + ": " + status);
 		}
