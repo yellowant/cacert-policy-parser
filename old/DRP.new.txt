@@ -24,7 +24,7 @@ Dispute Resolution Policy (DRP) Name: DRP [COD7] Status: TESTING, TECHNICAL PREV
 4 Appendix
 4.1 The Advantages of this Forum
 4.2 The Disadvantages of this Forum
-4.3 Process and Flow Name: DRP COD7 Status: POLICY p20140731 Created: m20070919.3 Changed: p20110108, p20121213, p20130116 Editor: Teus Hagen Licence: CC-by-sa+DRP 	DRP Status - POLICY Dispute Resolution Policy
+4.3 Process and Flow
 0 Introduction This is the Dispute Resolution Policy for the CAcert Community, consisting of CAcert Inc and Members who agree to the CAcert Community Agreement (CCA [COD9]). Disputes arising out of operations by CAcert Inc and interactions between Members may be addressed through this policy. This document also presents the rules for resolution of disputes.
 0.1 Nature of Disputes Disputes include: Requests for non-routine support actions. CAcert support team has no authority to act outside the normal support facilities made available to Members; Classical disputes where a Member or another assert claims and demand remedies; Requests by external organisations, including legal processes from foreign courts; Events initiated for training purposes.
 1 Filing
