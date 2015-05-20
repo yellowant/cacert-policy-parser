@@ -10,15 +10,6 @@ Change: p20130116
 Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
 Editor: Teus(https://wiki.cacert.org/TeusHagen)
 
-
-
-Name: DRP COD7
-Status: POLICY p20140731
-Created: m20070919.3
-Changed: p20110108, p20121213, p20130116
-Editor: Teus Hagen
-Licence: CC-by-sa+DRP 	DRP Status - POLICY
-Dispute Resolution Policy
 = 0 Introduction =
 
 This is the Dispute Resolution Policy for the CAcert Community, consisting of CAcert Inc and Members who agree to the {&&CCA}. Disputes arising out of operations by CAcert Inc and interactions between Members may be addressed through this policy. This document also presents the rules for resolution of disputes.
