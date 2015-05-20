@@ -128,6 +128,13 @@ public class HTMLSynthesizer implements PolicyTarget {
 		out.println(formatContent(content));
 
 	}
+	@Override
+	public void emitLineBreak() {
+		if (s != State.PARAGRAPH) {
+			throw new Error("line breaks are only allowed in paragraphs");
+		}
+		out.println("<br/>");
+	}
 	private String formatContent(String content) {
 		StringBuffer resolved = new StringBuffer();
 		int i = 0;

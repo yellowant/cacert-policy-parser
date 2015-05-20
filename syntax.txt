@@ -58,3 +58,9 @@ Links:
 {&AH} short reference to another "entity" (in this case the Assurance handbook)
 {http://denic.de} reference to a URL (the URL is printed as a link to the same text)
 {http://cacert.org our main page} reference to a page a by another text.
+
+
+Text Flow:
+
+A newline causes a new paragraph to be generated
+a "\\" at the end of a line causes a in-paragraph linebreak. Use with care.

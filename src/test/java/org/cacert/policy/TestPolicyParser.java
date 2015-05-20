@@ -17,7 +17,10 @@ public class TestPolicyParser {
 		public void emitContent(String content) {
 			buffer.append(",c" + content);
 		}
-
+		@Override
+		public void emitLineBreak() {
+			buffer.append(",break");
+		}
 		@Override
 		public void endParagraph() {
 			buffer.append(",p");

@@ -30,6 +30,11 @@ public interface PolicyTarget {
 	public abstract void emitContent(String content);
 
 	/**
+	 * Outputs a in-paragraph linebreak.
+	 */
+	public abstract void emitLineBreak();
+
+	/**
 	 * A paragraph has ended. If there had been {@link #emitContent(String)}
 	 * before, a call to this method closes the paragraph and starts a new one.
 	 * Note that calls to other functions (e.g.

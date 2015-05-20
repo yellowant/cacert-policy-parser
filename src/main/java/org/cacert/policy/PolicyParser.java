@@ -95,7 +95,15 @@ public class PolicyParser {
 					}
 				}
 			} else {
+				boolean breakAfter = false;
+				if (line.endsWith("\\\\")) {
+					line = line.substring(0, line.length() - 2);
+					breakAfter = true;
+				}
 				out.emitContent(line);
+				if (breakAfter) {
+					out.emitLineBreak();
+				}
 			}
 		}
 	}

@@ -49,6 +49,8 @@ public class PolicyGenerator {
 			convert("DRP");
 			convert("OAP");
 			convert("PoP");
+			convert("PP");
+			convert("RDL");
 		} catch (AssertionError ae) {
 			LOG.severe(String.format("unexpected runtime condition: %s",
 					ae.getMessage()));
