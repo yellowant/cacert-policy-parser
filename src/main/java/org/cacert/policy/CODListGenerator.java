@@ -62,7 +62,7 @@ public class CODListGenerator {
 		});
 		target.emitHeading(1, "1 Introduction", "1");
 		PolicyParser pp = new PolicyParser(target);
-		pp.parse(content.toString());
+		pp.parse(content.toString(), 0);
 
 		target.emitHeading(1, "2 List of Documents", "2");
 		emitCODTable(target, cods, comments);

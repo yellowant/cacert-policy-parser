@@ -79,54 +79,56 @@ public class TestPolicyParser {
 
 	@Test
 	public void testSimpleHeading0() {
-		pp.parse("= 0 Heading =\n= 1 Heading1< =");
+		pp.parse("= 0 Heading =\n= 1 Heading1< =", 0);
 		finish(",h10 Heading->0,h11 Heading1<->1,l");
 	}
 
 	@Test
 	public void testLevelHeading() {
-		pp.parse("= 0 Heading =\n== 0.1 Heading1< ==");
+		pp.parse("= 0 Heading =\n== 0.1 Heading1< ==", 0);
 		finish(",h10 Heading->0,h20.1 Heading1<->0.1,l");
 	}
 	@Test
 	public void testLevelHeadingBig() {
-		pp.parse("= 1 Heading =\n== 1.1 Sub Heading ==\n== 1.2 Sub Heading ==\n== 1.2a Sub Heading ==\n== 1.3 Sub Heading ==\n= 2 Heading =");
+		pp.parse(
+				"= 1 Heading =\n== 1.1 Sub Heading ==\n== 1.2 Sub Heading ==\n== 1.2a Sub Heading ==\n== 1.3 Sub Heading ==\n= 2 Heading =",
+				0);
 		finish(",h11 Heading->1,h21.1 Sub Heading->1.1,h21.2 Sub Heading->1.2,h21.2a Sub Heading->1.2a,h21.3 Sub Heading->1.3,h12 Heading->2,l");
 	}
 	@Test
 	public void testSimpleHeading() {
-		pp.parse("= 1 Heading =\n= 2 Heading1< =");
+		pp.parse("= 1 Heading =\n= 2 Heading1< =", 0);
 		finish(",h11 Heading->1,h12 Heading1<->2,l");
 	}
 	@Test
 	public void testSimpleParagraph() {
-		pp.parse("= 0 Heading =\nThis is the first\n\nthis is the secodn");
+		pp.parse("= 0 Heading =\nThis is the first\n\nthis is the secodn", 0);
 		finish(",h10 Heading->0,cThis is the first,p,cthis is the secodn,l");
 	}
 	@Test
 	public void testMultiParagraph() {
-		pp.parse("= 0 Heading =\nThis is the first\nthis is the secodn");
+		pp.parse("= 0 Heading =\nThis is the first\nthis is the secodn", 0);
 		finish(",h10 Heading->0,cThis is the first,cthis is the secodn,l");
 	}
 	@Test
 	public void testOL() {
-		pp.parse("= 0 Heading =\n#1. it1\n#1. it2");
+		pp.parse("= 0 Heading =\n#1. it1\n#1. it2", 0);
 		// because noone updates the counter
 		finish(",h10 Heading->0,olit1,olit2,l");
 	}
 	@Test
 	public void testUL() {
-		pp.parse("= 0 Heading =\na\n* it1\n* it2\nb\n\nc");
+		pp.parse("= 0 Heading =\na\n* it1\n* it2\nb\n\nc", 0);
 		finish(",h10 Heading->0,ca,ulit11,ulit21,cb,p,cc,l");
 	}
 	@Test
 	public void testULPara() {
-		pp.parse("= 0 Heading =\n\n\na\n* it1\n* it2\nb\n\nc");
+		pp.parse("= 0 Heading =\n\n\na\n* it1\n* it2\nb\n\nc", 0);
 		finish(",h10 Heading->0,p,p,ca,ulit11,ulit21,cb,p,cc,l");
 	}
 	@Test
 	public void testTable() {
-		pp.parse("= 0 Heading =\n{|\n|a\n|b\n|-\n|c\n|d\n|}");
+		pp.parse("= 0 Heading =\n{|\n|a\n|b\n|-\n|c\n|d\n|}", 0);
 		finish(",h10 Heading->0,st,tca,tcb,tr,tcc,tcd,/tab,l");
 	}
 }

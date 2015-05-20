@@ -6,3 +6,142 @@ Status: POLICY
 Change: m20070918.x(https://wiki.cacert.org/TopMinutes-20070917)
 Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
 Editor: Jens Paul
+
+= 0 Preliminaries =
+
+This policy describes how Organisation Assurers ("OAs") conduct Assurances on Organisations. It fits within the overall web-of-trust or Assurance process of CAcert.
+
+This policy is not a Controlled document, for purposes of {&&CCS}.
+= 1 Purpose =
+
+Organisations with assured status can issue certificates directly with their own domains within.
+
+The purpose and statement of the certificate remains the same as with ordinary users (natural persons) and as described in the {&CPS}.
+
+* The organisation named within is identified.
+* The organisation has been verified according to this policy.
+* The organisation is within the jurisdiction and can be taken to CAcert Arbitration. 
+
+= 2 Roles and Structure =
+== 2.1 Assurance Officer ==
+
+The Assurance Officer ("AO") manages this policy and reports to the CAcert Inc. Committee ("Board").
+
+The AO manages all OAs and is responsible for process, the CAcert Organisation Assurance Programme ("COAP") form, OA training and testing, manuals, quality control. In these responsibilities, other Officers will assist.
+
+The OA is appointed by the Board. Where the OA is failing the Board decides.
+== 2.2 Organisation Assurers ==
+
+#1. An OA must be an experienced Assurer
+##1. Have 150 assurance points.
+##2. Be fully trained and tested on all general Assurance processes.
+#2. Must be trained as Organisation Assurer.
+##1. Global knowledge: This policy.
+##2. Global knowledge: A OA manual covers how to do the process.
+##3. Local knowledge: legal forms of organisations within jurisdiction.
+##4. Basic governance.
+##5. Training may be done a variety of ways, such as on-the-job, etc.
+#3. Must be tested.
+##1. Global test: Covers this policy and the process.
+##2. Local knowledge: Subsidiary Policy to specify.
+##3. Tests to be created, approved, run, verified by CAcert only (not outsourced).
+##4. Tests are conducted manually, not online/automatic.
+##5. Documentation to be retained.
+##6. Tests may include on-the-job components.
+#4. Must be approved.
+##1. Two supervising OAs must sign-off on new OA, as trained, tested and passed.
+##2. AO must sign-off on a new OA, as supervised, trained and tested.
+#5. The OA can decide when a CAcert (individual) Assurer has done several OA Application Advises to appoint this person to OA Assurer.
+
+== 2.3 Organisation Assurance Advisor ("OAA") ==
+
+In countries/states/provinces where no OA Assurers are operating for an OA Application (COAP) the OA can be advised by an experienced local CAcert (individual) Assurer to take the decision to accept the OA Application (COAP) of the organisation.
+
+The local Assurer must have at least 150 Points, should know the language, and know the organisation trade office registry culture and quality.
+== 2.4 Organisation Administrator ==
+
+The Administrator within each Organisation ("O-Admin") is the one who handles the assurance requests and the issuing of certificates.
+
+#1. O-Admin must be Assurer
+##1. Have 100 assurance points.
+##2. Fully trained and tested as Assurer.
+#2. Organisation is required to appoint O-Admin, and appoint ones as required.
+##1. On COAP Request Form.
+#3. O-Admin must work with an assigned OA.
+##1. Have contact details.
+
+= 3 Policies =
+== 3.1 Policy ==
+
+There is one policy being this present document, and several subsidiary policies.
+
+#1. This policy authorises the creation of subsidiary policies.
+#2. This policy is international.
+#3. Subsidiary policies are implementations of the policy.
+#4. Organisations are assured under an appropriate subsidiary policy.
+
+== 3.2 Subsidiary Policies ==
+
+The nature of the Subsidiary Policies ("SubPols"):
+
+#1. SubPols are purposed to check the organisation under the rules of the jurisdiction that creates the organisation. This does not evidence an intention by CAcert to enter into the local jurisdiction, nor an intention to impose the rules of that jurisdiction over any other organisation. CAcert assurances are conducted under the jurisdiction of CAcert.
+#2. For OAs, SubPol specifies the tests of local knowledge including the local organisation assurance COAP forms.
+#3. For assurances, SubPol specifies the local documentation forms which are acceptable under this SubPol to meet the standard.
+#4. SubPols are subjected to the normal policy approval process. 
+
+== 3.3 Freedom to Assemble ==
+
+Subsidiary Policies are open, accessible and free to enter.
+
+#1. SubPols compete but are compatible.
+#2. No SubPol is a franchise.
+#3. Many will be on State or National lines, reflecting the legal tradition of organisations created ("incorporated") by states.
+#4. However, there is no need for strict national lines; it is possible to have 2 SubPols in one country, or one covering several countries with the same language (e.g., Austria with Germany, England with Wales but not Scotland).
+#5. There could also be SubPols for special organisations, one person organisations, UN agencies, churches, etc.
+#6. Where it is appropriate to use the SubPol in another situation (another country?), it can be so approved. (e.g., Austrian SubPol might be approved for Germany.) The SubPol must record this approval. 
+
+= 4 Process =
+== 4.1 Standard of Organisation Assurance ==
+
+The essential standard of Organisation Assurance is:
+
+#1. the organisation exists
+#2. the organisation name is correct and consistent:
+##1. in official documents specified in SubPol.
+##2. on COAP form.
+##3. in CAcert database.
+##4. form or type of legal entity is consistent
+#3. signing rights: requestor can sign on behalf of the organisation.
+#4. the organisation has agreed to the terms of the CAcert Community Agreement and is therefore subject to Arbitration. 
+
+Acceptable documents to meet above standard are stated in the SubPol.
+== 4.2 COAP ==
+
+The COAP form documents the checks and the resultant assurance results to meet the standard. Additional information to be provided on form:
+
+#1. CAcert account of O-Admin (email address?)
+#2. location:
+##1. country (MUST).
+##2. city (MUST).
+##3. additional contact information (as required by SubPol).
+#3. administrator account name(s) (1 or more)
+#4. domain name(s)
+#5. Agreement with CAcert Community Agreement. Statement and initials box for organisation and also for OA.
+#6. Date of completion of Assurance. Records should be maintained for 7 years from this date. 
+
+The COAP should be in English. Where translations are provided, they should be matched to the English, and indication provided that the English is the ruling language (due to Arbitration requirements).
+
+== 4.3 Jurisdiction ==
+
+Organisation Assurances are carried out by CAcert Inc. under its Arbitration jurisdiction. Actions carried out by OAs are under this regime.
+
+#1. The organisation has agreed to the terms of the CAcert Community Agreement.
+#2. The organisation, the Organisation Assurers, CAcert and other related parties are bound into CAcert's jurisdiction and dispute resolution.
+#3. The OA is responsible for ensuring that the organisation reads, understands, intends and agrees to the CAcert Community Agreement. This OA responsibility should be recorded on COAP (statement and initials box). 
+
+= 5 Exceptions =
+
+#1. Conflicts of Interest. An OA must not assure an organisation in which there is a close or direct relationship by, e.g., employment, family, financial interests. Other conflicts of interest must be disclosed.
+#2. Trusted Third Parties. TTPs are not generally approved to be part of organisation assurance, but may be approved by subsidiary policies according to local needs.
+#3. Exceptional Organisations. (e.g., Vatican, International Space Station, United Nations) can be dealt with as a single-organisation SubPol. The OA creates the checks, documents them, and subjects them to to normal policy approval.
+#4. DBA. Alternative names for organisations (DBA, "doing business as") can be added as long as they are proven independently. E.g., registration as DBA or holding of registered trade mark. This means that the anglo law tradition of unregistered DBAs is not accepted without further proof.

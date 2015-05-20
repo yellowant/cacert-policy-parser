@@ -31,10 +31,12 @@ public class PolicyParser {
 	 * 
 	 * @param templateDoc
 	 *            the content of the document to process
+	 * @param headerLen
 	 */
-	public void parse(String templateDoc) {
+	public void parse(String templateDoc, int headerLen) {
 		String[] lines = templateDoc.split("\n");
 		for (int i = 0; i < lines.length; i++) {
+			int lineN = i + headerLen;
 			String line = lines[i];
 			line = line.trim();
 			if (line.isEmpty()) {
@@ -42,17 +44,17 @@ public class PolicyParser {
 			} else if (line.startsWith("=")) {
 				number = 0;
 				if (line.startsWith("= ") && line.endsWith(" =")) {
-					handleHeading(line, 1, i);
+					handleHeading(line, 1, lineN);
 				} else if (line.startsWith("== ") && line.endsWith(" ==")) {
-					handleHeading(line, 2, i);
+					handleHeading(line, 2, lineN);
 				} else {
-					System.err.println("Crappy header in line: " + i);
+					System.err.println("Crappy header in line: " + lineN);
 					return;
 				}
 			} else if (line.startsWith("#")) {
 				String[] parts = line.split(" ", 2);
 				if (parts.length != 2 || !parts[0].endsWith(".")) {
-					throw new Error("Invalid numbering in line " + i);
+					throw new Error("Invalid numbering in line " + lineN);
 				}
 				int depth = 0;
 				while (parts[0].startsWith("#")) {
@@ -68,8 +70,8 @@ public class PolicyParser {
 				parts[1] = parts[1].trim();
 				if (num != out.getListCounter(depth) + 1) {
 					System.out.println(line);
-					throw new Error("Invalid numbering in line " + i + " is "
-							+ num + " should be "
+					throw new Error("Invalid numbering in line " + lineN
+							+ " is " + num + " should be "
 							+ (out.getListCounter(depth) + 1));
 				}
 				out.emitOrderedListItem(parts[1], depth);

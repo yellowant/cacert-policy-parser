@@ -20,13 +20,13 @@ import java.util.logging.Logger;
 import org.cacert.policy.HTMLSynthesizer.Link;
 
 public class PolicyGenerator {
-	public PolicyGenerator(String templateDoc, File target, COD doc)
-			throws IOException {
+	public PolicyGenerator(String templateDoc, File target, COD doc,
+			int headerLen) throws IOException {
 		PolicyTarget out = new HTMLSynthesizer(new PrintWriter(
 				new OutputStreamWriter(new FileOutputStream(target), "UTF-8")),
 				doc);
-		PolicyParser parser = new PolicyParser(out);
-		parser.parse(templateDoc);
+		final PolicyParser parser = new PolicyParser(out);
+		parser.parse(templateDoc, headerLen);
 		out.close();
 	}
 	private static Map<String, Entity> cods;
@@ -47,6 +47,8 @@ public class PolicyGenerator {
 			convert("CCA");
 			convert("CCS");
 			convert("DRP");
+			convert("OAP");
+			convert("PoP");
 		} catch (AssertionError ae) {
 			LOG.severe(String.format("unexpected runtime condition: %s",
 					ae.getMessage()));
@@ -201,12 +203,18 @@ public class PolicyGenerator {
 			buf.append(buffer, 0, len);
 		}
 		int firstEmptyLine = buf.indexOf("\n\n");
+		int count = 3;
+		for (int i = 0; i < firstEmptyLine; i++) {
+			if (buf.charAt(i) == '\n') {
+				count++;
+			}
+		}
 		buf.delete(0, firstEmptyLine + 2);
 		String document = buf.toString();
 		File target = new File("policy/" + path + ".html");
 		target.getAbsoluteFile().getParentFile().mkdirs();
 		new PolicyGenerator(document, target, (COD) PolicyGenerator
-				.getEntities().get(name));
+				.getEntities().get(name), count);
 		r.close();
 	}
 }
