@@ -87,6 +87,7 @@ public class GenerateDiffs {
 			policy.append(buf, 0, len);
 		}
 		String s = policy.toString();
+		s = s.replaceAll("<!--([^-]|-[^-]|--[^>])*-->", "");
 		s = s.replaceAll("<style[^>]+>[^<]*</style>", "");
 		s = s.replaceAll("<[^>]+>", "");
 		s = s.replaceAll("\\r", "");
