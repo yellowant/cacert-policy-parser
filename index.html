@@ -1,0 +1,35 @@
+<!Doctype html>
+<html style="background-color: #ccc">
+<head><title>CAcert Policy Cleaning Proposal</title></head>
+<body style="max-width: 800px; margin: auto; background-color: #fff; padding: 30px; margin-top: 40px">
+<h1>CAcert Policy Cleaning Proposal</h1>
+<p>
+Currently CAcerts policies are managed by many people writing differently-styled and differently-valid html source.
+The vote, if a policy document is going to be changed is based upon a HTML-document/HTML-source.
+</p>
+<p>
+This page aims to give you an overview of what the change is going to be, if it is accepted.
+</p>
+<p>
+The best impression of what the new policy-files would look like might be by looking at the <a href='policy'>generated HTML files</a> directly.
+From this new "index"-page you can navigate directly to all Policy Documents, that have been already converted (That are at least, AP, CCA, CCS, DRP, OAP and PoP).
+</p>
+<p>
+The source of these documents can be found <a href="https://github.com/yellowant/cacert-policy-parser/tree/master/policyText">here</a>.
+This is going to be the content that PolG votes on.
+</p>
+<p>
+In order to help you understand what exactly changes on a character level, we prepared diffs.
+We stripped the HTML of both the new and the old HTML-documents and re-formatted the text (e.g. removing spaces, newlines, etc).
+Then we did a word-diff between those two document sets. You can see the result in the ".diff.html"-files <a href="old">here</a>.
+You can also run that diff by yourself by cloning <a href="https://github.com/yellowant/cacert-policy-parser">https://github.com/yellowant/cacert-policy-parser</a>
+and running "org.cacert.policy.GenerateDiffs" after having run "org.cacert.policy.PolicyGenerator", when you have "wdiff" installed.
+
+If you'd only like to have a look on the stripping/reformating-tool, you can take a look <a href="https://github.com/yellowant/cacert-policy-parser/tree/master/src/test/java/org/cacert/policy/GenerateDiffs.java">here</a>.
+</p>
+<p>
+With this proposal come content-changes to the PoP. Those changes are not yet made. You can look them up in the <a href="https://github.com/yellowant/cacert-policy-parser/tree/master/policyText/PoP.txt">new Policy File Format</a>, see the <a href="old/PoP.diff.html">diff the old PoP text-wise</a>, or look at the <a href="policy/PoP.html">proposed new PoP</a>.
+</p>
+
+</body>
+</html>
