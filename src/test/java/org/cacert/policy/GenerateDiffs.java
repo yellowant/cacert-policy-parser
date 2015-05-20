@@ -21,13 +21,16 @@ public class GenerateDiffs {
 		File target = new File("old");
 		target.mkdirs();
 		HashMap<String, String> urls = new HashMap<>();
-		urls.put("DRP",
-				"https://www.cacert.org/policy/DisputeResolutionPolicy.html");
 		urls.put("AP", "https://www.cacert.org/policy/AssurancePolicy.html");
 		urls.put("CCA",
 				"https://www.cacert.org/policy/CAcertCommunityAgreement.html");
 		urls.put("CCS",
 				"https://www.cacert.org/policy/ConfigurationControlSpecification.html");
+		urls.put("DRP",
+				"https://www.cacert.org/policy/DisputeResolutionPolicy.html");
+		urls.put("OAP",
+				"https://www.cacert.org/policy/OrganisationAssurancePolicy.html");
+		urls.put("PoP", "https://www.cacert.org/policy/PolicyOnPolicy.html");
 		for (Entry<String, String> entry : urls.entrySet()) {
 			URL u = new URL(entry.getValue());
 			Reader r = new InputStreamReader(u.openStream());
@@ -47,7 +50,7 @@ public class GenerateDiffs {
 					p.getInputStream()));
 
 			PrintWriter out = new PrintWriter(new File(target, entry.getKey()
-					+ ".html"));
+					+ ".diff.html"));
 			out.println("<!Doctype html><html><head><title>diff of "
 					+ entry.getKey() + "</title></head><body>");
 			String s;
