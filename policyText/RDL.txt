@@ -40,3 +40,4 @@ THIS LICENSE SPECIFICALLY DOES NOT PERMIT YOU TO RELY UPON ANY CERTIFICATES ISSU
 = 5 Statutory Rights =
 
 Nothing in this license affects any statutory rights that cannot be waived or limited by contract. In the event that any provision of this license is held to be invalid or unenforceable, the remaining provisions of this license remain in full force and effect.
+Alternatives If you find the terms of the above Root Distribution License difficult or inadequate for your purposes, you may wish to: Enter into the CAcert Community Agreement by registering as a Member. This is free. Delete CAcert Root Certificates from your software. Your software documentation should give directions and assistance for this. These alternatives are outside the above Root Distribution License and do not incorporate.
