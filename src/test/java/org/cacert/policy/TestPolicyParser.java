@@ -72,6 +72,11 @@ public class TestPolicyParser {
 
 		}
 
+		@Override
+		public void emitDescriptionItem(String key, String content, int lvl) {
+			buffer.append(",d" + key + "," + content);
+		}
+
 	}
 	DummyTarget dt = new DummyTarget();
 	PolicyParser pp = new PolicyParser(dt);

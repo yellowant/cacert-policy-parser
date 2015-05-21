@@ -39,6 +39,11 @@ Unordered List
 ** Sub-item to item 2
 * Item 3
 
+Description:
+
+[Member] someone within CAcert
+[Other Term] another term that needs to be explained.
+
 
 Table: (newlines required) only may contain plain text.
 

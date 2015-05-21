@@ -47,6 +47,8 @@ public class PolicyParser {
 					handleHeading(line, 1, lineN);
 				} else if (line.startsWith("== ") && line.endsWith(" ==")) {
 					handleHeading(line, 2, lineN);
+				} else if (line.startsWith("=== ") && line.endsWith(" ===")) {
+					handleHeading(line, 3, lineN);
 				} else {
 					System.err.println("Crappy header in line: " + lineN);
 					return;
@@ -75,6 +77,9 @@ public class PolicyParser {
 							+ (out.getListCounter(depth) + 1));
 				}
 				out.emitOrderedListItem(parts[1], depth);
+			} else if (line.startsWith("[")) {
+				String[] parts = line.substring(1).split("] ", 2);
+				out.emitDescriptionItem(parts[0], parts[1], 1);
 			} else if (line.startsWith("* ")) {
 				out.emitUnorderedListItem(line.substring(2), 1);
 			} else if (line.startsWith("** ")) {

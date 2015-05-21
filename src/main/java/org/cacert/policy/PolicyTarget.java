@@ -68,6 +68,16 @@ public interface PolicyTarget {
 	public abstract void emitOrderedListItem(String content, int lvl);
 
 	/**
+	 * Output an item that describes a key.
+	 * 
+	 * @param content
+	 *            The text that is in this list item.
+	 * @param lvl
+	 *            The level of the item (1 of top level and incresing)
+	 */
+	public abstract void emitDescriptionItem(String key, String content, int lvl);
+
+	/**
 	 * Begins a table.
 	 * 
 	 * @param clas

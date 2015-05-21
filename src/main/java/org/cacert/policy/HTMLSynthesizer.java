@@ -168,6 +168,8 @@ public class HTMLSynthesizer implements PolicyTarget {
 			if (content.startsWith("&&")) {
 				return PolicyGenerator.getEntities().get(parts[0].substring(2))
 						.getLongLink(anchor, hrefName);
+			} else if (parts[0].equals("&")) {
+				return myDoc.getShortLink(anchor, hrefName);
 			} else {
 				return PolicyGenerator.getEntities().get(parts[0].substring(1))
 						.getShortLink(anchor, hrefName);
@@ -215,6 +217,21 @@ public class HTMLSynthesizer implements PolicyTarget {
 		}
 		listCounter[listDepth - 1]++;
 		out.println("  <li>" + formatContent(content) + "</li>");
+	}
+	@Override
+	public void emitDescriptionItem(String key, String content, int lvl) {
+		state(State.UL);
+		while (listDepth < lvl) {
+			listDepth++;
+			out.println("<ul>");
+		}
+		while (listDepth > lvl) {
+			listDepth--;
+			out.println("</ul>");
+		}
+		out.println("  <li><span class='desc-key' style='font-weight: bold'>"
+				+ formatContent(key) + "</span> "//
+				+ formatContent(content) + "</li>");
 	}
 
 	@Override
