@@ -34,6 +34,7 @@ public class GenerateDiffs {
 		urls.put("PP", "https://www.cacert.org/policy/PrivacyPolicy.html");
 		urls.put("RDL",
 				"https://www.cacert.org/policy/RootDistributionLicense.html");
+		urls.put("SP", "https://www.cacert.org/policy/SecurityPolicy.html");
 		for (Entry<String, String> entry : urls.entrySet()) {
 			URL u = new URL(entry.getValue());
 			Reader r = new InputStreamReader(u.openStream());

@@ -13,7 +13,8 @@ public class PolicyParser {
 	private static final Pattern[] headings = new Pattern[]{
 			Pattern.compile("([0-9]+[a-z]?)"),
 			Pattern.compile("([0-9]+[a-z]?)\\.([0-9]+[a-z]?)"),
-			Pattern.compile("([0-9]+[a-z]?)\\.([0-9]+[a-z]?)\\.([0-9]+[a-z]?)")};
+			Pattern.compile("([0-9]+[a-z]?)\\.([0-9]+[a-z]?)\\.([0-9]+[a-z]?)"),
+			Pattern.compile("([0-9]+[a-z]?)\\.([0-9]+[a-z]?)\\.([0-9]+[a-z]?)\\.([0-9]+[a-z]?)")};
 	String[] headingCounter = new String[3];
 
 	/**
@@ -49,6 +50,8 @@ public class PolicyParser {
 					handleHeading(line, 2, lineN);
 				} else if (line.startsWith("=== ") && line.endsWith(" ===")) {
 					handleHeading(line, 3, lineN);
+				} else if (line.startsWith("==== ") && line.endsWith(" ====")) {
+					handleHeading(line, 4, lineN);
 				} else {
 					System.err.println("Crappy header in line: " + lineN);
 					return;
