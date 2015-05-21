@@ -11,18 +11,18 @@ Editor: Iang(https://wiki.cacert.org/Iang)
 = 0 Preliminaries =
 == 0.1 Authority ==
 
-This sub-policy extends the Assurance Policy ("AP" => COD13) by specifying how Juniors can be brought into the CAcert Community.
+This sub-policy extends the {&&AP} by specifying how Juniors can be brought into the CAcert Community.
 == 0.2 Terms ==
 
-#1. "Minor" is a person who is not empowered to enter contracts as self under local laws.
-#2. "Junior" is a person under 18. A Junior is probably a Minor.
-#3. "Parent", is a competent adult that is legally responsible under local law for the Minor. E.g., a natural or adopted parent, or a legal guardian. Unless otherwise stated, the singular term Parent is used herein, and is used to cover all forms of persons that are legally responsible for the Minor.
+[Minor] is a person who is not empowered to enter contracts as self under local laws.
+[Junior] is a person under 18. A Junior is probably a Minor.
+[Parent] is a competent adult that is legally responsible under local law for the Minor. E.g., a natural or adopted parent, or a legal guardian. Unless otherwise stated, the singular term Parent is used herein, and is used to cover all forms of persons that are legally responsible for the Minor.
 
 = 1 Scope =
 
 1.1 This policy applies to all Members of the CAcert Community
 
-1.2 Although variations exist in different countries, CAcert works to a principle of no discrimination (Principles) and therefore imposes the same view across all countries.
+1.2 Although variations exist in different countries, CAcert works to a principle of no discrimination ({&Principles}) and therefore imposes the same view across all countries.
 
 = 2 Entering the Community =
 
@@ -57,7 +57,7 @@ that consent was established during the Assurance,
 or otherwise as considered by the Assurer,
 before additional higher reliance products are available.
 
-The system therefore will block all "reliance" products as defined by policy (issuance of named certificates under CPS, Assurer under AP), until consent is established as appropriate.
+The system therefore will block all "reliance" products as defined by policy (issuance of named certificates under {&CPS}, Assurer under {&AP}), until consent is established as appropriate.
 
 The absence of this feature does not remove the duty of the Assurer (for example, because of delays in implementation).
 
@@ -66,17 +66,17 @@ The absence of this feature does not remove the duty of the Assurer (for example
 3.5 The {&&AH} should document more efficient methods, such as a single form carried by the Junior Member for showing to the Assurer, rather than the Parent's signature over each individual CAP form.
 = 4 The Junior Assurer =
 
-4.1 Assurer status may only be granted if the user is at least 14 years old. Other preliminaries for the Assurer status set up by other policies are untouched. Combining AP and this policy, a Junior Assurer is a CAcert member with 100 Assurance Points, has passed the CAcert Assurer Challenge, and is between the ages of 14 and 18 years.
+4.1 Assurer status may only be granted if the user is at least 14 years old. Other preliminaries for the Assurer status set up by other policies are untouched. Combining {&AP} and this policy, a Junior Assurer is a CAcert member with 100 Assurance Points, has passed the CAcert Assurer Challenge, and is between the ages of 14 and 18 years.
 
 4.2 A Junior Assurer can issue a maximum of 10 Assurance Points to an assuree, independent of how many Experience Points the Junior already has. The Experience Points awarded to the Junior Assurer are untouched.
 
 4.3 The {&&AH} should stipulate the convention as to how the Junior Assurer establishes bona fides.
 = 5 Arbitration =
 
-Arbitration with Juniors needs to take into account that a local court may find the CCA to be improperly imposed. Some understanding of this risk should be taken, but Arbitrators should be careful not to weaken the web of trust on this basis. Therefore, more care should be taken in explaining and ensuring the spirit of the CCA is maintained.
+Arbitration with Juniors needs to take into account that a local court may find the {&CCA} to be improperly imposed. Some understanding of this risk should be taken, but Arbitrators should be careful not to weaken the web of trust on this basis. Therefore, more care should be taken in explaining and ensuring the spirit of the {&CCA} is maintained.
 
 * The Parent may be concerned about the impact of an Arbitration. Technically, the consenting Parent is the one appearing in the Arbitration. The Arbitrator should recognise both the technical (legal) meaning, but strive to maintain the spirit of the Junior member's appearance. For example, Arbitration documentation may name the Parent primarily, and refer to the Junior in text.
 * The Arbitrator may appoint a senior Assurer to advise the Parent on the nature of the Community.
 * A ruling should be tested by comparing it to an adult scenario.
 
-The counter-situation to a weak CCA agreement is that if a person (of any age) feels the CCA to be inappropriate, then they have not entered into the Community. The Arbitrator is at liberty to terminate the CCA with a Member, if there is a sustainable view that it is inappropriate. Such termination should include measures needed to repair the web of trust.
+The counter-situation to a weak {&CCA} agreement is that if a person (of any age) feels the {&CCA} to be inappropriate, then they have not entered into the Community. The Arbitrator is at liberty to terminate the {&CCA} with a Member, if there is a sustainable view that it is inappropriate. Such termination should include measures needed to repair the web of trust.

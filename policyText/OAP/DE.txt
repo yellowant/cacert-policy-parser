@@ -12,7 +12,7 @@ This sub-policy describes how Organisation Assurers ("OAs") conduct assurances o
 
 
 = 1 Purpose =
-This is a subsidiary policy to the OAP.
+This is a subsidiary policy to the {&OAP}.
 
 #1. This sub-policy is applicable for the assurance of German organisations only.
 #2. This sub-policy is an implementation of the OAP.

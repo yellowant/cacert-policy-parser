@@ -22,6 +22,10 @@ public class GenerateDiffs {
 		target.mkdirs();
 		HashMap<String, String> urls = new HashMap<>();
 		urls.put("AP", "https://www.cacert.org/policy/AssurancePolicy.html");
+		urls.put("AP/PoJAM",
+				"https://www.cacert.org/policy/PolicyOnJuniorAssurersMembers.html");
+		urls.put("AP/TTP",
+				"https://www.cacert.org/policy/TTPAssistedAssurancePolicy.html");
 		urls.put("CCA",
 				"https://www.cacert.org/policy/CAcertCommunityAgreement.html");
 		urls.put("CCS",
@@ -30,6 +34,10 @@ public class GenerateDiffs {
 				"https://www.cacert.org/policy/DisputeResolutionPolicy.html");
 		urls.put("OAP",
 				"https://www.cacert.org/policy/OrganisationAssurancePolicy.html");
+		urls.put("OAP/DE",
+				"https://www.cacert.org/policy/OrganisationAssurancePolicy_Germany.html");
+		urls.put("OAP/AU",
+				"https://www.cacert.org/policy/OrganisationAssurancePolicy_Australia.html");
 		urls.put("PoP", "https://www.cacert.org/policy/PolicyOnPolicy.html");
 		urls.put("PP", "https://www.cacert.org/policy/PrivacyPolicy.html");
 		urls.put("RDL",
@@ -38,23 +46,27 @@ public class GenerateDiffs {
 		for (Entry<String, String> entry : urls.entrySet()) {
 			URL u = new URL(entry.getValue());
 			Reader r = new InputStreamReader(u.openStream());
-			clean(r, new FileWriter(new File(target, entry.getKey()
-					+ ".old.txt")));
+			File f = new File(target, entry.getKey().replace("/", ".")
+					+ ".old.txt");
+			clean(r, new FileWriter(f));
 			clean(new FileReader("policy/" + entry.getKey() + ".html"),
-					new FileWriter(
-							new File(target, entry.getKey() + ".new.txt")));
+					new FileWriter(new File(target, entry.getKey().replace("/",
+							".")
+							+ ".new.txt")));
 			Process p = Runtime.getRuntime().exec(
 					new String[]{"wdiff", "-n", "-w",
 							"<span style='background-color:#FFBBBB'>", "-x",
 							"</span>", "-y",
 							"<span style='background-color: #BBFFBB'>", "-z",
-							"</span>", entry.getKey() + ".old.txt",
-							entry.getKey() + ".new.txt"}, null, target);
+							"</span>",
+							entry.getKey().replace("/", ".") + ".old.txt",
+							entry.getKey().replace("/", ".") + ".new.txt"},
+					null, target);
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					p.getInputStream()));
 
 			PrintWriter out = new PrintWriter(new File(target, entry.getKey()
-					+ ".diff.html"));
+					.replace("/", ".") + ".diff.html"));
 			out.println("<!Doctype html><html><head><title>diff of "
 					+ entry.getKey() + "</title></head><body>");
 			String s;
@@ -66,7 +78,6 @@ public class GenerateDiffs {
 
 		}
 	}
-
 	/**
 	 * Clean the input html so that it's roughly plaintext.
 	 * 

@@ -220,8 +220,8 @@ The Committee (board) of CAcert Inc. appoints an Assurance Officer with the foll
 
 * Reporting to the Committee and advising on all matters to do with Assurance;
 * Training and testing of Assurers, in association with the Education Team;
-* Updating this Assurance Policy, under the process established by Policy on Policy (PoP);
-* Management of all Subsidiary Policies (see below) for Assurances, under Policy on Policy;
+* Updating this Assurance Policy, under the process established by {&&PoP};
+* Management of all Subsidiary Policies (see below) for Assurances, under {&&PoP};
 * Managing and creating rules of detail or procedure where inappropriate for policies;
 * Incorporating rulings from Arbitration into policies, procedures or guidelines;
 * Assisting the Arbitrator in any requests;
