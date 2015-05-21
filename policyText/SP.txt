@@ -128,7 +128,7 @@ All personel who are in possession of physical security codes and devices (keys)
 Current and complete diagrams of the physical and logical CAcert network infrastructure shall be maintained by Systems Administration team leader. These diagrams should include cabling information, physical port configuration details, expected/allowed data flow directions, and any further pertinent information, as applicable. Diagrams should be revision controlled, and must be updated when any change is made.
 ==== 3.1.1.1 External connectivity ====
 
-Only such services as are required for normal operation should be visible externally; systems and servers which do not require access to the Internet for their normal operation must not be granted that access. If such access becomes temporarily necessary for an authorized administrative task, such access may be granted under the procedures of the SM and must be reported and logged.
+Only such services as are required for normal operation should be visible externally; systems and servers which do not require access to the Internet for their normal operation must not be granted that access. If such access becomes temporarily necessary for an authorized administrative task, such access may be granted under the procedures of the {&SM} and must be reported and logged.
 ==== 3.1.1.2 Internal connectivity ====
 
 System and server connections internal to the CAcert infrastructure should be kept to the minimum required for routine operations. Any new connectivity desired must be requested and approved by System administration team leader and then must be reflected in the appropriate infrastructure diagram(s).
@@ -286,7 +286,7 @@ Conditions and procedures for examining the backups must be documented, and must
 == 4.4 Data retention ==
 === 4.4.1 User data ===
 
-Termination of user data is under direction of the Arbitrator. See CCA.
+Termination of user data is under direction of the Arbitrator. See {&CCA}.
 === 4.4.2 System logs ===
 
 See {&#4.2.1}.
@@ -339,7 +339,7 @@ Board must maintain a Key Persons List with all the contact information needed. 
 Software assessment team is responsible for the security and maintenance of the code.
 == 7.1 Authority ==
 
-The source code is under CCS. Additions to the team are subject to Board approval. See {&#3.4.2}.
+The source code is under {&CCS}. Additions to the team are subject to Board approval. See {&#3.4.2}.
 == 7.2 Tasks ==
 
 The primary tasks for Software Assessors are:
@@ -363,7 +363,7 @@ Software assessment team maintains a bug system. Primary communications should g
 = 8 SUPPORT =
 == 8.1 Authority ==
 
-The software interface gives features to Support Engineer. Access to the special features is under tight control. Additions to the team are subject to Board approval, and the software features are under CCS. See {&#3.4.2}.
+The software interface gives features to Support Engineer. Access to the special features is under tight control. Additions to the team are subject to Board approval, and the software features are under {&CCS}. See {&#3.4.2}.
 
 Support Engineers do not have any inherent authority to take any action, and they have to get authority on a case-by-case basis. The authority required in each case must be guided by this policy or the Security Manual or other clearly applicable document. If the Member's authority is not in doubt, the Member can give that authority. If not, the Arbitrator's authority must be sought.
 
@@ -513,7 +513,7 @@ Components may be outsourced. Any outsourcing arrangements must be documented. A
 * transparent and no barrier to security,
 * under this Policy and the Security Manual,
 * fully under Arbitration and {&DRP} for the purposes of Security, and
-* under the spirit of the Community and within the Principles of CAcert. 
+* under the spirit of the Community and within the {&&Principles}. 
 
 Contracts should be written with the above in mind. Outsourcing of critical components must be approved by the Board.
 == 9.5 Confidentiality, Secrecy ==

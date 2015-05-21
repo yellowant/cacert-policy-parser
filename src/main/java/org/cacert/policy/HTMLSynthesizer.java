@@ -154,6 +154,12 @@ public class HTMLSynthesizer implements PolicyTarget {
 		return resolved.toString();
 	}
 	private String formatPlain(String escape) {
+		for (Entity e : PolicyGenerator.getEntities().values()) {
+			if (escape.matches("(^|.*[^A-Z])" + e.getAbbrev() + "([^A-Z].*|$)")) {
+				System.err.println("WARNING: possible unlinked entity "
+						+ e.getAbbrev() + " in " + escape);
+			}
+		}
 		return escape.replaceAll("\\[i\\]([^\\[]+)\\[/i\\]", "<i>$1</i>");
 	}
 	private String resolveLink(String content) {

@@ -199,6 +199,7 @@ public class PolicyGenerator {
 	private static void convert(String path, String name) throws IOException {
 		Reader r = new InputStreamReader(new FileInputStream(new File(
 				"policyText/" + path + ".txt")), "UTF-8");
+		System.out.println("Converting: " + path);
 		StringBuffer buf = new StringBuffer();
 		char[] buffer = new char[4096];
 		int len;
