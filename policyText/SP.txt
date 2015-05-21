@@ -66,7 +66,7 @@ Section Headings are the same in both documents. Where Sections are empty in one
 === 1.4.3 The Security Procedures ===
 
 The team leaders may from time to time explicitly defer single, cohesive components of the security practices into separate procedures documents. Each procedure should be managed in a wiki page under their control, probably at {http://wiki.cacert.org/SystemAdministration/Procedures}. Each procedure must be referenced explicitly in the {&&SM}.
-= 2 PHYSICAL SECURITY =
+= 2 Physical Security =
 == 2.1 Facility ==
 
 CAcert shall host critical servers in a highly secure facility. There shall be independent verification of the physical and access security.
@@ -121,7 +121,7 @@ There must not be a procedure for emergency access. If, in the judgement of the 
 === 2.3.5 Physical Security codes & devices ===
 
 All personel who are in possession of physical security codes and devices (keys) are to be authorised and documented.
-= 3 LOGICAL SECURITY =
+= 3 Logical Security =
 == 3.1 Network ==
 === 3.1.1 Infrastructure ===
 
@@ -219,7 +219,7 @@ Strong methods of authentication shall be used wherever possible. All authentica
 
 Follow-up actions to termination must be documented. See {&#9.1.7}.
 
-= 4 OPERATIONAL SECURITY =
+= 4 Operational Security =
 == 4.1 System administration ==
 
 Primary Systems Administration tasks shall be conducted under four eyes principle. These shall include backup performance verification, software patch application, account creation and deletion, and hardware maintenance.
@@ -293,7 +293,7 @@ See {&#4.2.1}.
 === 4.4.3 Incident reports ===
 
 See {&#5.6}.
-= 5 INCIDENT RESPONSE =
+= 5 Incident Response =
 == 5.1 Incidents ==
 == 5.2 Detection ==
 
@@ -319,7 +319,7 @@ Incidents must be investigated. The investigation must be documented. If the sev
 Incident reports shall be be published. The Incident Report is written on closing the investigation. A full copy should be appended to the documentation of the investigation. Sensitive information may be pushed out into a restricted appendix of the report. The Systems Administration team leader is responsible for publication and maintenance.
 
 Incidents are not normally kept secret nor confidential, and progress information should be published as soon as possible. The knowledge of the existence of the event must not be kept secret, nor the manner and methods be kept confidential. See {&#9.5}.
-= 6 DISASTER RECOVERY =
+= 6 Disaster Recovery =
 
 Disaster Recovery is the responsibility of the Board of CAcert Inc.
 == 6.1 Business Processes ==
@@ -334,7 +334,7 @@ Board must have a basic plan to recover.
 == 6.4 Key Persons List ==
 
 Board must maintain a Key Persons List with all the contact information needed. See {&#10.1}. The list shall be accessible even if CAcert's infrastructure is not available.
-= 7 SOFTWARE ASSESSMENT =
+= 7 Software Assessment =
 
 Software assessment team is responsible for the security and maintenance of the code.
 == 7.1 Authority ==
@@ -360,7 +360,7 @@ Software assessment team maintains a test system. Each patch should be built and
 
 Software assessment team maintains a bug system. Primary communications should go through this system. Management access should be granted to all Software Assessors, software developers, and Systems Administrators. Bug submission access should be provided to any Member that requests it.
 == 7.6 Production ==
-= 8 SUPPORT =
+= 8 Support =
 == 8.1 Authority ==
 
 The software interface gives features to Support Engineer. Access to the special features is under tight control. Additions to the team are subject to Board approval, and the software features are under {&CCS}. See {&#3.4.2}.
@@ -389,7 +389,7 @@ Support may always be contacted by email at support at cacert dot org. Other cha
 
 Support Engineers refer questions requiring authority to Arbitration, and may also be called upon to act as default Case Managers. See {&DRP} and {&Case Manager's Handbook}. Support Engineers should be familiar with these topics, even if not listed as Arbitrators or Case Managers.
 == 8.6 References ==
-= 9 ADMINISTRATIVE =
+= 9 Administrative =
 == 9.1 Staffing ==
 === 9.1.1 Roles and responsibilities ===
 
@@ -521,7 +521,7 @@ Contracts should be written with the above in mind. Outsourcing of critical comp
 CAcert is an open organisation and adopts a principle of open disclosure wherever possible. See {&Principles}. This is not a statement of politics but a statement of security; if a security issue can only be sustained under some confidentiality or secrecy, then find another way.
 
 In concrete terms, confidentiality or secrecy may be maintained only under a defined method in policy, or under the oversight of the Arbitrator (which itself is under {&DRP}). The exception itself must not be secret or confidential. All secrets and confidentials are reviewable under Arbitration, and may be reversed. All should strive to reduce or remove any such restriction.
-= 10 REFERENCES =
+= 10 References =
 == 10.1 Contacts ==
 
 Contact information for all key people and teams must be documented.
