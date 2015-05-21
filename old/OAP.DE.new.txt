@@ -1,0 +1,17 @@
+Organisation Assurance - sub-policy for Germany (OAP-DE) Name: OAP-DE [COD11.DE] Status: TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20140731, if voted for it) Editor: Jens Paul Changes: p20071022, p20140731 Licence: CC-by-sa+DRP TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Organisation Assurance - sub-policy for Germany (OAP-DE)Table of Contents
+0 Preliminaries
+1 Purpose
+2 Organisation Assurers
+3 Requirements for the Organisation Assurer
+4 Process
+5 Organisations
+6 Documents
+7 COAP
+0 Preliminaries This sub-policy describes how Organisation Assurers ("OAs") conduct assurances on German organisations. It fits within the overall web-of-trust or assurance process and the Organisation Assurance Policy (OAP) of CAcert.
+1 Purpose This is a subsidiary policy to the OAP [COD11]. This sub-policy is applicable for the assurance of German organisations only. This sub-policy is an implementation of the OAP. In the below, where the Assurance Officer (AO) is referred to, this includes his local delegate.
+2 Organisation Assurers
+3 Requirements for the Organisation Assurer In addition to the requirements defined in the OAP, an OA must meet the following requirements for assuring German organisations: Knowledge on common legal forms of organisations in Germany. Must pass an additional test on local knowledge even if he is already an OA. Should help the AO to define local requirements.
+4 Process
+5 Organisations Acceptable organisations under this sub-policy must be: Organisations created under the rules of the German jurisdiction. Organisations must not be revoked by a competent authority with direct oversight over the organisation.
+6 Documents The organisation has to provide documents to prove the essential standard of Organisation Assurance as defined in the policy: The primary mechanism to prove existence is to get an official extract from the official register, either via an online interface or via physical means (organisation is asked to carry the costs) Where not available, an official document will be required from the company, subject to such checks as defined by the AO. If copies of official extracts from the official register are provided, they must be officially certified Extracts from the official register should not be older than 4 weeks. The AO maintains a list of which specific documents and tests can be acceptable for the certain types of organisations. The OA can ask for additional documents if needed to validate required information for the assurance action.
+7 COAP In addition to the checks defined in the policy, the COAP form for German organisations requires: The OA must keep all documentation for 10 years. Signatures from organisation officials must meet the following requirements as legally specified for the type of organisation as specified in the official documents (f.e. the excerpt from the register) as delegated within the organisation (proof of delegation needed)

@@ -1,0 +1,33 @@
+Policy On Junior Assurers / Members (PoJAM) Name: PoJAM [COD13.1] Status: TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20130222, if voted for it) Editor: Iang Changes: p20100119, p20130222 Licence: CC-by-sa+DRP TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Policy On Junior Assurers / Members (PoJAM)Table of Contents
+0 Preliminaries
+0.1 Authority
+0.2 Terms
+1 Scope
+2 Entering the Community
+3 System Block
+4 The Junior Assurer
+5 Arbitration
+0 Preliminaries
+0.1 Authority This sub-policy extends the Assurance Policy (AP [COD13]) by specifying how Juniors can be brought into the CAcert Community.
+0.2 Terms Minor is a person who is not empowered to enter contracts as self under local laws. Junior is a person under 18. A Junior is probably a Minor. Parent is a competent adult that is legally responsible under local law for the Minor. E.g., a natural or adopted parent, or a legal guardian. Unless otherwise stated, the singular term Parent is used herein, and is used to cover all forms of persons that are legally responsible for the Minor.
+1 Scope
+1.1 This policy applies to all Members of the CAcert Community
+1.2 Although variations exist in different countries, CAcert works to a principle of no discrimination (Principles of the Community) and therefore imposes the same view across all countries.
+2 Entering the Community
+2.1 There is no limit on age for membership of CAcert.
+2.2 Membership requires a legal contract to be formed. This can be formed one of two ways: the member has capacity to enter the contract themselves, or the member is a Minor and requires the consent of the Parent.
+2.3 The Assurer is responsible in all cases for confirming that the entry into the CAcert Community Agreement is founded. This means in practice that the Assurer has to confirm the above.
+2.4 A general situation in each country is that a Minor can only enter with Parental consent. In this case, the Assurer should confirm the consent of the Parent.
+2.5 The mechanism for confirming the Parent's consent is something that varies and is not covered by policy. The simple requirement here is that the Assurer makes a reliable statement (CARS) that consent is established, following these two declarations: The Assurer's declaration (specifically referring to Assurance Policy (AP [COD13] Section 1.1)): "This Assurance conducted according to Assurance Policy" The member's declaration: "I agree to the CCA"
+2.6 The Assurance Handbook (AH) should expand on common methods to establish and record consent. Such as, on a separate form, a modification to CAP form, etc.
+3 System Block
+3.1 Although there is no age limit in this policy, it is reasonable that the Assurer should check this issue closely below 18.
+3.2 For persons over 18, the Assurer may presume that the person has capacity to enter into a contract, in absence of any alternate suggestion. This is regardless of the legal circumstances of the country.
+3.3 Therefore, a change should be put into the system: If the member is under 18 years of age, the system shall require the Assurer to confirm that consent was established during the Assurance, or otherwise as considered by the Assurer, before additional higher reliance products are available. The system therefore will block all "reliance" products as defined by policy (issuance of named certificates under CPS [COD6], Assurer under AP [COD13]), until consent is established as appropriate. The absence of this feature does not remove the duty of the Assurer (for example, because of delays in implementation).
+3.4 The first Assurers of a Member may then have the greater technical burden of explaining and confirming the consent, but the confirmation is required of all Assurers as part of the CAP.
+3.5 The Assurance Handbook (AH) should document more efficient methods, such as a single form carried by the Junior Member for showing to the Assurer, rather than the Parent's signature over each individual CAP form.
+4 The Junior Assurer
+4.1 Assurer status may only be granted if the user is at least 14 years old. Other preliminaries for the Assurer status set up by other policies are untouched. Combining AP [COD13] and this policy, a Junior Assurer is a CAcert member with 100 Assurance Points, has passed the CAcert Assurer Challenge, and is between the ages of 14 and 18 years.
+4.2 A Junior Assurer can issue a maximum of 10 Assurance Points to an assuree, independent of how many Experience Points the Junior already has. The Experience Points awarded to the Junior Assurer are untouched.
+4.3 The Assurance Handbook (AH) should stipulate the convention as to how the Junior Assurer establishes bona fides.
+5 Arbitration Arbitration with Juniors needs to take into account that a local court may find the CCA [COD9] to be improperly imposed. Some understanding of this risk should be taken, but Arbitrators should be careful not to weaken the web of trust on this basis. Therefore, more care should be taken in explaining and ensuring the spirit of the CCA [COD9] is maintained. The Parent may be concerned about the impact of an Arbitration. Technically, the consenting Parent is the one appearing in the Arbitration. The Arbitrator should recognise both the technical (legal) meaning, but strive to maintain the spirit of the Junior member's appearance. For example, Arbitration documentation may name the Parent primarily, and refer to the Junior in text. The Arbitrator may appoint a senior Assurer to advise the Parent on the nature of the Community. A ruling should be tested by comparing it to an adult scenario. The counter-situation to a weak CCA [COD9] agreement is that if a person (of any age) feels the CCA [COD9] to be inappropriate, then they have not entered into the Community. The Arbitrator is at liberty to terminate the CCA [COD9] with a Member, if there is a sustainable view that it is inappropriate. Such termination should include measures needed to repair the web of trust.
