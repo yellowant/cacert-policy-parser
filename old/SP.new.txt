@@ -9,7 +9,7 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 1.4.1 The Security Policy Document
 1.4.2 The Security Manual (Practices) Document
 1.4.3 The Security Procedures
-2 PHYSICAL SECURITY
+2 Physical Security
 2.1 Facility
 2.2 Physical Assets
 2.2.1 Computers
@@ -24,7 +24,7 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 2.3.3 Access Logging
 2.3.4 Emergency Access
 2.3.5 Physical Security codes &amp; devices
-3 LOGICAL SECURITY
+3 Logical Security
 3.1 Network
 3.1.1 Infrastructure
 3.1.1.1 External connectivity
@@ -44,7 +44,7 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 3.4.2 Special Authorisation
 3.4.3 Authentication
 3.4.4 Removing access
-4 OPERATIONAL SECURITY
+4 Operational Security
 4.1 System administration
 4.1.1 Privileged accounts and passphrases
 4.1.1.1 Authorized users
@@ -71,7 +71,7 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 4.4.1 User data
 4.4.2 System logs
 4.4.3 Incident reports
-5 INCIDENT RESPONSE
+5 Incident Response
 5.1 Incidents
 5.2 Detection
 5.3 Immediate Action
@@ -81,26 +81,26 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 5.4 Investigation
 5.5 Response
 5.6 Report
-6 DISASTER RECOVERY
+6 Disaster Recovery
 6.1 Business Processes
 6.2 Recovery Times
 6.3 Plan
 6.4 Key Persons List
-7 SOFTWARE ASSESSMENT
+7 Software Assessment
 7.1 Authority
 7.2 Tasks
 7.3 Repository
 7.4 Review
 7.5 Test and Bugs
 7.6 Production
-8 SUPPORT
+8 Support
 8.1 Authority
 8.2 Responsibilities
 8.3 Channels
 8.4 Records and Logs
 8.5 Arbitration
 8.6 References
-9 ADMINISTRATIVE
+9 Administrative
 9.1 Staffing
 9.1.1 Roles and responsibilities
 9.1.2 Staffing levels
@@ -124,7 +124,7 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 9.3.2 Response to external (legal) inquiry
 9.4 Outsourcing
 9.5 Confidentiality, Secrecy
-10 REFERENCES
+10 References
 10.1 Contacts
 10.2 Documents
 10.3 Related Documents
@@ -138,7 +138,7 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 1.4.1 The Security Policy Document This Security Policy is part of the Configuration-Control Specification for audit purposes (DRC-A.1). It is under the control of Policy on Policy for version purposes. This policy document says what is done, rather than how to do it. Some sections are empty, which means "refer to the Manual."
 1.4.2 The Security Manual (Practices) Document This Policy explicitly defers detailed security practices to the Security Manual (SM). The Security Manual (SM) says how things are done. As practices are things that vary from time to time, including between each event of practice, the Security Manual (SM) is under the direct control of the applicable team leaders. It is located and version-controlled on the CAcert wiki. Section Headings are the same in both documents. Where Sections are empty in one document, they are expected to be documented in the other. "Document further in Security Manual" can be implied from any section heading in the Policy.
 1.4.3 The Security Procedures The team leaders may from time to time explicitly defer single, cohesive components of the security practices into separate procedures documents. Each procedure should be managed in a wiki page under their control, probably at [http://wiki.cacert.org/SystemAdministration/Procedures]. Each procedure must be referenced explicitly in the Security Manual (SM).
-2 PHYSICAL SECURITY
+2 Physical Security
 2.1 Facility CAcert shall host critical servers in a highly secure facility. There shall be independent verification of the physical and access security.
 2.2 Physical Assets
 2.2.1 Computers Computers shall be inventoried before being put into service. Inventory list shall be available to all Access Engineers and all Systems Administrators. List must be subject to change control. Each unit shall be distinctly and uniquely identified on all visible sides. Machines shall be housed in secured facilities (cages and/or locked racks).
@@ -154,7 +154,7 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 2.3.3 Access Logging All physical accesses are logged and reported to all.
 2.3.4 Emergency Access There must not be a procedure for emergency access. If, in the judgement of the Systems Administrator, emergency access is required and gained, in order to avoid a greater harm, independent authorisation before the Arbitrator must be sought as soon as possible. See DRP [COD7].
 2.3.5 Physical Security codes &amp; devices All personel who are in possession of physical security codes and devices (keys) are to be authorised and documented.
-3 LOGICAL SECURITY
+3 Logical Security
 3.1 Network
 3.1.1 Infrastructure Current and complete diagrams of the physical and logical CAcert network infrastructure shall be maintained by Systems Administration team leader. These diagrams should include cabling information, physical port configuration details, expected/allowed data flow directions, and any further pertinent information, as applicable. Diagrams should be revision controlled, and must be updated when any change is made.
 3.1.1.1 External connectivity Only such services as are required for normal operation should be visible externally; systems and servers which do not require access to the Internet for their normal operation must not be granted that access. If such access becomes temporarily necessary for an authorized administrative task, such access may be granted under the procedures of the Security Manual (SM) and must be reported and logged.
@@ -174,7 +174,7 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 3.4.2 Special Authorisation Additional or special access is granted according to the authorisations on the below access control lists (see SP [COD8] Section 1.1.1): List Name Who Purpose of access Relationship Manager Physical Control List Access Engineers control of access by personnel to hardware exclusive of all other roles Access team leader Physical Access List Systems Administrators hardware-level for installation and recovery exclusive with Access Engineers and Software Assessors Systems Administration team leader SSH Access List Systems Administrators Unix / account / shell level includes by default all on Physical Access List Systems Administration team leader Repository Access List Software Assessors change the source code repository exclusive with Access Engineers and Systems Administrators Software Assessment team leader Support Access List Support Engineer support features in the web application exclusive with Access Engineers and Systems Administrators Support team leader All changes of personnel to the above lists are subject to Board approval.
 3.4.3 Authentication Strong methods of authentication shall be used wherever possible. All authentication schemes must be documented.
 3.4.4 Removing access Follow-up actions to termination must be documented. See SP [COD8] Section 9.1.7.
-4 OPERATIONAL SECURITY
+4 Operational Security
 4.1 System administration Primary Systems Administration tasks shall be conducted under four eyes principle. These shall include backup performance verification, software patch application, account creation and deletion, and hardware maintenance.
 4.1.1 Privileged accounts and passphrases Access to privileged accounts (root and user via SSH or console) must be strictly controlled. Passphrases and SSH private keys used for entering into the systems will be kept private to CAcert sysadmins in all cases.
 4.1.1.1 Authorized users Only Systems Administrators designated on the Access Lists in SP [COD8] Section 3.4.2 are authorized to access accounts. Systems Administration team leader may temporarily permit Software Assessors access to the application via SSH in order to do advanced debugging, or as specifically directed by the Arbitrator.
@@ -201,7 +201,7 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 4.4.1 User data Termination of user data is under direction of the Arbitrator. See CCA [COD9].
 4.4.2 System logs See SP [COD8] Section 4.2.1.
 4.4.3 Incident reports See SP [COD8] Section 5.6.
-5 INCIDENT RESPONSE
+5 Incident Response
 5.1 Incidents
 5.2 Detection The standard of monitoring, alerting and reporting must be documented.
 5.3 Immediate Action
@@ -211,26 +211,26 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 5.4 Investigation Incidents must be investigated. The investigation must be documented. If the severity is high, evidence must be secured and escalated to Arbitration.
 5.5 Response
 5.6 Report Incident reports shall be be published. The Incident Report is written on closing the investigation. A full copy should be appended to the documentation of the investigation. Sensitive information may be pushed out into a restricted appendix of the report. The Systems Administration team leader is responsible for publication and maintenance. Incidents are not normally kept secret nor confidential, and progress information should be published as soon as possible. The knowledge of the existence of the event must not be kept secret, nor the manner and methods be kept confidential. See SP [COD8] Section 9.5.
-6 DISASTER RECOVERY Disaster Recovery is the responsibility of the Board of CAcert Inc.
+6 Disaster Recovery Disaster Recovery is the responsibility of the Board of CAcert Inc.
 6.1 Business Processes Board must develop and maintain documentation on Business Processes. From this list, Core Processes for business continuity / disaster recovery purposes must be identified.
 6.2 Recovery Times Board should identify standard process times for all processes, and must designate Maximum Acceptable Outages and Recovery Time Objectives for the Core Processes.
 6.3 Plan Board must have a basic plan to recover.
 6.4 Key Persons List Board must maintain a Key Persons List with all the contact information needed. See SP [COD8] Section 10.1. The list shall be accessible even if CAcert's infrastructure is not available.
-7 SOFTWARE ASSESSMENT Software assessment team is responsible for the security and maintenance of the code.
+7 Software Assessment Software assessment team is responsible for the security and maintenance of the code.
 7.1 Authority The source code is under CCS [COD2]. Additions to the team are subject to Board approval. See SP [COD8] Section 3.4.2.
 7.2 Tasks The primary tasks for Software Assessors are: Keep the code secure in its operation, Fix security bugs, including incidents, Audit, Verify and sign-off proposed patches, Provide guidance for architecture, Software assessment is not primarily tasked to write the code. In principle, anyone can submit code changes for approval.
 7.3 Repository
 7.4 Review At the minimum, patches are signed off by the team leader or his designated reviewer. Each software change should be reviewed by a person other than the author. Author and signers-off must be logged. The riskier the source is, the more reviews have to be done.
 7.5 Test and Bugs Software assessment team maintains a test system. Each patch should be built and tested. Test status of each patch must be logged. Software assessment team maintains a bug system. Primary communications should go through this system. Management access should be granted to all Software Assessors, software developers, and Systems Administrators. Bug submission access should be provided to any Member that requests it.
 7.6 Production
-8 SUPPORT
+8 Support
 8.1 Authority The software interface gives features to Support Engineer. Access to the special features is under tight control. Additions to the team are subject to Board approval, and the software features are under CCS [COD2]. See SP [COD8] Section 3.4.2. Support Engineers do not have any inherent authority to take any action, and they have to get authority on a case-by-case basis. The authority required in each case must be guided by this policy or the Security Manual or other clearly applicable document. If the Member's authority is not in doubt, the Member can give that authority. If not, the Arbitrator's authority must be sought. Support Engineers are responsible to follow the policies and practices.
 8.2 Responsibilities Support Engineers have these responsibilities: Member account recovery, as documented in the Security Manual. Respond to general requests for information or explanation by Members. Support Engineers cannot make a binding statement. Responses must be based on policies and practices. Tasks and responsibilities as specified in other policies, such as DRP [COD7].
 8.3 Channels Support may always be contacted by email at support at cacert dot org. Other channels may be made available and documented in Security Manual.
 8.4 Records and Logs use of restricted interfaces must be logged. all support channels should be logged. private requests for support should be referred to proper channels and logged there (e.g., by CCs)
 8.5 Arbitration Support Engineers refer questions requiring authority to Arbitration, and may also be called upon to act as default Case Managers. See DRP [COD7] and Case Manager's Handbook. Support Engineers should be familiar with these topics, even if not listed as Arbitrators or Case Managers.
 8.6 References
-9 ADMINISTRATIVE
+9 Administrative
 9.1 Staffing
 9.1.1 Roles and responsibilities Access Engineer: responsible for controlling access to hardware, and maintaining hardware. System Administrator: responsible for maintaining core services and integrity. Software Assessor: maintain the code base and confirm security ("sign-off") of patches and releases. Support Engineer: human interface with users. Team leaders: coordinate with teams, report to Board. All: respond to Arbitrator's rulings on changes. Respond to critical security issues. Observe. Board: authorise new individuals and accesses. Coordinate overall. Arbitrator: conducts ABCs. Authorises exceptions to policy.
 9.1.2 Staffing levels Each team should have a minimum of two members available at any time. Individuals should not be active in more than one team at any one time, but are expected to observe the other teams. See SP [COD8] Section 3.4.2 for exclusivities. One individual in each team is designated team leader and reports to Board.
@@ -254,7 +254,7 @@ Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but wou
 9.3.2 Response to external (legal) inquiry All external inquiries of security import are filed as disputes and placed before the Arbitrator under DRP [COD7]. Board and applicable team leaders must be notified. Only the Arbitrator has the authority to deal with external requests and/or create a procedure. Access Engineers, Systems Administrators, support engineers, Board members and other key roles do not have the authority to answer legal inquiry. The Arbitrator's ruling may instruct individuals, and becomes your authority to act.
 9.4 Outsourcing Components may be outsourced. Any outsourcing arrangements must be documented. All arrangements must be: with Members of CAcert that are Assurers, as individuals, or Assured Organisations, in which all involved personnel are Assurers, with Members that have the requisite knowledge and in good contact with the team leader(s), subject to audit, transparent and no barrier to security, under this Policy and the Security Manual, fully under Arbitration and DRP [COD7] for the purposes of Security, and under the spirit of the Community and within the Principles of the Community. Contracts should be written with the above in mind. Outsourcing of critical components must be approved by the Board.
 9.5 Confidentiality, Secrecy CAcert is an open organisation and adopts a principle of open disclosure wherever possible. See Principles of the Community. This is not a statement of politics but a statement of security; if a security issue can only be sustained under some confidentiality or secrecy, then find another way. In concrete terms, confidentiality or secrecy may be maintained only under a defined method in policy, or under the oversight of the Arbitrator (which itself is under DRP [COD7]). The exception itself must not be secret or confidential. All secrets and confidentials are reviewable under Arbitration, and may be reversed. All should strive to reduce or remove any such restriction.
-10 REFERENCES
+10 References
 10.1 Contacts Contact information for all key people and teams must be documented.
 10.2 Documents All incorporated Documents must be documented.
 10.3 Related Documents Relevant and helpful Documents should be referenced for convenience.
