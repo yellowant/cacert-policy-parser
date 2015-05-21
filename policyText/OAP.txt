@@ -141,7 +141,7 @@ Organisation Assurances are carried out by CAcert Inc. under its Arbitration jur
 
 = 5 Exceptions =
 
-#1. Conflicts of Interest. An OA must not assure an organisation in which there is a close or direct relationship by, e.g., employment, family, financial interests. Other conflicts of interest must be disclosed.
-#2. Trusted Third Parties. TTPs are not generally approved to be part of organisation assurance, but may be approved by subsidiary policies according to local needs.
-#3. Exceptional Organisations. (e.g., Vatican, International Space Station, United Nations) can be dealt with as a single-organisation SubPol. The OA creates the checks, documents them, and subjects them to to normal policy approval.
-#4. DBA. Alternative names for organisations (DBA, "doing business as") can be added as long as they are proven independently. E.g., registration as DBA or holding of registered trade mark. This means that the anglo law tradition of unregistered DBAs is not accepted without further proof.
+[Conflicts of Interest] An OA must not assure an organisation in which there is a close or direct relationship by, e.g., employment, family, financial interests. Other conflicts of interest must be disclosed.
+[Trusted Third Parties] TTPs are not generally approved to be part of organisation assurance, but may be approved by subsidiary policies according to local needs.
+[Exceptional Organisations] (e.g., Vatican, International Space Station, United Nations) can be dealt with as a single-organisation SubPol. The OA creates the checks, documents them, and subjects them to to normal policy approval.
+[DBA] Alternative names for organisations (DBA, "doing business as") can be added as long as they are proven independently. E.g., registration as DBA or holding of registered trade mark. This means that the anglo law tradition of unregistered DBAs is not accepted without further proof.

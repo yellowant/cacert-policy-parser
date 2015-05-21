@@ -10,16 +10,16 @@ Change: p20130116
 Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
 Editor: Mark Lipscombe
 
- Root Distribution License
 = 1 Terms =
 
-* "CAcert Inc" means CAcert Incorporated, a non-profit association incorporated in New South Wales, Australia.
-* "CAcert Community Agreement" means the agreement entered into by each person wishing to RELY.
-* "Member" means a natural or legal person who has agreed to the CAcert Community Agreement.
-* "Certificate" means any certificate or like device to which CAcert Inc's digital signature has been affixed.
-* "CAcert Root Certificates" means any certificate issued by CAcert Inc to itself for the purposes of signing further CAcert Roots or for signing certificates of Members.
-* "RELY" means the human act in taking on a risk or liability on the basis of the claim(s) bound within a certificate issued by CAcert.
-* "Embedded" means a certificate that is contained within a software application or hardware system, when and only when, that software application or system is distributed in binary form only.
+[CAcert Inc] means CAcert Incorporated, a non-profit association incorporated in New South Wales, Australia.
+[CAcert Community Agreement] means the agreement entered into by each person wishing to RELY.
+[Member] means a natural or legal person who has agreed to the CAcert Community Agreement.
+[Certificate] means any certificate or like device to which CAcert Inc's digital signature has been affixed.
+[CAcert Root Certificates] means any certificate issued by CAcert Inc to itself for the purposes of signing further CAcert Roots or for signing certificates of Members.
+[RELY] means the human act in taking on a risk or liability on the basis of the claim(s) bound within a certificate issued by CAcert.
+[Embedded] means a certificate that is contained within a software application or hardware system, when and only when, that software application or system is distributed in binary form only.
+
 = 2 Copyright =
 
 CAcert Root Certificates are Copyright CAcert Incorporated. All rights reserved.
