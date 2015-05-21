@@ -1,0 +1,260 @@
+Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20140731, if voted for it) Editor: Iang Changes: p20100510, p20140731 Licence: CC-by-sa+DRP TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Security Policy (SP)Table of Contents
+1 Introduction
+1.1 Motivation and Scope
+1.1.1 Covered Personnel
+1.1.2 Out of Scope
+1.2 Principles
+1.3 Definition of Terms
+1.4 Documents and Version control
+1.4.1 The Security Policy Document
+1.4.2 The Security Manual (Practices) Document
+1.4.3 The Security Procedures
+2 PHYSICAL SECURITY
+2.1 Facility
+2.2 Physical Assets
+2.2.1 Computers
+2.2.2 Service
+2.2.3 Media
+2.2.3.1 Provisioning
+2.2.3.2 Storage
+2.2.3.3 Retirement
+2.3 Physical Access
+2.3.1 Access Authorisation
+2.3.2 Access Profiles
+2.3.3 Access Logging
+2.3.4 Emergency Access
+2.3.5 Physical Security codes &amp; devices
+3 LOGICAL SECURITY
+3.1 Network
+3.1.1 Infrastructure
+3.1.1.1 External connectivity
+3.1.1.2 Internal connectivity
+3.1.2 Operating Configuration
+3.1.2.1 Ingress
+3.1.2.2 Egress
+3.1.3 Intrusion detection
+3.2 Operating System
+3.2.1 Disk Encryption
+3.2.2 Operating configuration
+3.2.3 Patching
+3.2.3.1 â€œemergencyâ€? patching
+3.3 Application
+3.4 Access control
+3.4.1 Application Access
+3.4.2 Special Authorisation
+3.4.3 Authentication
+3.4.4 Removing access
+4 OPERATIONAL SECURITY
+4.1 System administration
+4.1.1 Privileged accounts and passphrases
+4.1.1.1 Authorized users
+4.1.1.2 Access to Systems
+4.1.1.3 Changing
+4.1.2 Required staff response time
+4.1.3 Change management procedures
+4.1.4 Outsourcing
+4.2 Logging
+4.2.1 Coverage
+4.2.2 Access and Security
+4.2.3 Automated logs
+4.2.4 Operational (manual) logs
+4.3 Backup
+4.3.1 Type
+4.3.2 Frequency
+4.3.3 Storage
+4.3.4 Retention period and Re-use
+4.3.5 Encryption
+4.3.6 Verifying Backups
+4.3.7 Key Management
+4.3.8 Reading Backups
+4.4 Data retention
+4.4.1 User data
+4.4.2 System logs
+4.4.3 Incident reports
+5 INCIDENT RESPONSE
+5.1 Incidents
+5.2 Detection
+5.3 Immediate Action
+5.3.1 Severity and Priority
+5.3.2 Communications
+5.3.3 Escalation
+5.4 Investigation
+5.5 Response
+5.6 Report
+6 DISASTER RECOVERY
+6.1 Business Processes
+6.2 Recovery Times
+6.3 Plan
+6.4 Key Persons List
+7 SOFTWARE ASSESSMENT
+7.1 Authority
+7.2 Tasks
+7.3 Repository
+7.4 Review
+7.5 Test and Bugs
+7.6 Production
+8 SUPPORT
+8.1 Authority
+8.2 Responsibilities
+8.3 Channels
+8.4 Records and Logs
+8.5 Arbitration
+8.6 References
+9 ADMINISTRATIVE
+9.1 Staffing
+9.1.1 Roles and responsibilities
+9.1.2 Staffing levels
+9.1.3 Process of new Team Members
+9.1.4 Arbitrated Background Check - Procedures
+9.1.4.1 Scope
+9.1.4.2 Coverage
+9.1.4.3 Documentation
+9.1.4.4 Privacy for Critical Roles
+9.1.5 Authorisation
+9.1.6 Security
+9.1.7 Termination of staff
+9.1.8 HR and Training
+9.2 Root Key Management
+9.2.1 Root Key generation
+9.2.2 Backup and escrow
+9.2.3 Recovery
+9.2.4 Revocation
+9.3 Legal
+9.3.1 Responsibility
+9.3.2 Response to external (legal) inquiry
+9.4 Outsourcing
+9.5 Confidentiality, Secrecy
+10 REFERENCES
+10.1 Contacts
+10.2 Documents
+10.3 Related Documents
+1 Introduction
+1.1 Motivation and Scope This Security Policy sets out the policy for the secure operation of the CAcert critical computer systems. These systems include: Physical hardware mounting the logical services Webserver + database (core server(s)) Signing service (signing server) Source code (changes and patches) The Committee of CAcert, Inc. (hereafter, "Board") may add additional components into the Security Manual.
+1.1.1 Covered Personnel Critical roles are covered. These roles are defined as: Access Engineer Systems Administrator Support Engineer Software Assessor
+1.1.2 Out of Scope Non-critical systems are not covered by this manual, but may be guided by it, and impacted where they are found within the security context. Architecture is out of scope, see CPS [COD6] Section 6.2.
+1.2 Principles Important principles of this Security Policy are: dual control at least two individuals must control a task four eyes at least two individuals must participate in a task, one to execute and one to observe. redundancy no single individual is the only one authorized to perform a task. escrow where critical information (backups, passphrases) is kept with other parties logging where events are recorded in a file separation of concerns when a core task is split between two people from different areas Audit where external reviewers do checks on practices and policies Authority every action is authorised by either a policy or by the Arbitrator. Each task or asset is covered by a variety of protections deriving from the above principles.
+1.3 Definition of Terms Access Engineer A Member who manages the critical hardware, including maintenance, access control and physical security. See SP [COD8] Section 1.1 Software Assessor A Member who reviews patches for security and workability, signs-off on them, and incorporates them into the repository. See SP [COD8] Section 7.2 Support Engineer A Member who mans the support list, and has access to restricted data through the online interface. See SP [COD8] Section 8. Systems Administrator A Member who manages a critical system, and has access to security-sensitive functions or data.
+1.4 Documents and Version control
+1.4.1 The Security Policy Document This Security Policy is part of the Configuration-Control Specification for audit purposes (DRC-A.1). It is under the control of Policy on Policy for version purposes. This policy document says what is done, rather than how to do it. Some sections are empty, which means "refer to the Manual."
+1.4.2 The Security Manual (Practices) Document This Policy explicitly defers detailed security practices to the Security Manual (SM). The Security Manual (SM) says how things are done. As practices are things that vary from time to time, including between each event of practice, the Security Manual (SM) is under the direct control of the applicable team leaders. It is located and version-controlled on the CAcert wiki. Section Headings are the same in both documents. Where Sections are empty in one document, they are expected to be documented in the other. "Document further in Security Manual" can be implied from any section heading in the Policy.
+1.4.3 The Security Procedures The team leaders may from time to time explicitly defer single, cohesive components of the security practices into separate procedures documents. Each procedure should be managed in a wiki page under their control, probably at [http://wiki.cacert.org/SystemAdministration/Procedures]. Each procedure must be referenced explicitly in the Security Manual (SM).
+2 PHYSICAL SECURITY
+2.1 Facility CAcert shall host critical servers in a highly secure facility. There shall be independent verification of the physical and access security.
+2.2 Physical Assets
+2.2.1 Computers Computers shall be inventoried before being put into service. Inventory list shall be available to all Access Engineers and all Systems Administrators. List must be subject to change control. Each unit shall be distinctly and uniquely identified on all visible sides. Machines shall be housed in secured facilities (cages and/or locked racks).
+2.2.1.1 Acquisition Equipment for critical purposes should be acquired in a way to minimise pre-acquisition security risks.
+2.2.2 Service Equipment that is subject to a service security risk must be retired if service is required. See also SP [COD8] Section 2.2.3.3.
+2.2.3 Media
+2.2.3.1 Provisioning Storage media (disk drives, tapes, removable media) are inventoried upon acquisition and tracked in their use. New storage media (whether disk or removable) shall be securely erased and reformatted before use.
+2.2.3.2 Storage Removable media shall be securely stored at all times, including when not in use. Drives that are kept for reuse are erased securely before storage. Reuse can only be within critical systems. When there is a change to status of media, a report is made to the log specifying the new status.
+2.2.3.3 Retirement Storage media that is exposed to critical data and is to be retired from service shall be destroyed or otherwise secured. The following steps are to be taken: The media is securely destroyed, or the media is securely erased, and stored securely. Records of secure erasure and method of final disposal shall be tracked in the asset inventory. Where critical data is involved, two Systems Administrators must sign-off on each step.
+2.3 Physical Access In accordance with the principle of dual control, at least two persons authorized for access must be on-site at the same time for physical access to be granted.
+2.3.1 Access Authorisation Access to physical equipment must be authorised.
+2.3.2 Access Profiles The Security Manual must present the different access profiles. At least one Access Engineer must control access in all cases. At least one Systems Administrator will be present for logical access. Only the most basic and safest of accesses should be done with one Systems Administrator present. There is no inherent authorisation to access the data. Systems Administrators are authorised to access the raw data under the control of this policy. All others must not access the raw data. All are responsible for protecting the data from access by those not authorised.
+2.3.3 Access Logging All physical accesses are logged and reported to all.
+2.3.4 Emergency Access There must not be a procedure for emergency access. If, in the judgement of the Systems Administrator, emergency access is required and gained, in order to avoid a greater harm, independent authorisation before the Arbitrator must be sought as soon as possible. See DRP [COD7].
+2.3.5 Physical Security codes &amp; devices All personel who are in possession of physical security codes and devices (keys) are to be authorised and documented.
+3 LOGICAL SECURITY
+3.1 Network
+3.1.1 Infrastructure Current and complete diagrams of the physical and logical CAcert network infrastructure shall be maintained by Systems Administration team leader. These diagrams should include cabling information, physical port configuration details, expected/allowed data flow directions, and any further pertinent information, as applicable. Diagrams should be revision controlled, and must be updated when any change is made.
+3.1.1.1 External connectivity Only such services as are required for normal operation should be visible externally; systems and servers which do not require access to the Internet for their normal operation must not be granted that access. If such access becomes temporarily necessary for an authorized administrative task, such access may be granted under the procedures of the SM and must be reported and logged.
+3.1.1.2 Internal connectivity System and server connections internal to the CAcert infrastructure should be kept to the minimum required for routine operations. Any new connectivity desired must be requested and approved by System administration team leader and then must be reflected in the appropriate infrastructure diagram(s).
+3.1.2 Operating Configuration
+3.1.2.1 Ingress All ports on which incoming traffic is expected shall be documented; traffic to other ports must be blocked. Unexpected traffic must be logged as an exception.
+3.1.2.2 Egress All outbound traffic that is initiated shall be documented; traffic to other destinations must be blocked. Unexpected traffic must be logged as an exception.
+3.1.3 Intrusion detection Logs should be examined regularly (by manual or automatic means) for unusual patterns and/or traffic; anomalies should be investigated as they are discovered and should be reported to appropriate personnel in near-real-time (e.g. text message, email) and investigated as soon as possible. Suspicious activity which may indicate an actual system intrusion or compromise should trigger the incident response protocol described in SP [COD8] Section 5.1.
+3.2 Operating System Any operating system used for critical server machines must be available under an OSI-approved open source software license.
+3.2.1 Disk Encryption Any operating system used for critical server machines must support software full-disk or disk volume encryption, and this encryption option must be enabled for all relevant disks/volumes when the operating system is first installed on the machine.
+3.2.2 Operating configuration Servers must enable only the operating system functions required to support the necessary services. Options and packages chosen at OS install shall be documented, and newly-installed systems must be inspected to ensure that only required services are active, and their functionality is limited through configuration options. Any required application software must follow similar techniques to ensure minimal exposure footprint. Documentation for installing and configuring servers with the appropriate software packages and configurations will be maintained by the System Administrators.
+3.2.3 Patching Software used on production servers must be kept current with respect to patches affecting software security. Patch application must be approved by the Systems Administration team leader, fully documented in the logs and reported by email to the Systems Administration list on completion (see Â§4.2).
+3.2.3.1 â€œemergencyâ€? patching Application of a patch is deemed an emergency when a remote exploit for a weakness in the particular piece of software has become known (on servers allowing direct local user access, an emergent local exploit may also be deemed to be an emergency). Application of patches in this case may occur as soon as possible, bypassing the normal configuration-change process. The Systems Administration team leader must either approve the patch or instruct remedial action, and refer the case to dispute resolution. Declaration of an emergency patching situation should not occur with any regularity. Emergency patch events must be documented within the regular summaries by the team leader to Board independent of filed disputes.
+3.3 Application Requests for ad hoc queries over the application database for business or similar purposes must be approved by the Arbitrator.
+3.4 Access control All access to critical data and services shall be controlled and logged.
+3.4.1 Application Access General access for Members shall be provided via a dedicated application. General features are made available according to Assurance Points and similar methods controlled in the software system.
+3.4.2 Special Authorisation Additional or special access is granted according to the authorisations on the below access control lists (see SP [COD8] Section 1.1.1): List Name Who Purpose of access Relationship Manager Physical Control List Access Engineers control of access by personnel to hardware exclusive of all other roles Access team leader Physical Access List Systems Administrators hardware-level for installation and recovery exclusive with Access Engineers and Software Assessors Systems Administration team leader SSH Access List Systems Administrators Unix / account / shell level includes by default all on Physical Access List Systems Administration team leader Repository Access List Software Assessors change the source code repository exclusive with Access Engineers and Systems Administrators Software Assessment team leader Support Access List Support Engineer support features in the web application exclusive with Access Engineers and Systems Administrators Support team leader All changes of personnel to the above lists are subject to Board approval.
+3.4.3 Authentication Strong methods of authentication shall be used wherever possible. All authentication schemes must be documented.
+3.4.4 Removing access Follow-up actions to termination must be documented. See SP [COD8] Section 9.1.7.
+4 OPERATIONAL SECURITY
+4.1 System administration Primary Systems Administration tasks shall be conducted under four eyes principle. These shall include backup performance verification, software patch application, account creation and deletion, and hardware maintenance.
+4.1.1 Privileged accounts and passphrases Access to privileged accounts (root and user via SSH or console) must be strictly controlled. Passphrases and SSH private keys used for entering into the systems will be kept private to CAcert sysadmins in all cases.
+4.1.1.1 Authorized users Only Systems Administrators designated on the Access Lists in SP [COD8] Section 3.4.2 are authorized to access accounts. Systems Administration team leader may temporarily permit Software Assessors access to the application via SSH in order to do advanced debugging, or as specifically directed by the Arbitrator.
+4.1.1.2 Access to Systems All access is secured, logged and monitored.
+4.1.1.3 Changing The procedure for changing passphrases and SSH keys shall be documented.
+4.1.2 Required staff response time Response times should be documented for Disaster Recovery planning. See SP [COD8] Section 6.
+4.1.3 Change management procedures All changes made to system configuration must be recorded and reported in regular summaries to the Board of CAcert.
+4.1.4 Outsourcing
+4.2 Logging
+4.2.1 Coverage All sensitive events should be logged reliably. Logs should be deleted after an appropriate amount of time as documented in the Security Manual.
+4.2.2 Access and Security Access to logs must be restricted. The security of the logs should be documented. The records retention should be documented.
+4.2.3 Automated logs Logging should be automated, and use should be made of appropriate system-provided automated tools. Automated logs should be reviewed periodically; suspicious events should be flagged and investigated in a timely fashion.
+4.2.4 Operational (manual) logs Configuration changes, no matter how small, must be logged. All physical visits must be logged and a report provided by the accessor and by the Access Engineer.
+4.3 Backup The procedure for all backups must be documented, according to the following sub-headings.
+4.3.1 Type Backups must be taken for operational and for disaster recovery purposes. Operational backups may be online and local. Disaster recovery backups must be offline and remote.
+4.3.2 Frequency
+4.3.3 Storage Backups must be protected to the same level as the critical systems themselves. Disaster recovery backups may be distributed.
+4.3.4 Retention period and Re-use See SP [COD8] Section 2.2.3.
+4.3.5 Encryption Backups must be encrypted and must only be transmitted via secured channels. Off-site backups must be dual-encrypted using divergent methods.
+4.3.6 Verifying Backups Two CAcert System Administrators must be present for verification of a backup. Four eyes principle must be maintained when the key and backup are together. For any other purpose than verification of the success of the backup, see next.
+4.3.7 Key Management The encryption keys must be stored securely by the CAcert Systems Administrators. Paper documentation must be stored with manual backups.
+4.3.8 Reading Backups Conditions and procedures for examining the backups must be documented, and must be under Arbitrator control for purposes other than verification and recovery.
+4.4 Data retention
+4.4.1 User data Termination of user data is under direction of the Arbitrator. See CCA.
+4.4.2 System logs See SP [COD8] Section 4.2.1.
+4.4.3 Incident reports See SP [COD8] Section 5.6.
+5 INCIDENT RESPONSE
+5.1 Incidents
+5.2 Detection The standard of monitoring, alerting and reporting must be documented.
+5.3 Immediate Action
+5.3.1 Severity and Priority On discovery of an incident, an initial assessment of severity and priority must be made.
+5.3.2 Communications An initial report should be circulated. A communications forum should be established for direct support of high priority or high severity incidents.
+5.3.3 Escalation A process of escalation should be established for oversight and management purposes, proportional to severity and priority. Oversight starts with four eyes and ends with the Arbitrator. Management starts with the team leader and ends with the Board.
+5.4 Investigation Incidents must be investigated. The investigation must be documented. If the severity is high, evidence must be secured and escalated to Arbitration.
+5.5 Response
+5.6 Report Incident reports shall be be published. The Incident Report is written on closing the investigation. A full copy should be appended to the documentation of the investigation. Sensitive information may be pushed out into a restricted appendix of the report. The Systems Administration team leader is responsible for publication and maintenance. Incidents are not normally kept secret nor confidential, and progress information should be published as soon as possible. The knowledge of the existence of the event must not be kept secret, nor the manner and methods be kept confidential. See SP [COD8] Section 9.5.
+6 DISASTER RECOVERY Disaster Recovery is the responsibility of the Board of CAcert Inc.
+6.1 Business Processes Board must develop and maintain documentation on Business Processes. From this list, Core Processes for business continuity / disaster recovery purposes must be identified.
+6.2 Recovery Times Board should identify standard process times for all processes, and must designate Maximum Acceptable Outages and Recovery Time Objectives for the Core Processes.
+6.3 Plan Board must have a basic plan to recover.
+6.4 Key Persons List Board must maintain a Key Persons List with all the contact information needed. See SP [COD8] Section 10.1. The list shall be accessible even if CAcert's infrastructure is not available.
+7 SOFTWARE ASSESSMENT Software assessment team is responsible for the security and maintenance of the code.
+7.1 Authority The source code is under CCS. Additions to the team are subject to Board approval. See SP [COD8] Section 3.4.2.
+7.2 Tasks The primary tasks for Software Assessors are: Keep the code secure in its operation, Fix security bugs, including incidents, Audit, Verify and sign-off proposed patches, Provide guidance for architecture, Software assessment is not primarily tasked to write the code. In principle, anyone can submit code changes for approval.
+7.3 Repository
+7.4 Review At the minimum, patches are signed off by the team leader or his designated reviewer. Each software change should be reviewed by a person other than the author. Author and signers-off must be logged. The riskier the source is, the more reviews have to be done.
+7.5 Test and Bugs Software assessment team maintains a test system. Each patch should be built and tested. Test status of each patch must be logged. Software assessment team maintains a bug system. Primary communications should go through this system. Management access should be granted to all Software Assessors, software developers, and Systems Administrators. Bug submission access should be provided to any Member that requests it.
+7.6 Production
+8 SUPPORT
+8.1 Authority The software interface gives features to Support Engineer. Access to the special features is under tight control. Additions to the team are subject to Board approval, and the software features are under CCS. See SP [COD8] Section 3.4.2. Support Engineers do not have any inherent authority to take any action, and they have to get authority on a case-by-case basis. The authority required in each case must be guided by this policy or the Security Manual or other clearly applicable document. If the Member's authority is not in doubt, the Member can give that authority. If not, the Arbitrator's authority must be sought. Support Engineers are responsible to follow the policies and practices.
+8.2 Responsibilities Support Engineers have these responsibilities: Member account recovery, as documented in the Security Manual. Respond to general requests for information or explanation by Members. Support Engineers cannot make a binding statement. Responses must be based on policies and practices. Tasks and responsibilities as specified in other policies, such as DRP [COD7].
+8.3 Channels Support may always be contacted by email at support at cacert dot org. Other channels may be made available and documented in Security Manual.
+8.4 Records and Logs use of restricted interfaces must be logged. all support channels should be logged. private requests for support should be referred to proper channels and logged there (e.g., by CCs)
+8.5 Arbitration Support Engineers refer questions requiring authority to Arbitration, and may also be called upon to act as default Case Managers. See DRP [COD7] and Case Manager's Handbook. Support Engineers should be familiar with these topics, even if not listed as Arbitrators or Case Managers.
+8.6 References
+9 ADMINISTRATIVE
+9.1 Staffing
+9.1.1 Roles and responsibilities Access Engineer: responsible for controlling access to hardware, and maintaining hardware. System Administrator: responsible for maintaining core services and integrity. Software Assessor: maintain the code base and confirm security ("sign-off") of patches and releases. Support Engineer: human interface with users. Team leaders: coordinate with teams, report to Board. All: respond to Arbitrator's rulings on changes. Respond to critical security issues. Observe. Board: authorise new individuals and accesses. Coordinate overall. Arbitrator: conducts ABCs. Authorises exceptions to policy.
+9.1.2 Staffing levels Each team should have a minimum of two members available at any time. Individuals should not be active in more than one team at any one time, but are expected to observe the other teams. See SP [COD8] Section 3.4.2 for exclusivities. One individual in each team is designated team leader and reports to Board.
+9.1.3 Process of new Team Members New team members need: Recommendation by team leader Arbitrated Background Check ("ABC") Authorisation by Board The team supports the process of adding new team members.
+9.1.4 Arbitrated Background Check - Procedures The Arbitrated Background Check ("ABC") must be conducted under the direction of the Arbitrator, with a separate Case Manager to provide four eyes. ABCs are carried out with full seriousness.
+9.1.4.1 Scope An investigation within ABC should include examination of: realm-specific knowledge realm-specific understanding of good security practice history of activity within Community reputation and standing within Community provided references conflicts of interest
+9.1.4.2 Coverage ABC is to be done on every individual in a critical role. See SP [COD8] Section 1.1.1.
+9.1.4.3 Documentation The process of the ABC should be documented as a procedure. Documentation of each individual check should be preserved and should be reviewable under any future Arbitration. It must include: Agreement with appropriate policies, etc. Contact information. See SP [COD8] Section 10.1.
+9.1.4.4 Privacy for Critical Roles The following privacy considerations exist: procedure and ruling (recommendation) should be public interview, documents should not be public, summary of evidence should be in the ruling. Arbitrator can rule on the escrow questions of evidence contact information goes into the contact addressbook CAcert trusted roles give up some privacy for the privacy of others.
+9.1.5 Authorisation Individuals and access (both) must be authorised by the Board. Only the Board may approve new individuals or any access to the systems. Each individual should be proposed to the Board, with the relevant supporting information as above. The Board should deliberate directly and in full. Board members who are also active in the area should abstain from the vote, but should support the deliberations. Deliberations and decisions should be documented. All conflicts of interest should be examined.
+9.1.6 Security It is the responsibility of all individuals to observe and report on security issues. All of CAcert observes all where possible. It is the responsibility of each individual to resolve issues satisfactorily, or to ensure that they are reported fully. See SP [COD8] Section 9.5.
+9.1.7 Termination of staff Termination of access may be for resignation, Arbitration ruling, or decision of Board or team leader. On termination (for any reason), access and information must be secured. See SP [COD8] Section 3.4.4. The provisions on Arbitration survive any termination by persons fulfilling a critical role. That is, even after a person has left a critical role, they are still bound by the DRP [COD7], and the Arbitrator may reinstate any provision of this agreement or bind the person to a ruling.
+9.1.8 HR and Training It is the responsibility of the team leaders to coordinate technical testing and training, especially of new team members.
+9.2 Root Key Management
+9.2.1 Root Key generation Root keys are generated only on instruction from Board. They must be generated to a fully documented and reviewed procedure. The procedure must include: Use of hardware built securely for the purpose only and cleaned/erased/destroyed immediately afterwards. Dual control over all phases, including by Board. Strong collection of primary entropy, separated from use of entropy. Test cycles of the process on the day. Documentation of each step as it happens against the procedure. Confirmation by each participant over the process and the results.
+9.2.2 Backup and escrow Root keys must be kept on reliable removable media used for that purpose only. Private Keys must be encrypted and should be dual-encrypted. Passphrase must be strong and must be separately escrowed from media. Dual control must be maintained. The top-level root must be escrowed under Board control. Subroots may be escrowed by either Board or Systems Administration Team.
+9.2.3 Recovery Recovery must only be conducted under Arbitrator authority.
+9.2.4 Revocation
+9.3 Legal
+9.3.1 Responsibility Board is responsible to the Community to manage the CA at the executive level.
+9.3.2 Response to external (legal) inquiry All external inquiries of security import are filed as disputes and placed before the Arbitrator under DRP [COD7]. Board and applicable team leaders must be notified. Only the Arbitrator has the authority to deal with external requests and/or create a procedure. Access Engineers, Systems Administrators, support engineers, Board members and other key roles do not have the authority to answer legal inquiry. The Arbitrator's ruling may instruct individuals, and becomes your authority to act.
+9.4 Outsourcing Components may be outsourced. Any outsourcing arrangements must be documented. All arrangements must be: with Members of CAcert that are Assurers, as individuals, or Assured Organisations, in which all involved personnel are Assurers, with Members that have the requisite knowledge and in good contact with the team leader(s), subject to audit, transparent and no barrier to security, under this Policy and the Security Manual, fully under Arbitration and DRP [COD7] for the purposes of Security, and under the spirit of the Community and within the Principles of CAcert. Contracts should be written with the above in mind. Outsourcing of critical components must be approved by the Board.
+9.5 Confidentiality, Secrecy CAcert is an open organisation and adopts a principle of open disclosure wherever possible. See Principles of the Community. This is not a statement of politics but a statement of security; if a security issue can only be sustained under some confidentiality or secrecy, then find another way. In concrete terms, confidentiality or secrecy may be maintained only under a defined method in policy, or under the oversight of the Arbitrator (which itself is under DRP [COD7]). The exception itself must not be secret or confidential. All secrets and confidentials are reviewable under Arbitration, and may be reversed. All should strive to reduce or remove any such restriction.
+10 REFERENCES
+10.1 Contacts Contact information for all key people and teams must be documented.
+10.2 Documents All incorporated Documents must be documented.
+10.3 Related Documents Relevant and helpful Documents should be referenced for convenience.

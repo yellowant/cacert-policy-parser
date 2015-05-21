@@ -1,0 +1,384 @@
+<!Doctype html><html><head><title>diff of SP</title></head><body>
+Security Policy <span style='background-color:#FFBBBB'>Security Policy for CAcert Systems</span> <span style='background-color: #BBFFBB'>(SP)</span> Name: SP <span style='background-color:#FFBBBB'>COD8 Creation date: 20090216 Editor: iang</span> <span style='background-color: #BBFFBB'>[COD8]</span> Status: <span style='background-color:#FFBBBB'>POLICY</span> <span style='background-color: #BBFFBB'>TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20140731, if voted for it) Editor: Iang Changes: p20100510,</span> p20140731 Licence: CC-by-sa+DRP<br/>
+<span style='background-color:#FFBBBB'>1. INTRODUCTION</span><br/>
+<span style='background-color:#FFBBBB'>1.1.</span> <span style='background-color: #BBFFBB'>TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Security Policy (SP)Table of Contents</span><br/>
+<span style='background-color: #BBFFBB'>1 Introduction</span><br/>
+<span style='background-color: #BBFFBB'>1.1 Motivation and Scope</span><br/>
+<span style='background-color: #BBFFBB'>1.1.1 Covered Personnel</span><br/>
+<span style='background-color: #BBFFBB'>1.1.2 Out of Scope</span><br/>
+<span style='background-color: #BBFFBB'>1.2 Principles</span><br/>
+<span style='background-color: #BBFFBB'>1.3 Definition of Terms</span><br/>
+<span style='background-color: #BBFFBB'>1.4 Documents and Version control</span><br/>
+<span style='background-color: #BBFFBB'>1.4.1 The Security Policy Document</span><br/>
+<span style='background-color: #BBFFBB'>1.4.2 The Security Manual (Practices) Document</span><br/>
+<span style='background-color: #BBFFBB'>1.4.3 The Security Procedures</span><br/>
+<span style='background-color: #BBFFBB'>2 PHYSICAL SECURITY</span><br/>
+<span style='background-color: #BBFFBB'>2.1 Facility</span><br/>
+<span style='background-color: #BBFFBB'>2.2 Physical Assets</span><br/>
+<span style='background-color: #BBFFBB'>2.2.1 Computers</span><br/>
+<span style='background-color: #BBFFBB'>2.2.2 Service</span><br/>
+<span style='background-color: #BBFFBB'>2.2.3 Media</span><br/>
+<span style='background-color: #BBFFBB'>2.2.3.1 Provisioning</span><br/>
+<span style='background-color: #BBFFBB'>2.2.3.2 Storage</span><br/>
+<span style='background-color: #BBFFBB'>2.2.3.3 Retirement</span><br/>
+<span style='background-color: #BBFFBB'>2.3 Physical Access</span><br/>
+<span style='background-color: #BBFFBB'>2.3.1 Access Authorisation</span><br/>
+<span style='background-color: #BBFFBB'>2.3.2 Access Profiles</span><br/>
+<span style='background-color: #BBFFBB'>2.3.3 Access Logging</span><br/>
+<span style='background-color: #BBFFBB'>2.3.4 Emergency Access</span><br/>
+<span style='background-color: #BBFFBB'>2.3.5 Physical Security codes &amp; devices</span><br/>
+<span style='background-color: #BBFFBB'>3 LOGICAL SECURITY</span><br/>
+<span style='background-color: #BBFFBB'>3.1 Network</span><br/>
+<span style='background-color: #BBFFBB'>3.1.1 Infrastructure</span><br/>
+<span style='background-color: #BBFFBB'>3.1.1.1 External connectivity</span><br/>
+<span style='background-color: #BBFFBB'>3.1.1.2 Internal connectivity</span><br/>
+<span style='background-color: #BBFFBB'>3.1.2 Operating Configuration</span><br/>
+<span style='background-color: #BBFFBB'>3.1.2.1 Ingress</span><br/>
+<span style='background-color: #BBFFBB'>3.1.2.2 Egress</span><br/>
+<span style='background-color: #BBFFBB'>3.1.3 Intrusion detection</span><br/>
+<span style='background-color: #BBFFBB'>3.2 Operating System</span><br/>
+<span style='background-color: #BBFFBB'>3.2.1 Disk Encryption</span><br/>
+<span style='background-color: #BBFFBB'>3.2.2 Operating configuration</span><br/>
+<span style='background-color: #BBFFBB'>3.2.3 Patching</span><br/>
+<span style='background-color: #BBFFBB'>3.2.3.1 â€œemergencyâ€? patching</span><br/>
+<span style='background-color: #BBFFBB'>3.3 Application</span><br/>
+<span style='background-color: #BBFFBB'>3.4 Access control</span><br/>
+<span style='background-color: #BBFFBB'>3.4.1 Application Access</span><br/>
+<span style='background-color: #BBFFBB'>3.4.2 Special Authorisation</span><br/>
+<span style='background-color: #BBFFBB'>3.4.3 Authentication</span><br/>
+<span style='background-color: #BBFFBB'>3.4.4 Removing access</span><br/>
+<span style='background-color: #BBFFBB'>4 OPERATIONAL SECURITY</span><br/>
+<span style='background-color: #BBFFBB'>4.1 System administration</span><br/>
+<span style='background-color: #BBFFBB'>4.1.1 Privileged accounts and passphrases</span><br/>
+<span style='background-color: #BBFFBB'>4.1.1.1 Authorized users</span><br/>
+<span style='background-color: #BBFFBB'>4.1.1.2 Access to Systems</span><br/>
+<span style='background-color: #BBFFBB'>4.1.1.3 Changing</span><br/>
+<span style='background-color: #BBFFBB'>4.1.2 Required staff response time</span><br/>
+<span style='background-color: #BBFFBB'>4.1.3 Change management procedures</span><br/>
+<span style='background-color: #BBFFBB'>4.1.4 Outsourcing</span><br/>
+<span style='background-color: #BBFFBB'>4.2 Logging</span><br/>
+<span style='background-color: #BBFFBB'>4.2.1 Coverage</span><br/>
+<span style='background-color: #BBFFBB'>4.2.2 Access and Security</span><br/>
+<span style='background-color: #BBFFBB'>4.2.3 Automated logs</span><br/>
+<span style='background-color: #BBFFBB'>4.2.4 Operational (manual) logs</span><br/>
+<span style='background-color: #BBFFBB'>4.3 Backup</span><br/>
+<span style='background-color: #BBFFBB'>4.3.1 Type</span><br/>
+<span style='background-color: #BBFFBB'>4.3.2 Frequency</span><br/>
+<span style='background-color: #BBFFBB'>4.3.3 Storage</span><br/>
+<span style='background-color: #BBFFBB'>4.3.4 Retention period and Re-use</span><br/>
+<span style='background-color: #BBFFBB'>4.3.5 Encryption</span><br/>
+<span style='background-color: #BBFFBB'>4.3.6 Verifying Backups</span><br/>
+<span style='background-color: #BBFFBB'>4.3.7 Key Management</span><br/>
+<span style='background-color: #BBFFBB'>4.3.8 Reading Backups</span><br/>
+<span style='background-color: #BBFFBB'>4.4 Data retention</span><br/>
+<span style='background-color: #BBFFBB'>4.4.1 User data</span><br/>
+<span style='background-color: #BBFFBB'>4.4.2 System logs</span><br/>
+<span style='background-color: #BBFFBB'>4.4.3 Incident reports</span><br/>
+<span style='background-color: #BBFFBB'>5 INCIDENT RESPONSE</span><br/>
+<span style='background-color: #BBFFBB'>5.1 Incidents</span><br/>
+<span style='background-color: #BBFFBB'>5.2 Detection</span><br/>
+<span style='background-color: #BBFFBB'>5.3 Immediate Action</span><br/>
+<span style='background-color: #BBFFBB'>5.3.1 Severity and Priority</span><br/>
+<span style='background-color: #BBFFBB'>5.3.2 Communications</span><br/>
+<span style='background-color: #BBFFBB'>5.3.3 Escalation</span><br/>
+<span style='background-color: #BBFFBB'>5.4 Investigation</span><br/>
+<span style='background-color: #BBFFBB'>5.5 Response</span><br/>
+<span style='background-color: #BBFFBB'>5.6 Report</span><br/>
+<span style='background-color: #BBFFBB'>6 DISASTER RECOVERY</span><br/>
+<span style='background-color: #BBFFBB'>6.1 Business Processes</span><br/>
+<span style='background-color: #BBFFBB'>6.2 Recovery Times</span><br/>
+<span style='background-color: #BBFFBB'>6.3 Plan</span><br/>
+<span style='background-color: #BBFFBB'>6.4 Key Persons List</span><br/>
+<span style='background-color: #BBFFBB'>7 SOFTWARE ASSESSMENT</span><br/>
+<span style='background-color: #BBFFBB'>7.1 Authority</span><br/>
+<span style='background-color: #BBFFBB'>7.2 Tasks</span><br/>
+<span style='background-color: #BBFFBB'>7.3 Repository</span><br/>
+<span style='background-color: #BBFFBB'>7.4 Review</span><br/>
+<span style='background-color: #BBFFBB'>7.5 Test and Bugs</span><br/>
+<span style='background-color: #BBFFBB'>7.6 Production</span><br/>
+<span style='background-color: #BBFFBB'>8 SUPPORT</span><br/>
+<span style='background-color: #BBFFBB'>8.1 Authority</span><br/>
+<span style='background-color: #BBFFBB'>8.2 Responsibilities</span><br/>
+<span style='background-color: #BBFFBB'>8.3 Channels</span><br/>
+<span style='background-color: #BBFFBB'>8.4 Records and Logs</span><br/>
+<span style='background-color: #BBFFBB'>8.5 Arbitration</span><br/>
+<span style='background-color: #BBFFBB'>8.6 References</span><br/>
+<span style='background-color: #BBFFBB'>9 ADMINISTRATIVE</span><br/>
+<span style='background-color: #BBFFBB'>9.1 Staffing</span><br/>
+<span style='background-color: #BBFFBB'>9.1.1 Roles and responsibilities</span><br/>
+<span style='background-color: #BBFFBB'>9.1.2 Staffing levels</span><br/>
+<span style='background-color: #BBFFBB'>9.1.3 Process of new Team Members</span><br/>
+<span style='background-color: #BBFFBB'>9.1.4 Arbitrated Background Check - Procedures</span><br/>
+<span style='background-color: #BBFFBB'>9.1.4.1 Scope</span><br/>
+<span style='background-color: #BBFFBB'>9.1.4.2 Coverage</span><br/>
+<span style='background-color: #BBFFBB'>9.1.4.3 Documentation</span><br/>
+<span style='background-color: #BBFFBB'>9.1.4.4 Privacy for Critical Roles</span><br/>
+<span style='background-color: #BBFFBB'>9.1.5 Authorisation</span><br/>
+<span style='background-color: #BBFFBB'>9.1.6 Security</span><br/>
+<span style='background-color: #BBFFBB'>9.1.7 Termination of staff</span><br/>
+<span style='background-color: #BBFFBB'>9.1.8 HR and Training</span><br/>
+<span style='background-color: #BBFFBB'>9.2 Root Key Management</span><br/>
+<span style='background-color: #BBFFBB'>9.2.1 Root Key generation</span><br/>
+<span style='background-color: #BBFFBB'>9.2.2 Backup and escrow</span><br/>
+<span style='background-color: #BBFFBB'>9.2.3 Recovery</span><br/>
+<span style='background-color: #BBFFBB'>9.2.4 Revocation</span><br/>
+<span style='background-color: #BBFFBB'>9.3 Legal</span><br/>
+<span style='background-color: #BBFFBB'>9.3.1 Responsibility</span><br/>
+<span style='background-color: #BBFFBB'>9.3.2 Response to external (legal) inquiry</span><br/>
+<span style='background-color: #BBFFBB'>9.4 Outsourcing</span><br/>
+<span style='background-color: #BBFFBB'>9.5 Confidentiality, Secrecy</span><br/>
+<span style='background-color: #BBFFBB'>10 REFERENCES</span><br/>
+<span style='background-color: #BBFFBB'>10.1 Contacts</span><br/>
+<span style='background-color: #BBFFBB'>10.2 Documents</span><br/>
+<span style='background-color: #BBFFBB'>10.3 Related Documents</span><br/>
+<span style='background-color: #BBFFBB'>1 Introduction</span><br/>
+<span style='background-color: #BBFFBB'>1.1</span> Motivation and Scope This Security Policy sets out the policy for the secure operation of the CAcert critical computer systems. These systems include: Physical hardware mounting the logical services Webserver + database (core server(s)) Signing service (signing server) Source code (changes and patches) The Committee of CAcert, Inc. (hereafter, "Board") may add additional components into the Security Manual.<br/>
+<span style='background-color:#FFBBBB'>1.1.1.</span><br/>
+<span style='background-color: #BBFFBB'>1.1.1</span> Covered Personnel Critical roles are covered. These roles are defined as: Access Engineer Systems Administrator Support Engineer Software Assessor<br/>
+<span style='background-color:#FFBBBB'>1.1.2.</span><br/>
+<span style='background-color: #BBFFBB'>1.1.2</span> Out of Scope Non-critical systems are not covered by this manual, but may be guided by it, and impacted where they are found within the security context. Architecture is out of scope, see <span style='background-color:#FFBBBB'>CPS#6.2.</span><br/>
+<span style='background-color:#FFBBBB'>1.2.</span> <span style='background-color: #BBFFBB'>CPS [COD6] Section 6.2.</span><br/>
+<span style='background-color: #BBFFBB'>1.2</span> Principles Important principles of this Security Policy are: dual control <span style='background-color:#FFBBBB'>--</span> at least two individuals must control a task four eyes <span style='background-color:#FFBBBB'>--</span> at least two individuals must participate in a task, one to execute and one to observe. redundancy <span style='background-color:#FFBBBB'>--</span> no single individual is the only one authorized to perform a task. escrow <span style='background-color:#FFBBBB'>--</span> where critical information (backups, passphrases) is kept with other parties logging <span style='background-color:#FFBBBB'>--</span> where events are recorded in a file separation of concerns <span style='background-color:#FFBBBB'>--</span> when a core task is split between two people from different areas Audit <span style='background-color:#FFBBBB'>--</span> where external reviewers do checks on practices and policies Authority <span style='background-color:#FFBBBB'>--</span> every action is authorised by either a policy or by the Arbitrator. Each task or asset is covered by a variety of protections deriving from the above principles.<br/>
+<span style='background-color:#FFBBBB'>1.3.</span><br/>
+<span style='background-color: #BBFFBB'>1.3</span> Definition of Terms Access Engineer A Member who manages the critical hardware, including maintenance, access control and physical security. See <span style='background-color:#FFBBBB'>&sect;1.1.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 1.1</span> Software Assessor A Member who reviews patches for security and workability, signs-off on them, and incorporates them into the repository. See <span style='background-color:#FFBBBB'>&sect;7.2.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 7.2</span> Support Engineer A Member who mans the support list, and has access to restricted data through the online interface. See <span style='background-color:#FFBBBB'>&sect;8.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 8.</span> Systems Administrator A Member who manages a critical system, and has access to security-sensitive functions or data.<br/>
+<span style='background-color:#FFBBBB'>1.4.</span><br/>
+<span style='background-color: #BBFFBB'>1.4</span> Documents and Version control<br/>
+<span style='background-color:#FFBBBB'>1.4.1.</span><br/>
+<span style='background-color: #BBFFBB'>1.4.1</span> The Security Policy Document This Security Policy is part of the Configuration-Control Specification for audit purposes (DRC-A.1). It is under the control of Policy on Policy for version purposes. This policy document says what is done, rather than how to do it. Some sections are empty, which means "refer to the Manual."<br/>
+<span style='background-color:#FFBBBB'>1.4.2.</span><br/>
+<span style='background-color: #BBFFBB'>1.4.2</span> The Security Manual (Practices) Document This Policy explicitly defers detailed security practices to the Security Manual <span style='background-color:#FFBBBB'>("SM").</span> <span style='background-color: #BBFFBB'>(SM).</span> The <span style='background-color:#FFBBBB'>SM</span> <span style='background-color: #BBFFBB'>Security Manual (SM)</span> says how things are done. As practices are things that vary from time to time, including between each event of practice, the <span style='background-color:#FFBBBB'>SM</span> <span style='background-color: #BBFFBB'>Security Manual (SM)</span> is under the direct control of the applicable team leaders. It is located and version-controlled on the CAcert wiki. Section Headings are the same in both documents. Where Sections are empty in one document, they are expected to be documented in the other. "Document further in Security Manual" can be implied from any section heading in the Policy.<br/>
+<span style='background-color:#FFBBBB'>1.4.3.</span><br/>
+<span style='background-color: #BBFFBB'>1.4.3</span> The Security Procedures The team leaders may from time to time explicitly defer single, cohesive components of the security practices into separate procedures documents. Each procedure should be managed in a wiki page under their control, probably at <span style='background-color:#FFBBBB'>SystemAdministration/Procedures.</span> <span style='background-color: #BBFFBB'>[http://wiki.cacert.org/SystemAdministration/Procedures].</span> Each procedure must be referenced explicitly in the Security <span style='background-color:#FFBBBB'>Manual.</span><br/>
+<span style='background-color:#FFBBBB'>2.</span> <span style='background-color: #BBFFBB'>Manual (SM).</span><br/>
+<span style='background-color: #BBFFBB'>2</span> PHYSICAL SECURITY<br/>
+<span style='background-color:#FFBBBB'>2.1.</span><br/>
+<span style='background-color: #BBFFBB'>2.1</span> Facility CAcert shall host critical servers in a highly secure facility. There shall be independent verification of the physical and access security.<br/>
+<span style='background-color:#FFBBBB'>2.2.</span><br/>
+<span style='background-color: #BBFFBB'>2.2</span> Physical Assets <br/>
+<span style='background-color:#FFBBBB'>2.2.1.</span><br/>
+<span style='background-color: #BBFFBB'>2.2.1</span> Computers Computers shall be inventoried before being put into service. Inventory list shall be available to all Access Engineers and all Systems Administrators. List must be subject to change control. Each unit shall be distinctly and uniquely identified on all visible sides. Machines shall be housed in secured facilities (cages and/or locked racks).<br/>
+2.2.1.1 Acquisition Equipment for critical purposes should be acquired in a way to minimise pre-acquisition security risks.<br/>
+<span style='background-color:#FFBBBB'>2.2.2.</span><br/>
+<span style='background-color: #BBFFBB'>2.2.2</span> Service Equipment that is subject to a service security risk must be retired if service is required. See also <span style='background-color:#FFBBBB'>&sect;2.2.3.3.</span><br/>
+<span style='background-color:#FFBBBB'>2.2.3.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 2.2.3.3.</span><br/>
+<span style='background-color: #BBFFBB'>2.2.3</span> Media<br/>
+2.2.3.1 Provisioning Storage media (disk drives, tapes, removable media) are inventoried upon acquisition and tracked in their use. New storage media (whether disk or removable) shall be securely erased and reformatted before use.<br/>
+2.2.3.2 Storage Removable media shall be securely stored at all times, including when not in use. Drives that are kept for reuse are erased securely before storage. Reuse can only be within critical systems. When there is a change to status of media, a report is made to the log specifying the new status.<br/>
+2.2.3.3 Retirement Storage media that is exposed to critical data and is to be retired from service shall be destroyed or otherwise secured. The following steps are to be taken: The media is securely destroyed, or the media is securely erased, and stored securely. Records of secure erasure and method of final disposal shall be tracked in the asset inventory. Where critical data is involved, two Systems Administrators must sign-off on each step.<br/>
+<span style='background-color:#FFBBBB'>2.3.</span><br/>
+<span style='background-color: #BBFFBB'>2.3</span> Physical Access In accordance with the principle of dual control, at least two persons authorized for access must be on-site at the same time for physical access to be granted.<br/>
+<span style='background-color:#FFBBBB'>2.3.1.</span><br/>
+<span style='background-color: #BBFFBB'>2.3.1</span> Access Authorisation Access to physical equipment must be authorised.<br/>
+<span style='background-color:#FFBBBB'>2.3.2.</span><br/>
+<span style='background-color: #BBFFBB'>2.3.2</span> Access Profiles The Security Manual must present the different access profiles. At least one Access Engineer must control access in all cases. At least one Systems Administrator will be present for logical access. Only the most basic and safest of accesses should be done with one Systems Administrator present. There is no inherent authorisation to access the data. Systems Administrators are authorised to access the raw data under the control of this policy. All others must not access the raw data. All are responsible for protecting the data from access by those not authorised.<br/>
+<span style='background-color:#FFBBBB'>2.3.3.</span><br/>
+<span style='background-color: #BBFFBB'>2.3.3</span> Access Logging All physical accesses are logged and reported to all.<br/>
+<span style='background-color:#FFBBBB'>2.3.4.</span><br/>
+<span style='background-color: #BBFFBB'>2.3.4</span> Emergency Access There must not be a procedure for emergency access. If, in the judgement of the Systems Administrator, emergency access is required and gained, in order to avoid a greater harm, independent authorisation before the Arbitrator must be sought as soon as possible. See <span style='background-color:#FFBBBB'>DRP.</span><br/>
+<span style='background-color:#FFBBBB'>2.3.5.</span> <span style='background-color: #BBFFBB'>DRP [COD7].</span><br/>
+<span style='background-color: #BBFFBB'>2.3.5</span> Physical Security codes &amp; devices All personel who are in possession of physical security codes and devices (keys) are to be authorised and documented.<br/>
+<span style='background-color:#FFBBBB'>3.</span><br/>
+<span style='background-color: #BBFFBB'>3</span> LOGICAL SECURITY<br/>
+<span style='background-color:#FFBBBB'>3.1.</span><br/>
+<span style='background-color: #BBFFBB'>3.1</span> Network <br/>
+<span style='background-color:#FFBBBB'>3.1.1.</span><br/>
+<span style='background-color: #BBFFBB'>3.1.1</span> Infrastructure Current and complete diagrams of the physical and logical CAcert network infrastructure shall be maintained by Systems Administration team leader. These diagrams should include cabling information, physical port configuration details, expected/allowed data flow directions, and any further pertinent information, as applicable. Diagrams should be revision controlled, and must be updated when any change is made.<br/>
+<span style='background-color:#FFBBBB'>3.1.1.1.</span><br/>
+<span style='background-color: #BBFFBB'>3.1.1.1</span> External connectivity Only such services as are required for normal operation should be visible externally; systems and servers which do not require access to the Internet for their normal operation must not be granted that access. If such access becomes temporarily necessary for an authorized administrative task, such access may be granted under the procedures of the SM and must be reported and logged.<br/>
+<span style='background-color:#FFBBBB'>3.1.1.2.</span><br/>
+<span style='background-color: #BBFFBB'>3.1.1.2</span> Internal connectivity System and server connections internal to the CAcert infrastructure should be kept to the minimum required for routine operations. Any new connectivity desired must be requested and approved by System administration team leader and then must be reflected in the appropriate infrastructure diagram(s).<br/>
+<span style='background-color:#FFBBBB'>3.1.2.</span><br/>
+<span style='background-color: #BBFFBB'>3.1.2</span> Operating Configuration <br/>
+<span style='background-color:#FFBBBB'>3.1.2.1.</span><br/>
+<span style='background-color: #BBFFBB'>3.1.2.1</span> Ingress All ports on which incoming traffic is expected shall be documented; traffic to other ports must be blocked. Unexpected traffic must be logged as an exception.<br/>
+<span style='background-color:#FFBBBB'>3.1.2.2.</span><br/>
+<span style='background-color: #BBFFBB'>3.1.2.2</span> Egress All outbound traffic that is initiated shall be documented; traffic to other destinations must be blocked. Unexpected traffic must be logged as an exception.<br/>
+<span style='background-color:#FFBBBB'>3.1.3.</span><br/>
+<span style='background-color: #BBFFBB'>3.1.3</span> Intrusion detection Logs should be examined regularly (by manual or automatic means) for unusual patterns and/or traffic; anomalies should be investigated as they are discovered and should be reported to appropriate personnel in near-real-time (e.g. text message, email) and investigated as soon as possible. Suspicious activity which may indicate an actual system intrusion or compromise should trigger the incident response protocol described in <span style='background-color:#FFBBBB'>section</span> <span style='background-color: #BBFFBB'>SP [COD8] Section</span> 5.1.<br/>
+<span style='background-color:#FFBBBB'>3.2.</span><br/>
+<span style='background-color: #BBFFBB'>3.2</span> Operating System Any operating system used for critical server machines must be available under an OSI-approved open source software license.<br/>
+<span style='background-color:#FFBBBB'>3.2.1.</span><br/>
+<span style='background-color: #BBFFBB'>3.2.1</span> Disk Encryption Any operating system used for critical server machines must support software full-disk or disk volume encryption, and this encryption option must be enabled for all relevant disks/volumes when the operating system is first installed on the machine.<br/>
+<span style='background-color:#FFBBBB'>3.2.2.</span><br/>
+<span style='background-color: #BBFFBB'>3.2.2</span> Operating configuration Servers must enable only the operating system functions required to support the necessary services. Options and packages chosen at OS install shall be documented, and newly-installed systems must be inspected to ensure that only required services are active, and their functionality is limited through configuration options. Any required application software must follow similar techniques to ensure minimal exposure footprint. Documentation for installing and configuring servers with the appropriate software packages and configurations will be maintained by the System Administrators.<br/>
+<span style='background-color:#FFBBBB'>3.2.3.</span><br/>
+<span style='background-color: #BBFFBB'>3.2.3</span> Patching Software used on production servers must be kept current with respect to patches affecting software security. Patch application must be approved by the Systems Administration team leader, fully documented in the logs and reported by email to the Systems Administration list on completion (see <span style='background-color:#FFBBBB'>&sect;4.2).</span><br/>
+<span style='background-color:#FFBBBB'>3.2.3.1.</span> <span style='background-color: #BBFFBB'>Â§4.2).</span><br/>
+<span style='background-color: #BBFFBB'>3.2.3.1</span> â€œemergencyâ€? patching Application of a patch is deemed an emergency when a remote exploit for a weakness in the particular piece of software has become known (on servers allowing direct local user access, an emergent local exploit may also be deemed to be an emergency). Application of patches in this case may occur as soon as possible, bypassing the normal configuration-change process. The Systems Administration team leader must either approve the patch or instruct remedial action, and refer the case to dispute resolution. Declaration of an emergency patching situation should not occur with any regularity. Emergency patch events must be documented within the regular summaries by the team leader to Board independent of filed disputes.<br/>
+<span style='background-color:#FFBBBB'>3.3.</span><br/>
+<span style='background-color: #BBFFBB'>3.3</span> Application Requests for ad hoc queries over the application database for business or similar purposes must be approved by the Arbitrator.<br/>
+<span style='background-color:#FFBBBB'>3.4.</span><br/>
+<span style='background-color: #BBFFBB'>3.4</span> Access control All access to critical data and services shall be controlled and logged.<br/>
+<span style='background-color:#FFBBBB'>3.4.1.</span><br/>
+<span style='background-color: #BBFFBB'>3.4.1</span> Application Access General access for Members shall be provided via a dedicated application. General features are made available according to Assurance Points and similar methods controlled in the software system.<br/>
+<span style='background-color:#FFBBBB'>3.4.2.</span><br/>
+<span style='background-color: #BBFFBB'>3.4.2</span> Special Authorisation Additional or special access is granted according to the authorisations on the below access control lists (see <span style='background-color:#FFBBBB'>&sect;1.1.1):</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 1.1.1):</span> List Name Who Purpose of access Relationship Manager Physical Control List Access Engineers control of access by personnel to hardware exclusive of all other roles Access team leader Physical Access List Systems Administrators hardware-level for installation and recovery exclusive with Access Engineers and Software Assessors Systems Administration team leader SSH Access List Systems Administrators Unix / account / shell level includes by default all on Physical Access List Systems Administration team leader Repository Access List Software Assessors change the source code repository exclusive with Access Engineers and Systems Administrators Software Assessment team leader Support Access List Support Engineer support features in the web application exclusive with Access Engineers and Systems Administrators Support team leader All changes of personnel to the above lists are subject to Board approval.<br/>
+<span style='background-color:#FFBBBB'>3.4.3.</span><br/>
+<span style='background-color: #BBFFBB'>3.4.3</span> Authentication Strong methods of authentication shall be used wherever possible. All authentication schemes must be documented.<br/>
+<span style='background-color:#FFBBBB'>3.4.4.</span><br/>
+<span style='background-color: #BBFFBB'>3.4.4</span> Removing access Follow-up actions to termination must be documented. See <span style='background-color:#FFBBBB'>&sect;9.1.7.</span><br/>
+<span style='background-color:#FFBBBB'>4.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 9.1.7.</span><br/>
+<span style='background-color: #BBFFBB'>4</span> OPERATIONAL SECURITY <br/>
+<span style='background-color:#FFBBBB'>4.1.</span><br/>
+<span style='background-color: #BBFFBB'>4.1</span> System administration Primary Systems Administration tasks shall be conducted under four eyes principle. These shall include backup performance verification, software patch application, account creation and deletion, and hardware maintenance.<br/>
+<span style='background-color:#FFBBBB'>4.1.1.</span><br/>
+<span style='background-color: #BBFFBB'>4.1.1</span> Privileged accounts and passphrases Access to privileged accounts (root and user via SSH or console) must be strictly controlled. Passphrases and SSH private keys used for entering into the systems will be kept private to CAcert sysadmins in all cases.<br/>
+<span style='background-color:#FFBBBB'>4.1.1.1.</span><br/>
+<span style='background-color: #BBFFBB'>4.1.1.1</span> Authorized users Only Systems Administrators designated on the Access Lists in <span style='background-color:#FFBBBB'>&sect;3.4.2</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 3.4.2</span> are authorized to access accounts. Systems Administration team leader may temporarily permit Software Assessors access to the application via SSH in order to do advanced debugging, or as specifically directed by the Arbitrator.<br/>
+<span style='background-color:#FFBBBB'>4.1.1.2.</span><br/>
+<span style='background-color: #BBFFBB'>4.1.1.2</span> Access to Systems All access is secured, logged and monitored.<br/>
+<span style='background-color:#FFBBBB'>4.1.1.3.</span><br/>
+<span style='background-color: #BBFFBB'>4.1.1.3</span> Changing The procedure for changing passphrases and SSH keys shall be documented.<br/>
+<span style='background-color:#FFBBBB'>4.1.2.</span><br/>
+<span style='background-color: #BBFFBB'>4.1.2</span> Required staff response time Response times should be documented for Disaster Recovery planning. See <span style='background-color:#FFBBBB'>&sect;6.</span><br/>
+<span style='background-color:#FFBBBB'>4.1.3.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 6.</span><br/>
+<span style='background-color: #BBFFBB'>4.1.3</span> Change management procedures All changes made to system configuration must be recorded and reported in regular summaries to the Board of CAcert.<br/>
+<span style='background-color:#FFBBBB'>4.1.4.</span><br/>
+<span style='background-color: #BBFFBB'>4.1.4</span> Outsourcing <br/>
+<span style='background-color:#FFBBBB'>4.2.</span><br/>
+<span style='background-color: #BBFFBB'>4.2</span> Logging <br/>
+<span style='background-color:#FFBBBB'>4.2.1.</span><br/>
+<span style='background-color: #BBFFBB'>4.2.1</span> Coverage All sensitive events should be logged reliably. Logs should be deleted after an appropriate amount of time as documented in the Security Manual.<br/>
+<span style='background-color:#FFBBBB'>4.2.2.</span><br/>
+<span style='background-color: #BBFFBB'>4.2.2</span> Access and Security Access to logs must be restricted. The security of the logs should be documented. The records retention should be documented.<br/>
+<span style='background-color:#FFBBBB'>4.2.3.</span><br/>
+<span style='background-color: #BBFFBB'>4.2.3</span> Automated logs Logging should be automated, and use should be made of appropriate system-provided automated tools. Automated logs should be reviewed periodically; suspicious events should be flagged and investigated in a timely fashion.<br/>
+<span style='background-color:#FFBBBB'>4.2.4.</span><br/>
+<span style='background-color: #BBFFBB'>4.2.4</span> Operational (manual) logs Configuration changes, no matter how small, must be logged. All physical visits must be logged and a report provided by the accessor and by the Access Engineer.<br/>
+<span style='background-color:#FFBBBB'>4.3.</span><br/>
+<span style='background-color: #BBFFBB'>4.3</span> Backup The procedure for all backups must be documented, according to the following sub-headings.<br/>
+<span style='background-color:#FFBBBB'>4.3.1.</span><br/>
+<span style='background-color: #BBFFBB'>4.3.1</span> Type Backups must be taken for operational and for disaster recovery purposes. Operational backups may be online and local. Disaster recovery backups must be offline and remote.<br/>
+<span style='background-color:#FFBBBB'>4.3.2.</span><br/>
+<span style='background-color: #BBFFBB'>4.3.2</span> Frequency <br/>
+<span style='background-color:#FFBBBB'>4.3.3.</span><br/>
+<span style='background-color: #BBFFBB'>4.3.3</span> Storage Backups must be protected to the same level as the critical systems themselves. Disaster recovery backups may be distributed.<br/>
+<span style='background-color:#FFBBBB'>4.3.4.</span><br/>
+<span style='background-color: #BBFFBB'>4.3.4</span> Retention period and Re-use See <span style='background-color:#FFBBBB'>&sect;2.2.3.</span><br/>
+<span style='background-color:#FFBBBB'>4.3.5.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 2.2.3.</span><br/>
+<span style='background-color: #BBFFBB'>4.3.5</span> Encryption Backups must be encrypted and must only be transmitted via secured channels. Off-site backups must be dual-encrypted using divergent methods.<br/>
+<span style='background-color:#FFBBBB'>4.3.6.</span><br/>
+<span style='background-color: #BBFFBB'>4.3.6</span> Verifying Backups Two CAcert System Administrators must be present for verification of a backup. Four eyes principle must be maintained when the key and backup are together. For any other purpose than verification of the success of the backup, see next.<br/>
+<span style='background-color:#FFBBBB'>4.3.7.</span><br/>
+<span style='background-color: #BBFFBB'>4.3.7</span> Key Management The encryption keys must be stored securely by the CAcert Systems Administrators. Paper documentation must be stored with manual backups.<br/>
+<span style='background-color:#FFBBBB'>4.3.8.</span><br/>
+<span style='background-color: #BBFFBB'>4.3.8</span> Reading Backups Conditions and procedures for examining the backups must be documented, and must be under Arbitrator control for purposes other than verification and recovery.<br/>
+<span style='background-color:#FFBBBB'>4.4.</span><br/>
+<span style='background-color: #BBFFBB'>4.4</span> Data retention <br/>
+<span style='background-color:#FFBBBB'>4.4.1.</span><br/>
+<span style='background-color: #BBFFBB'>4.4.1</span> User data Termination of user data is under direction of the Arbitrator. See CCA.<br/>
+<span style='background-color:#FFBBBB'>4.4.2.</span><br/>
+<span style='background-color: #BBFFBB'>4.4.2</span> System logs See <span style='background-color:#FFBBBB'>&sect;4.2.1.</span><br/>
+<span style='background-color:#FFBBBB'>4.4.3.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 4.2.1.</span><br/>
+<span style='background-color: #BBFFBB'>4.4.3</span> Incident reports See <span style='background-color:#FFBBBB'>&sect;5.6.</span><br/>
+<span style='background-color:#FFBBBB'>5.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 5.6.</span><br/>
+<span style='background-color: #BBFFBB'>5</span> INCIDENT RESPONSE<br/>
+<span style='background-color:#FFBBBB'>5.1.</span><br/>
+<span style='background-color: #BBFFBB'>5.1</span> Incidents <br/>
+<span style='background-color:#FFBBBB'>5.2.</span><br/>
+<span style='background-color: #BBFFBB'>5.2</span> Detection The standard of monitoring, alerting and reporting must be documented.<br/>
+<span style='background-color:#FFBBBB'>5.3.</span><br/>
+<span style='background-color: #BBFFBB'>5.3</span> Immediate Action <br/>
+<span style='background-color:#FFBBBB'>5.3.1.</span><br/>
+<span style='background-color: #BBFFBB'>5.3.1</span> Severity and Priority On discovery of an incident, an initial assessment of severity and priority must be made.<br/>
+<span style='background-color:#FFBBBB'>5.3.2.</span><br/>
+<span style='background-color: #BBFFBB'>5.3.2</span> Communications An initial report should be circulated. A communications forum should be established for direct support of high priority or high severity incidents.<br/>
+<span style='background-color:#FFBBBB'>5.3.3.</span><br/>
+<span style='background-color: #BBFFBB'>5.3.3</span> Escalation A process of escalation should be established for oversight and management purposes, proportional to severity and priority. Oversight starts with four eyes and ends with the Arbitrator. Management starts with the team leader and ends with the Board.<br/>
+<span style='background-color:#FFBBBB'>5.4.</span><br/>
+<span style='background-color: #BBFFBB'>5.4</span> Investigation Incidents must be investigated. The investigation must be documented. If the severity is high, evidence must be secured and escalated to Arbitration.<br/>
+<span style='background-color:#FFBBBB'>5.5.</span><br/>
+<span style='background-color: #BBFFBB'>5.5</span> Response <br/>
+<span style='background-color:#FFBBBB'>5.6.</span><br/>
+<span style='background-color: #BBFFBB'>5.6</span> Report Incident reports shall be be published. The Incident Report is written on closing the investigation. A full copy should be appended to the documentation of the investigation. Sensitive information may be pushed out into a restricted appendix of the report. The Systems Administration team leader is responsible for publication and maintenance. Incidents are not normally kept secret nor confidential, and progress information should be published as soon as possible. The knowledge of the existence of the event must not be kept secret, nor the manner and methods be kept confidential. See <span style='background-color:#FFBBBB'>&sect;9.5.</span><br/>
+<span style='background-color:#FFBBBB'>6.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 9.5.</span><br/>
+<span style='background-color: #BBFFBB'>6</span> DISASTER RECOVERY Disaster Recovery is the responsibility of the Board of CAcert Inc.<br/>
+<span style='background-color:#FFBBBB'>6.1.</span><br/>
+<span style='background-color: #BBFFBB'>6.1</span> Business Processes Board must develop and maintain documentation on Business Processes. From this list, Core Processes for business continuity / disaster recovery purposes must be identified.<br/>
+<span style='background-color:#FFBBBB'>6.2.</span><br/>
+<span style='background-color: #BBFFBB'>6.2</span> Recovery Times Board should identify standard process times for all processes, and must designate Maximum Acceptable Outages and Recovery Time Objectives for the Core Processes.<br/>
+<span style='background-color:#FFBBBB'>6.3.</span><br/>
+<span style='background-color: #BBFFBB'>6.3</span> Plan Board must have a basic plan to recover.<br/>
+<span style='background-color:#FFBBBB'>6.4.</span><br/>
+<span style='background-color: #BBFFBB'>6.4</span> Key Persons List Board must maintain a Key Persons List with all the contact information needed. See <span style='background-color:#FFBBBB'>&sect;10.1.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 10.1.</span> The list shall be accessible even if CAcert's infrastructure is not available.<br/>
+<span style='background-color:#FFBBBB'>7.</span><br/>
+<span style='background-color: #BBFFBB'>7</span> SOFTWARE ASSESSMENT Software assessment team is responsible for the security and maintenance of the code.<br/>
+<span style='background-color:#FFBBBB'>7.1.</span><br/>
+<span style='background-color: #BBFFBB'>7.1</span> Authority The source code is under CCS. Additions to the team are subject to Board approval. See <span style='background-color:#FFBBBB'>&sect;3.4.2.</span><br/>
+<span style='background-color:#FFBBBB'>7.2.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 3.4.2.</span><br/>
+<span style='background-color: #BBFFBB'>7.2</span> Tasks The primary tasks for Software Assessors are: Keep the code secure in its operation, Fix security bugs, including incidents, Audit, Verify and sign-off proposed patches, Provide guidance for architecture, Software assessment is not primarily tasked to write the code. In principle, anyone can submit code changes for approval.<br/>
+<span style='background-color:#FFBBBB'>7.3.</span><br/>
+<span style='background-color: #BBFFBB'>7.3</span> Repository <br/>
+<span style='background-color:#FFBBBB'>7.4.</span><br/>
+<span style='background-color: #BBFFBB'>7.4</span> Review At the minimum, patches are signed off by the team leader or his designated reviewer. Each software change should be reviewed by a person other than the author. Author and signers-off must be logged. The riskier the source is, the more reviews have to be done.<br/>
+<span style='background-color:#FFBBBB'>7.5.</span><br/>
+<span style='background-color: #BBFFBB'>7.5</span> Test and Bugs Software assessment team maintains a test system. Each patch should be built and tested. Test status of each patch must be logged. Software assessment team maintains a bug system. Primary communications should go through this system. Management access should be granted to all Software Assessors, software developers, and Systems Administrators. Bug submission access should be provided to any Member that requests it.<br/>
+<span style='background-color:#FFBBBB'>7.6.</span><br/>
+<span style='background-color: #BBFFBB'>7.6</span> Production <br/>
+<span style='background-color:#FFBBBB'>8.</span><br/>
+<span style='background-color: #BBFFBB'>8</span> SUPPORT<br/>
+<span style='background-color:#FFBBBB'>8.1.</span><br/>
+<span style='background-color: #BBFFBB'>8.1</span> Authority The software interface gives features to Support Engineer. Access to the special features is under tight control. Additions to the team are subject to Board approval, and the software features are under CCS. See <span style='background-color:#FFBBBB'>&sect;3.4.2.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 3.4.2.</span> Support Engineers do not have any inherent authority to take any action, and they have to get authority on a case-by-case basis. The authority required in each case must be guided by this policy or the Security Manual or other clearly applicable document. If the Member's authority is not in doubt, the Member can give that authority. If not, the Arbitrator's authority must be sought. Support Engineers are responsible to follow the policies and practices.<br/>
+<span style='background-color:#FFBBBB'>8.2.</span><br/>
+<span style='background-color: #BBFFBB'>8.2</span> Responsibilities Support Engineers have these responsibilities: Member account recovery, as documented in the Security Manual. Respond to general requests for information or explanation by Members. Support Engineers cannot make a binding statement. Responses must be based on policies and practices. Tasks and responsibilities as specified in other policies, such as <span style='background-color:#FFBBBB'>DRP.</span><br/>
+<span style='background-color:#FFBBBB'>8.3.</span> <span style='background-color: #BBFFBB'>DRP [COD7].</span><br/>
+<span style='background-color: #BBFFBB'>8.3</span> Channels Support may always be contacted by email at support at cacert dot org. Other channels may be made available and documented in Security Manual.<br/>
+<span style='background-color:#FFBBBB'>8.4.</span><br/>
+<span style='background-color: #BBFFBB'>8.4</span> Records and Logs use of restricted interfaces must be logged. all support channels should be logged. private requests for support should be referred to proper channels and logged there (e.g., by CCs) <br/>
+<span style='background-color:#FFBBBB'>8.5.</span><br/>
+<span style='background-color: #BBFFBB'>8.5</span> Arbitration Support Engineers refer questions requiring authority to Arbitration, and may also be called upon to act as default Case Managers. See DRP <span style='background-color: #BBFFBB'>[COD7]</span> and Case Manager's Handbook. Support Engineers should be familiar with these topics, even if not listed as Arbitrators or Case Managers.<br/>
+<span style='background-color:#FFBBBB'>8.6.</span><br/>
+<span style='background-color: #BBFFBB'>8.6</span> References <br/>
+<span style='background-color:#FFBBBB'>9.</span><br/>
+<span style='background-color: #BBFFBB'>9</span> ADMINISTRATIVE<br/>
+<span style='background-color:#FFBBBB'>9.1.</span><br/>
+<span style='background-color: #BBFFBB'>9.1</span> Staffing<br/>
+<span style='background-color:#FFBBBB'>9.1.1.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.1</span> Roles and responsibilities Access Engineer: responsible for controlling access to hardware, and maintaining hardware. System Administrator: responsible for maintaining core services and integrity. Software Assessor: maintain the code base and confirm security ("sign-off") of patches and releases. Support Engineer: human interface with users. Team leaders: coordinate with teams, report to Board. All: respond to Arbitrator's rulings on changes. Respond to critical security issues. Observe. Board: authorise new individuals and accesses. Coordinate overall. Arbitrator: conducts ABCs. Authorises exceptions to policy. <br/>
+<span style='background-color:#FFBBBB'>9.1.2.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.2</span> Staffing levels Each team should have a minimum of two members available at any time. Individuals should not be active in more than one team at any one time, but are expected to observe the other teams. See <span style='background-color:#FFBBBB'>&sect;3.4.2</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 3.4.2</span> for exclusivities. One individual in each team is designated team leader and reports to Board.<br/>
+<span style='background-color:#FFBBBB'>9.1.3.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.3</span> Process of new Team Members New team members need: Recommendation by team leader Arbitrated Background Check ("ABC") Authorisation by Board The team supports the process of adding new team members.<br/>
+<span style='background-color:#FFBBBB'>9.1.4.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.4</span> Arbitrated Background Check - Procedures The Arbitrated Background Check ("ABC") must be conducted under the direction of the Arbitrator, with a separate Case Manager to provide four eyes. ABCs are carried out with full seriousness.<br/>
+<span style='background-color:#FFBBBB'>9.1.4.1.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.4.1</span> Scope An investigation within ABC should include examination of: realm-specific knowledge realm-specific understanding of good security practice history of activity within Community reputation and standing within Community provided references conflicts of interest <br/>
+<span style='background-color:#FFBBBB'>9.1.4.2.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.4.2</span> Coverage ABC is to be done on every individual in a critical role. See <span style='background-color:#FFBBBB'>&sect;1.1.1.</span><br/>
+<span style='background-color:#FFBBBB'>9.1.4.3.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 1.1.1.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.4.3</span> Documentation The process of the ABC should be documented as a procedure. Documentation of each individual check should be preserved and should be reviewable under any future Arbitration. It must include: Agreement with appropriate policies, etc. Contact information. See <span style='background-color:#FFBBBB'>&sect;10.1. </span><br/>
+<span style='background-color:#FFBBBB'>9.1.4.4.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 10.1.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.4.4</span> Privacy for Critical Roles The following privacy considerations exist: procedure and ruling (recommendation) should be public interview, documents should not be public, summary of evidence should be in the ruling. Arbitrator can rule on the escrow questions of evidence contact information goes into the contact addressbook CAcert trusted roles give up some privacy for the privacy of others.<br/>
+<span style='background-color:#FFBBBB'>9.1.5.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.5</span> Authorisation Individuals and access (both) must be authorised by the Board. Only the Board may approve new individuals or any access to the systems. Each individual should be proposed to the Board, with the relevant supporting information as above. The Board should deliberate directly and in full. Board members who are also active in the area should abstain from the vote, but should support the deliberations. Deliberations and decisions should be documented. All conflicts of interest should be examined.<br/>
+<span style='background-color:#FFBBBB'>9.1.6.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.6</span> Security It is the responsibility of all individuals to observe and report on security issues. All of CAcert observes all where possible. It is the responsibility of each individual to resolve issues satisfactorily, or to ensure that they are reported fully. See <span style='background-color:#FFBBBB'>&sect;9.5.</span><br/>
+<span style='background-color:#FFBBBB'>9.1.7.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 9.5.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.7</span> Termination of staff Termination of access may be for resignation, Arbitration ruling, or decision of Board or team leader. On termination (for any reason), access and information must be secured. See <span style='background-color:#FFBBBB'>&sect;3.4.4.</span> <span style='background-color: #BBFFBB'>SP [COD8] Section 3.4.4.</span> The provisions on Arbitration survive any termination by persons fulfilling a critical role. That is, even after a person has left a critical role, they are still bound by the DRP <span style='background-color:#FFBBBB'>(COD7),</span> <span style='background-color: #BBFFBB'>[COD7],</span> and the Arbitrator may reinstate any provision of this agreement or bind the person to a ruling.<br/>
+<span style='background-color:#FFBBBB'>9.1.8.</span><br/>
+<span style='background-color: #BBFFBB'>9.1.8</span> HR and Training It is the responsibility of the team leaders to coordinate technical testing and training, especially of new team members.<br/>
+<span style='background-color:#FFBBBB'>9.2.</span><br/>
+<span style='background-color: #BBFFBB'>9.2</span> Root Key Management<br/>
+<span style='background-color:#FFBBBB'>9.2.1.</span><br/>
+<span style='background-color: #BBFFBB'>9.2.1</span> Root Key generation Root keys are generated only on instruction from Board. They must be generated to a fully documented and reviewed procedure. The procedure must include: Use of hardware built securely for the purpose only and cleaned/erased/destroyed immediately afterwards. Dual control over all phases, including by Board. Strong collection of primary entropy, separated from use of entropy. Test cycles of the process on the day. Documentation of each step as it happens against the procedure. Confirmation by each participant over the process and the results. <br/>
+<span style='background-color:#FFBBBB'>9.2.2.</span><br/>
+<span style='background-color: #BBFFBB'>9.2.2</span> Backup and escrow Root keys must be kept on reliable removable media used for that purpose only. Private Keys must be encrypted and should be dual-encrypted. Passphrase must be strong and must be separately escrowed from media. Dual control must be maintained. The top-level root must be escrowed under Board control. Subroots may be escrowed by either Board or Systems Administration Team.<br/>
+<span style='background-color:#FFBBBB'>9.2.3.</span><br/>
+<span style='background-color: #BBFFBB'>9.2.3</span> Recovery Recovery must only be conducted under Arbitrator authority.<br/>
+<span style='background-color:#FFBBBB'>9.2.4.</span><br/>
+<span style='background-color: #BBFFBB'>9.2.4</span> Revocation <br/>
+<span style='background-color:#FFBBBB'>9.3.</span><br/>
+<span style='background-color: #BBFFBB'>9.3</span> Legal<br/>
+<span style='background-color:#FFBBBB'>9.3.1.</span><br/>
+<span style='background-color: #BBFFBB'>9.3.1</span> Responsibility Board is responsible to the Community to manage the CA at the executive level.<br/>
+<span style='background-color:#FFBBBB'>9.3.2.</span><br/>
+<span style='background-color: #BBFFBB'>9.3.2</span> Response to external (legal) inquiry All external inquiries of security import are filed as disputes and placed before the Arbitrator under <span style='background-color:#FFBBBB'>DRP.</span> <span style='background-color: #BBFFBB'>DRP [COD7].</span> Board and applicable team leaders must be notified. Only the Arbitrator has the authority to deal with external requests and/or create a procedure. Access Engineers, Systems Administrators, support engineers, Board members and other key roles do not have the authority to answer legal inquiry. The Arbitrator's ruling may instruct individuals, and becomes your authority to act.<br/>
+<span style='background-color:#FFBBBB'>9.4.</span><br/>
+<span style='background-color: #BBFFBB'>9.4</span> Outsourcing Components may be outsourced. Any outsourcing arrangements must be documented. All arrangements must be: with Members of CAcert that are Assurers, as individuals, or Assured Organisations, in which all involved personnel are Assurers, with Members that have the requisite knowledge and in good contact with the team leader(s), subject to audit, transparent and no barrier to security, under this Policy and the Security Manual, fully under Arbitration and DRP <span style='background-color: #BBFFBB'>[COD7]</span> for the purposes of Security, and under the spirit of the Community and within the Principles of CAcert. Contracts should be written with the above in mind. Outsourcing of critical components must be approved by the Board.<br/>
+9.5 Confidentiality, Secrecy CAcert is an open organisation and adopts a principle of open disclosure wherever possible. See <span style='background-color:#FFBBBB'>Principles.</span> <span style='background-color: #BBFFBB'>Principles of the Community.</span> This is not a statement of politics but a statement of security; if a security issue can only be sustained under some confidentiality or secrecy, then find another way. In concrete terms, confidentiality or secrecy may be maintained only under a defined method in policy, or under the oversight of the Arbitrator (which itself is under <span style='background-color:#FFBBBB'>DRP).</span> <span style='background-color: #BBFFBB'>DRP [COD7]).</span> The exception itself must not be secret or confidential. All secrets and confidentials are reviewable under Arbitration, and may be reversed. All should strive to reduce or remove any such restriction.<br/>
+<span style='background-color:#FFBBBB'>10.</span><br/>
+<span style='background-color: #BBFFBB'>10</span> REFERENCES<br/>
+10.1 Contacts Contact information for all key people and teams must be documented.<br/>
+10.2 Documents All incorporated Documents must be documented.<br/>
+10.3 Related Documents Relevant and helpful Documents should be referenced for convenience.<br/>
+</body></html>
