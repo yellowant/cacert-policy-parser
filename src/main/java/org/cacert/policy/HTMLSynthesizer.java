@@ -300,12 +300,14 @@ public class HTMLSynthesizer implements PolicyTarget {
 		state(State.EMPTY);
 		realOut.println("<!DOCTYPE html><html><head><meta charset=\"utf-8\"><link rel=\"stylesheet\" type=\"text/css\" href=\"static/policy.css\"></style><title>"
 				+ myDoc.generateTitle() + "</title><body>");
+		realOut.println("<div class='TOC'>");
 		myDoc.printHeader(realOut);
 		while (0 < TOCDepth) {
 			headS.print("</li></ul>");
 			TOCDepth--;
 		}
 		realOut.print(head.toString());
+		realOut.println("</div>");
 		String cStr = content.toString();
 		realOut.print(cStr);
 		realOut.println("</body></html>");
