@@ -20,3 +20,7 @@ table.codList tr:nth-child(even) td{
 table.codList tr:nth-child(even) td:nth-child(4){
 	font-style: italic;
 }
+
+div.TOC ul{
+	list-style: none;
+}
