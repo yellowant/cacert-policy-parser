@@ -1,7 +1,10 @@
 package org.cacert.policy;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,6 +12,7 @@ import java.util.regex.Pattern;
  * Outputs a policy document as HTML.
  */
 public class HTMLSynthesizer implements PolicyTarget {
+	public static final boolean CHECK_EXTERNAL_LINKS = false;
 	static class Link {
 		String name;
 		String link;
@@ -182,14 +186,33 @@ public class HTMLSynthesizer implements PolicyTarget {
 			}
 		} else if (content.matches("[a-z]+://[^ ]+ .*")) {
 			String[] parts = content.split(" ", 2);
-			System.out.println("WARNING, Unchecked external link: " + parts[0]
-					+ "=>" + parts[1]);
+			checkExternalLink(parts[0]);
 			return new Link(parts[1], parts[0]).toString();
 		} else if (content.matches("[a-z]+://[^ ]+")) {
-			System.out.println("WARNING, Unchecked plain link: " + content);
+			checkExternalLink(content);
 			return "[" + new Link(content, content).toString() + "]";
 		}
 		return "-- INVALID -- ";
+	}
+	private void checkExternalLink(String parts) {
+		String error = "WARNING, unchecked external link ";
+		if (CHECK_EXTERNAL_LINKS) {
+			try {
+				URL u = new URL(parts);
+				HttpURLConnection connection = (HttpURLConnection) u
+						.openConnection();
+				connection.setRequestProperty("User-Agent",
+						"CAcert.org policy generator.");
+				int code = connection.getResponseCode();
+				if (code != 200) {
+					error = "ERROR, URL had status code " + code + " ";
+				}
+			} catch (IOException e) {
+				error = "ERROR, URL wasn't available ";
+				e.printStackTrace();
+			}
+		}
+		System.out.println(error + parts);
 	}
 	@Override
 	public void endParagraph() {

@@ -51,7 +51,7 @@ Assurance Officer should prepare a {https://wiki.cacert.org/TTP detailed documen
 
 == 4.2 Deserts ==
 
-The Assurance Officer maintains a {https://wiki.cacert.org/deserts list of regions} that are designated as 'deserts,' being areas that are so short of Assurers as to render face-to-face Assurance impractical. In each region, approved types of TTP are listed (e.g., Notary). The list is expected to vary according to the different juridical traditions of different regions. Changes to the regional lists are prepared by either an Organisation Assurer for that region (as described by OAP) or by two Assurers familiar with the traditions in that region. Changes are then submitted to the Board for approval.
+The Assurance Officer maintains a {https://wiki.cacert.org/TTP/TTPAL list of regions} that are designated as 'deserts' being areas that are so short of Assurers as to render face-to-face Assurance impractical. In each region, approved types of TTP are listed (e.g., Notary). The list is expected to vary according to the different juridical traditions of different regions. Changes to the regional lists are prepared by either an Organisation Assurer for that region (as described by OAP) or by two Assurers familiar with the traditions in that region. Changes are then submitted to the Board for approval.
 
 Use of a type of TTP not on the list must be approved by AO and notified to Board. It is an explicit goal to reduce the usage of TTP-assisted assurances in favour of face-to-face Assurance.
 
