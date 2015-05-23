@@ -99,5 +99,22 @@ a:visited{
 
 
 </svg>
+<h4>Proposed new Policy workflow</h4>
+<p>
+This restructuring of the policy documents is also intended to clean up the policy workflow. The new (cleaned) workflow could look like this:
+
+<ol>
+<li>Persons wishing changes in policy documents may:
+<ol>
+<li>Fork the git repository of the policies, make their changes and send that (github link, patch file, etc.) to the mailing list, or ..</li>
+<li>.. ask for those changes on the mailing list directly and the PolO will create the commits.</li>
+</ol>
+</li>
+<li>When there is a decision to be made (i.e. by rough consensus or by a vote), the two commits (base and proposed new base) and a diff between them can be sent to clarify what the changes are.</li>
+<li>When the decision is made, the resulting commit will be tagged with a label indicating the corresponding policy decision.</li>
+<li>In order to deploy the new documents the Jenkins instance might be used to re-create the .html documents, commit them into the "policy.cacert.org"-repository and push that onto the server.</li>
+</ol>
+This new process helps to clearly identify all modifications and have a documented history of all changes to the policy documents.
+</p>
 </body>
 </html>
