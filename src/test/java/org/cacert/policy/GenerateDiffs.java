@@ -21,28 +21,21 @@ public class GenerateDiffs {
 		File target = new File("old");
 		target.mkdirs();
 		HashMap<String, String> urls = new HashMap<>();
-		urls.put("AP", "https://www.cacert.org/policy/AssurancePolicy.html");
-		urls.put("AP/PoJAM",
-				"https://www.cacert.org/policy/PolicyOnJuniorAssurersMembers.html");
-		urls.put("AP/TTP",
-				"https://www.cacert.org/policy/TTPAssistedAssurancePolicy.html");
-		urls.put("CCA",
-				"https://www.cacert.org/policy/CAcertCommunityAgreement.html");
-		urls.put("CCS",
-				"https://www.cacert.org/policy/ConfigurationControlSpecification.html");
-		urls.put("DRP",
-				"https://www.cacert.org/policy/DisputeResolutionPolicy.html");
-		urls.put("OAP",
-				"https://www.cacert.org/policy/OrganisationAssurancePolicy.html");
-		urls.put("OAP/DE",
-				"https://www.cacert.org/policy/OrganisationAssurancePolicy_Germany.html");
-		urls.put("OAP/AU",
-				"https://www.cacert.org/policy/OrganisationAssurancePolicy_Australia.html");
-		urls.put("PoP", "https://www.cacert.org/policy/PolicyOnPolicy.html");
-		urls.put("PP", "https://www.cacert.org/policy/PrivacyPolicy.html");
-		urls.put("RDL",
-				"https://www.cacert.org/policy/RootDistributionLicense.html");
-		urls.put("SP", "https://www.cacert.org/policy/SecurityPolicy.html");
+		final String polPre = "https://www.cacert.org/policy/";
+		urls.put("AP", polPre + "AssurancePolicy.html");
+		urls.put("AP/PoJAM", polPre + "PolicyOnJuniorAssurersMembers.html");
+		urls.put("AP/TTP", polPre + "TTPAssistedAssurancePolicy.html");
+		urls.put("CCA", polPre + "CAcertCommunityAgreement.html");
+		urls.put("CCS", polPre + "ConfigurationControlSpecification.html");
+		urls.put("DRP", polPre + "DisputeResolutionPolicy.html");
+		urls.put("OAP", polPre + "OrganisationAssurancePolicy.html");
+		urls.put("OAP/DE", polPre + "OrganisationAssurancePolicy_Germany.html");
+		urls.put("OAP/AU", polPre
+				+ "OrganisationAssurancePolicy_Australia.html");
+		urls.put("PoP", polPre + "PolicyOnPolicy.html");
+		urls.put("PP", polPre + "PrivacyPolicy.html");
+		urls.put("RDL", polPre + "RootDistributionLicense.html");
+		urls.put("SP", polPre + "SecurityPolicy.html");
 		for (Entry<String, String> entry : urls.entrySet()) {
 			URL u = new URL(entry.getValue());
 			Reader r = new InputStreamReader(u.openStream());
