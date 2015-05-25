@@ -155,7 +155,7 @@ Servers must enable only the operating system functions required to support the 
 Documentation for installing and configuring servers with the appropriate software packages and configurations will be maintained by the System Administrators.
 === 3.2.3 Patching ===
 
-Software used on production servers must be kept current with respect to patches affecting software security. Patch application must be approved by the Systems Administration team leader, fully documented in the logs and reported by email to the Systems Administration list on completion (see §4.2).
+Software used on production servers must be kept current with respect to patches affecting software security. Patch application must be approved by the Systems Administration team leader, fully documented in the logs and reported by email to the Systems Administration list on completion (see {&#4.2}).
 ==== 3.2.3.1 “emergency” patching ====
 
 Application of a patch is deemed an emergency when a remote exploit for a weakness in the particular piece of software has become known (on servers allowing direct local user access, an emergent local exploit may also be deemed to be an emergency). Application of patches in this case may occur as soon as possible, bypassing the normal configuration-change process. The Systems Administration team leader must either approve the patch or instruct remedial action, and refer the case to dispute resolution.

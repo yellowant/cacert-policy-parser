@@ -82,5 +82,5 @@ Types of critical member data is defined by {&&AP}.
 Changes and access to critical member data is as defined under {&&AP}, {&&CCA} and {&&DRP}. Implementation of collection and storage of critical member data (user interface software and databases) is defined by {&&SP}.
 == 6.3 Archive ==
 
-Data retention is controlled by {&&AP} and {&&CCA}.
+Data retention is controlled by {&&SP} and {&&CCA}.
  
