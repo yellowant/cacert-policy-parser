@@ -48,4 +48,4 @@ Configuration-Control Specification (CCS) Name: CCS [COD2] Status: TESTING, TECH
 6 Data
 6.1 Types of Data Types of critical member data is defined by Assurance Policy (AP [COD13]).
 6.2 Changes Changes and access to critical member data is as defined under Assurance Policy (AP [COD13]), CAcert Community Agreement (CCA [COD9]) and Dispute Resolution Policy (DRP [COD7]). Implementation of collection and storage of critical member data (user interface software and databases) is defined by Security Policy (SP [COD8]).
-6.3 Archive Data retention is controlled by Assurance Policy (AP [COD13]) and CAcert Community Agreement (CCA [COD9]).
+6.3 Archive Data retention is controlled by Security Policy (SP [COD8]) and CAcert Community Agreement (CCA [COD9]).
