@@ -62,7 +62,7 @@ Links:
 
 {&AH} short reference to another "entity" (in this case the Assurance handbook)
 {http://denic.de} reference to a URL (the URL is printed as a link to the same text)
-{http://cacert.org our main page} reference to a page a by another text.
+{http://cacert.org Our_main_page} reference to a page a while displaying another text. There must be a blank to seperate the URL from the given text.
 
 
 Text Flow:
