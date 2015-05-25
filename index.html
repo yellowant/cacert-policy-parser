@@ -116,5 +116,27 @@ This restructuring of the policy documents is also intended to clean up the poli
 </ol>
 This new process helps to clearly identify all modifications and to have a publicly documented history of all changes to the policy documents.
 </p>
+<h4>Structured arguments</h4>
+<h5>in favor</h5>
+<ul>
+<li>uniform style</li>
+<li>verified manual headline/enumeration counting
+<ul><li>not possbile to accidentally shift numbering where references could be made</li></ul></li>
+<li>verified citing (consistent reference texts)</li>
+<li>verifing external links (calling non-200-responses)</li>
+<li>possibility to verify the exact changes automatically and not depend on someone adding them to the document correctly.
+<ul><li>e.g. (<span style="font-family: monospace">git blame tags/p12345678..HEAD policyText/CCS.txt</span>)</li></ul></li>
+<li>beeing able to vote for exact document versions (git commits)</li>
+</ul>
+
+<h5>against</h5>
+<ul>
+<li>no direct control over the generated HTML
+<ul><li>but the output is diff-able from what I tried</li></ul></li>
+<li>dependency on the features of that policy tool
+<ul><li>additional features may not be good. Better concentrate on content</li></ul></li>
+<li>adding complexity</li>
+</ul>
+
 </body>
 </html>
