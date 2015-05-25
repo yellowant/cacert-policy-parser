@@ -14,7 +14,7 @@ public class COD extends Entity {
 	private Link editor;
 	public COD(String abbrev, String name, String COD, String link,
 			String status, LinkedList<Link> changes, Link editor) {
-		super(abbrev, name, abbrev + ".html");
+		super(abbrev, name, linkof(abbrev));
 		if (!status.equals("POLICY") && !status.equals("DRAFT")) {
 			throw new Error("Invalid status of COD " + abbrev + ": " + status);
 		}
@@ -23,6 +23,13 @@ public class COD extends Entity {
 		this.changes = changes;
 		this.editor = editor;
 
+	}
+	private static final String LINK_PREFIX = "//policy.cacert.org/";
+	private static String linkof(String abbrev) {
+		if (abbrev.equals("TTP") || abbrev.equals("PoJAM")) {
+			abbrev = "AP-" + abbrev;
+		}
+		return LINK_PREFIX + abbrev.replace("-", "/") + ".html";
 	}
 
 	@Override
