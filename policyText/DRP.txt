@@ -113,7 +113,7 @@ As a matter of public policy, courts will generally refer any case back to Arbit
 
 When an external court claims and asserts its jurisdiction, and issues a court order, subpoena or other service to CAcert, the CM files the order as a dispute, with the external court as Claimant. The CM and other support staff are granted no authority to act on the basis of any court order, and ordinarily must await the order of the Arbitrator (which might simply be a repeat of the external court order).
 
-The Arbitrator establishes the bona fides of the court, and rules. The Arbitrator may rule to reject the order, for jurisdiction or other reasons. By way of example, if all Parties are Members, then jurisdiction more normally falls within the forum. If the Arbitrator rules to reject, he should do so only after consulting with CAcert Inc. counsel. The Arbitrator's jurisidiction is ordinarily that of dealing with the order, and not that which the external court has claimed to.
+The Arbitrator establishes the bona fides of the court, and rules. The Arbitrator may rule to reject the order, for jurisdiction or other reasons. By way of example, if all Parties are Members, then jurisdiction more normally falls within the forum. If the Arbitrator rules to reject, he should do so only after consulting with CAcert Inc. counsel. The Arbitrator's jurisdiction is ordinarily that of dealing with the order, and not that which the external court has claimed to.
 
 == 2.6 Process ==
 
@@ -150,7 +150,7 @@ If a person who is not a Member is a party to the dispute, then the Ruling is no
 
 == 3.4 Review for Appeal ==
 
-In the eventof clear injustices, egregious behaviour or unconscionable Rulings, a review may be requested by filing a dispute. The new Arbitrator reviews the new dispute, re-examines and reviews the entire case, then rules on whether the case may be re-opened or not.
+In the event of clear injustices, egregious behaviour or unconscionable Rulings, a review may be requested by filing a dispute. The new Arbitrator reviews the new dispute, re-examines and reviews the entire case, then rules on whether the case may be re-opened or not.
 
 If the Review Arbitrator rules the case be re-opened, then the Review Arbitrator refers the case to an Appeal Panel of 3. The Appeal Panel is led by a Senior Arbitrator, and is formed according to procedures established by the DRO from time to time. The Appeal Panel hears the case and delivers a final and binding Ruling.
 

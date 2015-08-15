@@ -120,7 +120,7 @@ All physical accesses are logged and reported to all.
 There must not be a procedure for emergency access. If, in the judgement of the Systems Administrator, emergency access is required and gained, in order to avoid a greater harm, independent authorisation before the Arbitrator must be sought as soon as possible. See {&DRP}.
 === 2.3.5 Physical Security codes & devices ===
 
-All personel who are in possession of physical security codes and devices (keys) are to be authorised and documented.
+All personnel who are in possession of physical security codes and devices (keys) are to be authorised and documented.
 = 3 Logical Security =
 == 3.1 Network ==
 === 3.1.1 Infrastructure ===
@@ -450,7 +450,7 @@ The following privacy considerations exist:
 * interview, documents should not be public,
 * summary of evidence should be in the ruling.
 * Arbitrator can rule on the escrow questions of evidence
-* contact information goes into the contact addressbook
+* contact information goes into the contact address book
 
 CAcert trusted roles give up some privacy for the privacy of others.
 === 9.1.5 Authorisation ===

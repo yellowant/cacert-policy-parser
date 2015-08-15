@@ -21,7 +21,7 @@ This agreement is between you, being a registered member ("Member") within CAcer
 [{&DRP}] is the policy and rules for resolving disputes.
 [USE] means the act by your software to conduct its tasks, incorporating the certificates according to software procedures.
 [RELY] means your human act in taking on a risk and liability on the basis of the claim(s) bound within a certificate.
-[OFFER] means the your act of making available your certificate to another person. Generally, you install and configure your software to act as your agent and facilite this and other tasks. OFFER does not imply suggestion of reliance.
+[OFFER] means the your act of making available your certificate to another person. Generally, you install and configure your software to act as your agent and facilitate this and other tasks. OFFER does not imply suggestion of reliance.
 [Issue] means creation of a certificate by CAcert. To create a certificate, CAcert affixes a digital signature from the root onto a public key and other information. This act would generally bind a statement or claim, such as your name, to your key.
 [Root] means CAcert's top level key, used for signing certificates for Members. In this document, the term includes any subroots.
 [CAcert Official Document ("COD")] is an official managed and controlled document (e. g. a Policy) of CAcert.
@@ -48,11 +48,11 @@ As part of the Community, CAcert offers you these rights:
 #2. You may RELY on any certificate issued by CAcert, as explained and limited by the {&CPS}.
 #3. You may OFFER certificates issued to you by CAcert to Members for their RELIANCE.
 #4. You may OFFER certificates issued to you by CAcert to NRPs for their USE, within the general {&Principles}.
-#5. This Licence is free of cost, non-exclusive, and non-transferrable.
+#5. This Licence is free of cost, non-exclusive, and non-transferable.
 
 == 1.3 Your Contributions ==
 
-You agree to a non-exclusive non-restrictive non-revokable transfer of Licence to CAcert for your contributions. That is, if you post an idea or comment on a CAcert forum, or email it to other Members, your work can be used freely by the Community for CAcert purposes, including placing under CAcert's licences for wider publication.
+You agree to a non-exclusive non-restrictive non-revocable transfer of Licence to CAcert for your contributions. That is, if you post an idea or comment on a CAcert forum, or email it to other Members, your work can be used freely by the Community for CAcert purposes, including placing under CAcert's licences for wider publication.
 
 You retain authorship rights, and the rights to also transfer non-exclusive rights to other parties. That is, you can still use your ideas and contributions outside the Community.
 

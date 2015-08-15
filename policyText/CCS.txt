@@ -14,7 +14,7 @@ The {&CCS} controls and tracks those documents, processes and assets which are c
 
 This document is the procedure for CCS. This document itself is a component of the CCS, see §2. All other documentation and process specified within is derivative and is ruled by the CCS.
 
-CCS is formated, inspired and designed to meet the needs of David Ross Criteria - Certificate Authority Review Checklist - section A.1 (DRC-A.1) CCS may be seen as the index to systems audit under DRC.
+CCS is formatted, inspired and designed to meet the needs of David Ross Criteria - Certificate Authority Review Checklist - section A.1 (DRC-A.1) CCS may be seen as the index to systems audit under DRC.
 = 1 Documents =
 == 1.1 Controlled Document List ==
 
@@ -83,4 +83,3 @@ Changes and access to critical member data is as defined under {&AP}, {&CCA} and
 == 6.3 Archive ==
 
 Data retention is controlled by {&SP} and {&CCA}.
- 
