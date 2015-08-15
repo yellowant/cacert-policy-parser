@@ -24,7 +24,7 @@ public class COD extends Entity {
 		this.editor = editor;
 
 	}
-	private static final String LINK_PREFIX = "//policy.cacert.org/";
+	public static final String LINK_PREFIX = "//policy.cacert.org/";
 	private static String linkof(String abbrev) {
 		if (abbrev.equals("TTP") || abbrev.equals("PoJAM")) {
 			abbrev = "AP-" + abbrev;

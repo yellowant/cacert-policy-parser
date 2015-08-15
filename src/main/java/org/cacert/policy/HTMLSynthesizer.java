@@ -298,7 +298,9 @@ public class HTMLSynthesizer implements PolicyTarget {
 	@Override
 	public String close() {
 		state(State.EMPTY);
-		realOut.println("<!DOCTYPE html><html><head><meta charset=\"utf-8\"><link rel=\"stylesheet\" type=\"text/css\" href=\"static/policy.css\"></style><title>"
+		realOut.println("<!DOCTYPE html><html><head><meta charset=\"utf-8\"><link rel=\"stylesheet\" type=\"text/css\" href=\""
+				+ COD.LINK_PREFIX
+				+ "static/policy.css\"><title>"
 				+ myDoc.generateTitle() + "</title><body>");
 		realOut.println("<div class='TOC'>");
 		myDoc.printHeader(realOut);
