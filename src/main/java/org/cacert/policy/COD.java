@@ -51,7 +51,7 @@ public class COD extends Entity {
 		out.println("<td>");
 		out.println("Name: " + HTMLSynthesizer.escape(getAbbrev()) + " [COD"
 				+ COD + "]<br/>");
-		out.println("Status: TESTING, TECHNICAL PREVIEW (but would be"
+		out.println("Status: TESTING, TECHNICAL PREVIEW (but would be "
 				+ HTMLSynthesizer.escape(status)
 				+ (changes.size() != 0 ? "&nbsp;"
 						+ changes.get(changes.size() - 1) : "")
@@ -70,6 +70,9 @@ public class COD extends Entity {
 				+ " title=\"this document is Copyright © CAcert Inc.,"
 				+ " licensed openly under CC-by-sa with all disputes resolved under DRP. "
 				+ "More at wiki.cacert.org/Policy\">CC-by-sa+DRP</a>");
+		out.println("<br/>");
+		out.println("This is a rendering of the official policy document text available <a href='"
+				+ getLink().replace(".html", ".txt") + "'>here</a>.");
 		out.println("</td><td align=\"right\" valign=\"top\">");
 		out.println("<a href=\""
 				+ HTMLSynthesizer.escape(PolicyGenerator.getEntities()

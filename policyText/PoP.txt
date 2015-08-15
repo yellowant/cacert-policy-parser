@@ -11,7 +11,7 @@ Editor: Iang(https://wiki.cacert.org/Iang)
 
 = 0 Preliminaries =
 
-Policy on Policy adopts the IETF model of 'rough consensus' to create CAcert documents within the open CAcert Policy Group mail list forum.
+Policy on Policy adopts the IETF model of 'rough consensus' to create CAcert documents within the open CAcert Policy Group {https://lists.cacert.org/wws/info/cacert-policy mail list forum}.
 = 1 Scope and Purpose =
 
 #1. This policy documents and controls the process by which CAcert creates and promulgates policies.
