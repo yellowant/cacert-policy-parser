@@ -1,4 +1,4 @@
-Root Distribution License (RDL) Name: RDL [COD14] Status: TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20140731, if voted for it) Editor: Mark Lipscombe Changes: p20100710, p20110108, p20121213, p20130116, p20140731 Licence: CC-by-sa+DRP TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Root Distribution License (RDL)Table of Contents
+Root Distribution License (RDL) Name: RDL [COD14] Status: TESTING, TECHNICAL PREVIEW (but would be POLICY&nbsp;p20140731, if voted for it) Editor: Mark Lipscombe Changes: p20100710, p20110108, p20121213, p20130116, p20140731 Licence: CC-by-sa+DRP This is a rendering of the official policy document text available here. TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Root Distribution License (RDL)Table of Contents
 1 Terms
 2 Copyright
 3 License

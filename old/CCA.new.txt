@@ -1,4 +1,4 @@
-CAcert Community Agreement (CCA) Name: CCA [COD9] Status: TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20141008, if voted for it) Editor: Benedikt Changes: m20070918.4, p20141008 Licence: CC-by-sa+DRP TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) CAcert Community Agreement (CCA)Table of Contents
+CAcert Community Agreement (CCA) Name: CCA [COD9] Status: TESTING, TECHNICAL PREVIEW (but would be POLICY&nbsp;p20141008, if voted for it) Editor: Benedikt Changes: m20070918.4, p20141008 Licence: CC-by-sa+DRP This is a rendering of the official policy document text available here. TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) CAcert Community Agreement (CCA)Table of Contents
 0 Introduction
 0.1 Terms
 1 Agreement and Licence

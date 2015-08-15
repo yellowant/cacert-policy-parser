@@ -1,4 +1,4 @@
-Configuration-Control Specification (CCS) Name: CCS [COD2] Status: TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20140731, if voted for it) Editor: Iang Changes: p20100426, p20140731 Licence: CC-by-sa+DRP TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Configuration-Control Specification (CCS)Table of Contents
+Configuration-Control Specification (CCS) Name: CCS [COD2] Status: TESTING, TECHNICAL PREVIEW (but would be POLICY&nbsp;p20140731, if voted for it) Editor: Iang Changes: p20100426, p20140731 Licence: CC-by-sa+DRP This is a rendering of the official policy document text available here. TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Configuration-Control Specification (CCS)Table of Contents
 0 Introduction
 1 Documents
 1.1 Controlled Document List

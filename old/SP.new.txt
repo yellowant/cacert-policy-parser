@@ -1,4 +1,4 @@
-Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20140731, if voted for it) Editor: Iang Changes: p20100510, p20140731 Licence: CC-by-sa+DRP TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Security Policy (SP)Table of Contents
+Security Policy (SP) Name: SP [COD8] Status: TESTING, TECHNICAL PREVIEW (but would be POLICY&nbsp;p20140731, if voted for it) Editor: Iang Changes: p20100510, p20140731 Licence: CC-by-sa+DRP This is a rendering of the official policy document text available here. TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Security Policy (SP)Table of Contents
 1 Introduction
 1.1 Motivation and Scope
 1.1.1 Covered Personnel

@@ -1,4 +1,4 @@
-Dispute Resolution Policy (DRP) Name: DRP [COD7] Status: TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20140731, if voted for it) Editor: Teus Changes: m20070919.3, p20110108, p20121213, p20130116 , p20140731 Licence: CC-by-sa+DRP TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Dispute Resolution Policy (DRP)Table of Contents
+Dispute Resolution Policy (DRP) Name: DRP [COD7] Status: TESTING, TECHNICAL PREVIEW (but would be POLICY&nbsp;p20140731, if voted for it) Editor: Teus Changes: m20070919.3, p20110108, p20121213, p20130116 , p20140731 Licence: CC-by-sa+DRP This is a rendering of the official policy document text available here. TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Dispute Resolution Policy (DRP)Table of Contents
 0 Introduction
 0.1 Nature of Disputes
 1 Filing

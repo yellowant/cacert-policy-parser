@@ -1,4 +1,4 @@
-TTP-Assisted Assurance Policy (TTP) Name: TTP [COD13.2] Status: TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20140731, if voted for it) Editor: Ulrich Schroeter Changes: p20100913, p20140731 Licence: CC-by-sa+DRP TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) TTP-Assisted Assurance Policy (TTP)Table of Contents
+TTP-Assisted Assurance Policy (TTP) Name: TTP [COD13.2] Status: TESTING, TECHNICAL PREVIEW (but would be POLICY&nbsp;p20140731, if voted for it) Editor: Ulrich Schroeter Changes: p20100913, p20140731 Licence: CC-by-sa+DRP This is a rendering of the official policy document text available here. TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) TTP-Assisted Assurance Policy (TTP)Table of Contents
 0 Preliminaries
 1 Scope
 2 Roles

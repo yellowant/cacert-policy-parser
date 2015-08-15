@@ -1,4 +1,4 @@
-Organisation Assurance - sub-policy for Australia (OAP-AU) Name: OAP-AU [COD11.AU] Status: TESTING, TECHNICAL PREVIEW (but would bePOLICY&nbsp;p20140731, if voted for it) Editor: Sam Johnston Changes: p20080402.1, p20140731 Licence: CC-by-sa+DRP TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Organisation Assurance - sub-policy for Australia (OAP-AU)Table of Contents
+Organisation Assurance - sub-policy for Australia (OAP-AU) Name: OAP-AU [COD11.AU] Status: TESTING, TECHNICAL PREVIEW (but would be POLICY&nbsp;p20140731, if voted for it) Editor: Sam Johnston Changes: p20080402.1, p20140731 Licence: CC-by-sa+DRP This is a rendering of the official policy document text available here. TECHNICAL PREIVEW (but would be ) (THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT) Organisation Assurance - sub-policy for Australia (OAP-AU)Table of Contents
 0 Preliminaries
 1 Scope
 2 Requirements

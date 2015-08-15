@@ -1,0 +1,86 @@
+Id: 2
+Abbrev: CCS
+Name: Configuration-Control Specification
+Link: https://www.cacert.org/policy/ConfigurationControlSpecification.html
+Status: POLICY
+Change: p20100426(https://wiki.cacert.org/PolicyDecisions#p20100426)
+Change: p20140731(https://wiki.cacert.org/PolicyDecisions#p20140731)
+Editor: Iang(https://wiki.cacert.org/Iang)
+
+
+= 0 Introduction =
+
+The {&&CCS} controls and tracks those documents, processes and assets which are critical to the business, security and governance of the CAcert operations.
+
+This document is the procedure for CCS. This document itself is a component of the CCS, see §2. All other documentation and process specified within is derivative and is ruled by the CCS.
+
+CCS is formated, inspired and designed to meet the needs of David Ross Criteria - Certificate Authority Review Checklist - section A.1 (DRC-A.1) CCS may be seen as the index to systems audit under DRC.
+= 1 Documents =
+== 1.1 Controlled Document List ==
+
+This CCS creates a Controlled Document List (CDL) of Primary or "root" documents known as Policies. Primary documents may authorise other secondary documents into the CDL, or "practices" outside the list.
+
+The Controlled Document List contains numbers, locations and status of all controlled documents. The list is part of this {&CCS}.
+== 1.2 Change ==
+
+Change to the documents is as specified by {&&PoP}. Policy Officer is to manage the CDL.
+== 1.3 Control ==
+
+CAcert policies are required to be owned / transferred to CAcert. See {&PoP#6.2}.
+= 2 Hardware =
+== 2.1 Controlled Hardware List ==
+
+Critical systems are defined by {&&SP}.
+== 2.2 Change ==
+
+See {&&SP}.
+== 2.3 Control ==
+
+{&&SP} places executive responsibility for Hardware with the Board of CAcert Inc. Access is delegated to Access Engineers ({&SP#2}) and Systems Administrators ({&SP#3}). Legal ownership may be delegated by agreement to other organisations ({&SP#9.4}).
+= 3 Software =
+== 3.1 Controlled Software List ==
+
+Critical software is defined by {&&SP}.
+== 3.2 Change ==
+
+See {&&SP}.
+== 3.3 Control ==
+
+CAcert owns its code, or requires control over open source code in use by means of an approved free and open licence. Such code must be identified and managed by Software Assessment.
+
+Developers transfer full rights to CAcert (in a similar fashion to documents), or organise their contributions under a proper free and open source code regime, as approved by Board. Where code is published (beyond scope of this document) care must be taken not to infringe licence conditions. For example, mingling issues with GPL.
+
+The Software Assessment Team Leader maintains a registry of assignments of title or full licence, and a registry of software under approved open source licences.
+= 4 Certificates =
+
+This section applies to Root and Sub-root certificates, not to End-entity (subscriber, member) certificates.
+== 4.1 Certificates List ==
+
+Certificates (Root and sub-root) are to be listed in the {&&CPS}.
+== 4.2 Changes ==
+
+Creation and handling of Certificates is controlled by {&&SP}. Usage of Certificates is controlled by {&&CPS}.
+== 4.3 Archive ==
+
+See {&&SP}.
+= 5 Logs =
+== 5.1 Controlled Logs List ==
+
+Logs are defined by {&&SP}.
+== 5.2 Changes ==
+
+Changes to Hardware, Software and Root Certificates are logged according to {&&SP}.
+== 5.3 Archive ==
+
+See {&&SP}.
+= 6 Data =
+== 6.1 Types of Data ==
+
+Types of critical member data is defined by {&&AP}.
+== 6.2 Changes ==
+
+Changes and access to critical member data is as defined under {&&AP}, {&&CCA} and {&&DRP}. Implementation of collection and storage of critical member data (user interface software and databases) is defined by {&&SP}.
+== 6.3 Archive ==
+
+Data retention is controlled by {&&SP} and {&&CCA}.
+ 
