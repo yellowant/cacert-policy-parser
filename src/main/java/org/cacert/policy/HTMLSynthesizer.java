@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -67,6 +68,8 @@ public class HTMLSynthesizer implements PolicyTarget {
 	private State s = State.EMPTY;
 
 	private COD myDoc;
+
+	private HashSet<Entity> longReferenced = new HashSet<>();
 
 	public HTMLSynthesizer(PrintWriter out, COD doc) {
 		this.realOut = out;
@@ -175,14 +178,22 @@ public class HTMLSynthesizer implements PolicyTarget {
 				anchor = "#s" + parts[1];
 				hrefName = " Section " + parts[1];
 			}
-			if (content.startsWith("&&")) {
-				return PolicyGenerator.getEntities().get(parts[0].substring(2))
-						.getLongLink(anchor, hrefName);
-			} else if (parts[0].equals("&")) {
-				return myDoc.getShortLink(anchor, hrefName);
+			if (parts[0].startsWith("&&")) {
+				parts[0] = parts[0].substring(2);
+			} else if (parts[0].startsWith("&")) {
+				parts[0] = parts[0].substring(1);
+			}
+			Entity refDoc;
+			if (parts[0].isEmpty()) {
+				refDoc = myDoc;
 			} else {
-				return PolicyGenerator.getEntities().get(parts[0].substring(1))
-						.getShortLink(anchor, hrefName);
+				refDoc = PolicyGenerator.getEntities().get(parts[0]);
+			}
+			if (longReferenced.contains(refDoc)) {
+				return refDoc.getShortLink(anchor, hrefName);
+			} else {
+				longReferenced.add(refDoc);
+				return refDoc.getLongLink(anchor, hrefName);
 			}
 		} else if (content.matches("[a-z]+://[^ ]+ .*")) {
 			String[] parts = content.split(" ", 2);
