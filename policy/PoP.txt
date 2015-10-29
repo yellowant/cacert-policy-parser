@@ -16,7 +16,7 @@ Policy on Policy adopts the IETF model of 'rough consensus' to create CAcert doc
 
 #1. This policy documents and controls the process by which CAcert creates and promulgates policies.
 #2. The policy covers itself. The policy replaces prior ones. For Audit purposes, the policy is part of the Configuration-Control Specification ("CCS", DRC_A.1) and also documents part of the {&CCS}.
-#3. The policies so created are generally binding on CAcert Inc., members under {&&CCA} and other related parties under other agreements.
+#3. The policies so created are generally binding on CAcert Inc., members under {&CCA} and other related parties under other agreements.
 #4. The Policy Officer manages all policies and the policy group. The policy group is formed on the open mailing list known as CAcert Policy Group, and is to be open to all Community Members of CAcert.
 
 = 2 Basic Model =
@@ -68,5 +68,5 @@ Policy on Policy adopts the IETF model of 'rough consensus' to create CAcert doc
 #1. Any questions not resolved by these rules may be voted on in the policy group, or may be dealt with in Dispute Resolution.
 #2. The Policy Officer may decide a tight vote in a minor matter only. Failure of Rough Consensus may be declared by dissenting members.
 #3. Matters unresolved refer back to further group discussion.
-#4. The external avenue for disputes is to file a dispute according to CAcert's {&&DRP}.
+#4. The external avenue for disputes is to file a dispute according to CAcert's {&DRP}.
  

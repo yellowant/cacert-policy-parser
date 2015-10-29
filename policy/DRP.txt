@@ -12,7 +12,7 @@ Editor: Teus(https://wiki.cacert.org/TeusHagen)
 
 = 0 Introduction =
 
-This is the Dispute Resolution Policy for the CAcert Community, consisting of CAcert Inc and Members who agree to the {&&CCA}. Disputes arising out of operations by CAcert Inc and interactions between Members may be addressed through this policy. This document also presents the rules for resolution of disputes.
+This is the Dispute Resolution Policy for the CAcert Community, consisting of CAcert Inc and Members who agree to the {&CCA}. Disputes arising out of operations by CAcert Inc and interactions between Members may be addressed through this policy. This document also presents the rules for resolution of disputes.
 
 == 0.1 Nature of Disputes ==
 

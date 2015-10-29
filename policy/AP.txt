@@ -11,7 +11,7 @@ Editor: Teus(https://wiki.cacert.org/TeusHagen)
 = 0 Preamble =
 == 0.1 Definition of Terms ==
 
-[Member] an individual who has agreed to the {&&CCA} and has created successfully a CAcert login account on the CAcert web site. 
+[Member] an individual who has agreed to the {&CCA} and has created successfully a CAcert login account on the CAcert web site. 
 [Assurance] the process by which a Member of CAcert Community (Assurer) identifies an individual (Assuree). 
 [Prospective Member] an individual who participates in the process of Assurance, but has not yet created a CAcert login account. 
 [Name] the full name of an individual. 
@@ -24,9 +24,9 @@ In face-to-face meetings, an Assurer allocates a number of Assurance Points to t
 CAcert explicitly chooses to meet its various goals by construction of a Web-of-Trust of all Members.
 == 0.3 Related Documentation ==
 
-Documentation on Assurance is split between this {&&AP} and the {&&AH}. The policy is controlled by {&&CCS} under {&&PoP} policy document regime. Because Assurance is an active area, much of the practice is handed over to the {&&AH}, which is not a controlled policy document, and can more easily respond to experience and circumstances. It is also more readable.
+Documentation on Assurance is split between this {&AP} and the {&AH}. The policy is controlled by {&CCS} under {&PoP} policy document regime. Because Assurance is an active area, much of the practice is handed over to the {&AH}, which is not a controlled policy document, and can more easily respond to experience and circumstances. It is also more readable.
 
-See also {&&OAP} and {&&CPS}.
+See also {&OAP} and {&CPS}.
 = 1 Assurance Purpose =
 
 The purpose of Assurance is to add confidence in the Assurance Statement made by the CAcert Community of a Member.
@@ -36,7 +36,7 @@ With sufficient assurances, a Member may: (a) issue certificates with their assu
 
 The Assurance Statement makes the following claims about a person:
 
-#1. The person is a bona fide Member. In other words, the person is a member of the CAcert Community as defined by the {&&CCA};
+#1. The person is a bona fide Member. In other words, the person is a member of the CAcert Community as defined by the {&CCA};
 #2. The Member has a (login) account with CAcert's on-line registration and service system;
 #3. The Member can be determined from any CAcert certificate issued by the Account;
 #4. The Member is bound into CAcert's Arbitration as defined by the CAcert Community Agreement;
@@ -45,7 +45,7 @@ The Assurance Statement makes the following claims about a person:
 The confidence level of the Assurance Statement is expressed by the Assurance Points.
 == 1.2 Relying Party Statement ==
 
-The primary goal of the Assurance Statement is for the express purpose of certificates to meet the needs of the Relying Party Statement, which latter is found in the {&&CPS}.
+The primary goal of the Assurance Statement is for the express purpose of certificates to meet the needs of the Relying Party Statement, which latter is found in the {&CPS}.
 
 When a certificate is issued, some of the Assurance Statement may be incorporated, e.g. Name. Other parts may be implied, e.g. Membership, exact account and status. They all are part of the Relying Party Statement. In short, this means that other Members of the Community may rely on the information verified by Assurance and found in the certificate.
 
@@ -95,7 +95,7 @@ A Name which has reached the level of 50 Assurance Points is defined as an Assur
 
 A Member may check the status of another Member, especially for an assurance process. Status may be implied from information in a certificate. The number of Assurance Points for each Member is not published.
 
-The {&&CPS} and other policies may list other capabilities that rely on Assurance Points.
+The {&CPS} and other policies may list other capabilities that rely on Assurance Points.
 = 3 The Assurer =
 
 An Assurer is a Member with the following:
@@ -110,7 +110,7 @@ The Assurer is obliged to:
 
 * Follow this Assurance Policy;
 * Follow any additional rules of detail laid out by the CAcert Assurance Officer;
-* Be guided by the CAcert {&&AH} in their judgement;
+* Be guided by the CAcert {&AH} in their judgement;
 * Make a good faith effort at identifying and verifying Members;
 * Maintain the documentation on each Assurance;
 * Deliver documentation to Arbitration, or as otherwise directed by the Arbitrator;
@@ -129,7 +129,7 @@ The process consists of:
 #4. Examination of Identity documents by Assurer and verification of recorded details (the Name(s) and Secondary Distinguishing Feature, e.g., DoB);
 #5. Allocation of Assurance Points by Assurer;
 #6. Optional: supervision of reciprocal Assurance made by Assuree (Mutual Assurance);
-#7. Safekeeping of the {&&CAP} forms by Assurer.
+#7. Safekeeping of the {&CAP} forms by Assurer.
 
 == 4.2 Mutual Assurance ==
 
@@ -149,7 +149,7 @@ An Assurer can allocate a number of Assurance Points to the Member according to 
 * Assurer's familiarity with identity documents;
 * The Assurance Statement is confirmed.
 
-Any lesser confidence should result in less Assurance Points for a Name. If the Assurer has no confidence in the information presented, then [i]zero[/i] Assurance Points may be allocated by the Assurer. For example, this may happen if the identity documents are totally unfamiliar to the Assurer. The number of Assurance Points from [i]zero[/i] to [i]maximum[/i] is guided by the {&&AH} and the judgement of the Assurer. If there is negative confidence the Assurer should consider filing a dispute.
+Any lesser confidence should result in less Assurance Points for a Name. If the Assurer has no confidence in the information presented, then [i]zero[/i] Assurance Points may be allocated by the Assurer. For example, this may happen if the identity documents are totally unfamiliar to the Assurer. The number of Assurance Points from [i]zero[/i] to [i]maximum[/i] is guided by the {&AH} and the judgement of the Assurer. If there is negative confidence the Assurer should consider filing a dispute.
 
 Multiple Names should be allocated Assurance Points independently within a single Assurance.
 
@@ -196,7 +196,7 @@ Additional Experience Points may be granted temporarily or permanently to an Ass
 Experience Points are not to be confused with Assurance Points.
 == 4.5 CAcert Assurance Programme (CAP) form ==
 
-The {&&CAP} form requests the following details of each Member or Prospective Member:
+The {&CAP} form requests the following details of each Member or Prospective Member:
 
 * Name(s), as recorded in the on-line account;
 * Primary email address, as recorded in the on-line account;
@@ -220,8 +220,8 @@ The Committee (board) of CAcert Inc. appoints an Assurance Officer with the foll
 
 * Reporting to the Committee and advising on all matters to do with Assurance;
 * Training and testing of Assurers, in association with the Education Team;
-* Updating this Assurance Policy, under the process established by {&&PoP};
-* Management of all Subsidiary Policies (see below) for Assurances, under {&&PoP};
+* Updating this Assurance Policy, under the process established by {&PoP};
+* Management of all Subsidiary Policies (see below) for Assurances, under {&PoP};
 * Managing and creating rules of detail or procedure where inappropriate for policies;
 * Incorporating rulings from Arbitration into policies, procedures or guidelines;
 * Assisting the Arbitrator in any requests;
@@ -230,7 +230,7 @@ The Committee (board) of CAcert Inc. appoints an Assurance Officer with the foll
 
 = 6 Subsidiary Policies =
 
-The Assurance Officer manages various exceptions and additional processes. Each must be covered by an approved Subsidiary Policy (refer to {&&PoP}). Subsidiary Policies specify any additional tests of knowledge required and variations to process and documentation, within the general standard stated here.
+The Assurance Officer manages various exceptions and additional processes. Each must be covered by an approved Subsidiary Policy (refer to {&PoP}). Subsidiary Policies specify any additional tests of knowledge required and variations to process and documentation, within the general standard stated here.
 == 6.1 Standard ==
 
 Each Subsidiary Policy must augment and improve the general standards in this Assurance Policy. It is the responsibility of each Subsidiary Policy to describe how it maintains and improves the specific and overall goals. It must describe exceptions and potential areas of risk.
@@ -246,7 +246,7 @@ Additional measures may include:
 ** photo of User,
 ** address of User.
 
-    Additional Information is to be kept by Assurer, attached to {&&CAP} form. Assurance Points allocation by this assurance is unchanged. User's CAcert login account should be annotated to record type of additional information;
+    Additional Information is to be kept by Assurer, attached to {&CAP} form. Assurance Points allocation by this assurance is unchanged. User's CAcert login account should be annotated to record type of additional information;
 
 * Arbitration:
 ** Member to participate in Arbitration. This confirms their acceptance of the forum as well as trains in the process and import,
@@ -266,6 +266,6 @@ Information is collected primarily to make claims within the certificates reques
 
 The Member's information can be accessed under these circumstances:
 
-* Under Arbitrator ruling, in a duly filed dispute ({&&DRP});
-* An Assurer in the process of an Assurance, as permitted on the {&&CAP} form;
+* Under Arbitrator ruling, in a duly filed dispute ({&DRP});
+* An Assurer in the process of an Assurance, as permitted on the {&CAP} form;
 * CAcert support administration and CAcert systems administration when operating under the authority of Arbitrator or under CAcert policy.
