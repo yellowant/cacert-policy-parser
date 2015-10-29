@@ -57,8 +57,9 @@ Table: (newlines required) only may contain plain text.
 
 Links:
 
-{&CCA} short link to official Document e.g. "CCA [<a href='/policy/CAcertCommunityAgreement.html'>COD9</a>]"
-{&&CCA} long link to official Document e.g. "CAcert Community Agreement (CCA [<a href='/policy/CAcertCommunityAgreement.html'>COD9</a>])"
+{&CCA} short/long link to official Document. First occurence will be long.
+short e.g. "CCA [<a href='/policy/CAcertCommunityAgreement.html'>COD9</a>]"
+long e.g. "CAcert Community Agreement (CCA [<a href='/policy/CAcertCommunityAgreement.html'>COD9</a>])"
 
 {&AH} short reference to another "entity" (in this case the Assurance handbook)
 {http://denic.de} reference to a URL (the URL is printed as a link to the same text)

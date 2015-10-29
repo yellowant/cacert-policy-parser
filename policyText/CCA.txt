@@ -18,14 +18,14 @@ This agreement is between you, being a registered member ("Member") within CAcer
 [Community] means all of the Members that are registered by this agreement and other parties by other agreements, all being under CAcert's Arbitration.
 [Non-Related Person ("NRP")] being someone who is not a Member, is not part of the Community, and has not registered their agreement.
 [Arbitration] is the Community's forum for resolving disputes, or jurisdiction.
-[{&&DRP}] is the policy and rules for resolving disputes.
+[{&DRP}] is the policy and rules for resolving disputes.
 [USE] means the act by your software to conduct its tasks, incorporating the certificates according to software procedures.
 [RELY] means your human act in taking on a risk and liability on the basis of the claim(s) bound within a certificate.
 [OFFER] means the your act of making available your certificate to another person. Generally, you install and configure your software to act as your agent and facilite this and other tasks. OFFER does not imply suggestion of reliance.
 [Issue] means creation of a certificate by CAcert. To create a certificate, CAcert affixes a digital signature from the root onto a public key and other information. This act would generally bind a statement or claim, such as your name, to your key.
 [Root] means CAcert's top level key, used for signing certificates for Members. In this document, the term includes any subroots.
 [CAcert Official Document ("COD")] is an official managed and controlled document (e. g. a Policy) of CAcert.
-[{&&CPS}] is the document that controls details about operational matters within CAcert.
+[{&CPS}] is the document that controls details about operational matters within CAcert.
 
 = 1 Agreement and Licence =
 == 1.1 Agreement ==
@@ -45,7 +45,7 @@ Your agreement is effective from the date of the first event above that makes th
 As part of the Community, CAcert offers you these rights:
 
 #1. You may USE any certificates issued by CAcert.
-#2. You may RELY on any certificate issued by CAcert, as explained and limited by the {&&CPS}.
+#2. You may RELY on any certificate issued by CAcert, as explained and limited by the {&CPS}.
 #3. You may OFFER certificates issued to you by CAcert to Members for their RELIANCE.
 #4. You may OFFER certificates issued to you by CAcert to NRPs for their USE, within the general {&Principles}.
 #5. This Licence is free of cost, non-exclusive, and non-transferrable.
@@ -58,7 +58,7 @@ You retain authorship rights, and the rights to also transfer non-exclusive righ
 
 Note that the following exceptions override this clause:
 
-#1. Contributions to controlled documents are subject to {&&PoP}
+#1. Contributions to controlled documents are subject to {&PoP}
 #2. Source code is subject to an open source licence regime.
 #3. Personal data
 #4. Postings under competing licences if clearly stated when posted
@@ -67,7 +67,7 @@ Note that the following exceptions override this clause:
 
 You give rights to CAcert to store, verify and process and publish your data in accordance with policies in force. These rights include shipping the data to foreign countries for system administration, support and processing purposes. Such shipping will only be done among CAcert Community administrators and Assurers.
 
-Privacy is further covered in the {&&PP}.
+Privacy is further covered in the {&PP}.
 = 2 Your Risks, Liabilities and Obligations =
 
 As a Member, you have risks, liabilities and obligations within this agreement.
@@ -80,7 +80,7 @@ As a Member, you have risks, liabilities and obligations within this agreement.
 == 2.2 Liabilities ==
 
 #1. You are liable for any penalties as awarded against you by the Arbitrator.
-#2. Remedies are as defined in the {&&DRP}. An Arbitrator's ruling may include monetary amounts, awarded against you.
+#2. Remedies are as defined in the {&DRP}. An Arbitrator's ruling may include monetary amounts, awarded against you.
 #3. Your liability is limited to a total maximum of 1000 Euros.
 #4. "Foreign Courts" may assert jurisdiction. These include your local courts, and are outside our Arbitration. Foreign Courts will generally refer to the Arbitration Act of their country, which will generally refer civil cases to Arbitration. The Arbitration Act will not apply to criminal cases.
 
@@ -138,9 +138,9 @@ A member may declare the wish to resign from CAcert at any time by writing to su
 
 The termination discontinues the right to USE, OFFER and CREATE personal certificates in any account of the former member. Those certificates will be revoked and all services to the former member will be terminated as soon as possible. However, some information will continue to be held for certificate processing purposes.
 
-The provisions on Arbitration for the time of membership survive any termination. Former members are still bound by the {&&DRP}, and the Arbitrator may reinstate any provision of this agreement or bind them to a ruling.
+The provisions on Arbitration for the time of membership survive any termination. Former members are still bound by the {&DRP}, and the Arbitrator may reinstate any provision of this agreement or bind them to a ruling.
 
-As far as Organisations are concerned details are also defined in the {&&OAP}.
+As far as Organisations are concerned details are also defined in the {&OAP}.
 
 Every member learning about the death of a member or termination of existence of a member should notify support AT cacert.org.
 
@@ -159,7 +159,7 @@ Notifications to CAcert are to be sent by email to the address support AT cacert
 == 4.1 (withdrawn) ==
 == 4.2 References and Other Binding Documents ==
 
-You are also bound by the Policies of the Community under the control of {&&PoP} and listed in {&ControlledDocumentList}.
+You are also bound by the Policies of the Community under the control of {&PoP} and listed in {&ControlledDocumentList}.
 
 Controlled documents are primary, and may not be replaced or waived except by formal policy channels and Arbitration.
 

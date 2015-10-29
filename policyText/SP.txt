@@ -60,12 +60,12 @@ This Security Policy is part of the Configuration-Control Specification for audi
 This policy document says what is done, rather than how to do it. Some sections are empty, which means "refer to the Manual."
 === 1.4.2 The Security Manual (Practices) Document ===
 
-This Policy explicitly defers detailed security practices to the {&&SM}. The {&SM} says how things are done. As practices are things that vary from time to time, including between each event of practice, the {&SM} is under the direct control of the applicable team leaders. It is located and version-controlled on the CAcert wiki.
+This Policy explicitly defers detailed security practices to the {&SM}. The {&SM} says how things are done. As practices are things that vary from time to time, including between each event of practice, the {&SM} is under the direct control of the applicable team leaders. It is located and version-controlled on the CAcert wiki.
 
 Section Headings are the same in both documents. Where Sections are empty in one document, they are expected to be documented in the other. "Document further in Security Manual" can be implied from any section heading in the Policy.
 === 1.4.3 The Security Procedures ===
 
-The team leaders may from time to time explicitly defer single, cohesive components of the security practices into separate procedures documents. Each procedure should be managed in a wiki page under their control, probably at {http://wiki.cacert.org/SystemAdministration/Procedures}. Each procedure must be referenced explicitly in the {&&SM}.
+The team leaders may from time to time explicitly defer single, cohesive components of the security practices into separate procedures documents. Each procedure should be managed in a wiki page under their control, probably at {http://wiki.cacert.org/SystemAdministration/Procedures}. Each procedure must be referenced explicitly in the {&SM}.
 = 2 Physical Security =
 == 2.1 Facility ==
 
@@ -513,7 +513,7 @@ Components may be outsourced. Any outsourcing arrangements must be documented. A
 * transparent and no barrier to security,
 * under this Policy and the Security Manual,
 * fully under Arbitration and {&DRP} for the purposes of Security, and
-* under the spirit of the Community and within the {&&Principles}. 
+* under the spirit of the Community and within the {&Principles}. 
 
 Contracts should be written with the above in mind. Outsourcing of critical components must be approved by the Board.
 == 9.5 Confidentiality, Secrecy ==

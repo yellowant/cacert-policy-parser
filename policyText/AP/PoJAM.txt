@@ -11,7 +11,7 @@ Editor: Iang(https://wiki.cacert.org/Iang)
 = 0 Preliminaries =
 == 0.1 Authority ==
 
-This sub-policy extends the {&&AP} by specifying how Juniors can be brought into the CAcert Community.
+This sub-policy extends the {&AP} by specifying how Juniors can be brought into the CAcert Community.
 == 0.2 Terms ==
 
 [Minor] is a person who is not empowered to enter contracts as self under local laws.
@@ -39,10 +39,10 @@ This sub-policy extends the {&&AP} by specifying how Juniors can be brought into
 
 2.5 The mechanism for confirming the Parent's consent is something that varies and is not covered by policy. The simple requirement here is that the Assurer makes a reliable statement (CARS) that consent is established, following these two declarations:
 
-#1. The Assurer's declaration (specifically referring to {&&AP#1.1}): "This Assurance conducted according to Assurance Policy"
+#1. The Assurer's declaration (specifically referring to {&AP#1.1}): "This Assurance conducted according to Assurance Policy"
 #2. The member's declaration: "I agree to the CCA"
 
-2.6 The {&&AH} should expand on common methods to establish and record consent. Such as, on a separate form, a modification to CAP form, etc.
+2.6 The {&AH} should expand on common methods to establish and record consent. Such as, on a separate form, a modification to CAP form, etc.
 = 3 System Block =
 
 3.1 Although there is no age limit in this policy, it is reasonable that the Assurer should check this issue closely below 18.
@@ -63,14 +63,14 @@ The absence of this feature does not remove the duty of the Assurer (for example
 
 3.4 The first Assurers of a Member may then have the greater technical burden of explaining and confirming the consent, but the confirmation is required of all Assurers as part of the CAP.
 
-3.5 The {&&AH} should document more efficient methods, such as a single form carried by the Junior Member for showing to the Assurer, rather than the Parent's signature over each individual CAP form.
+3.5 The {&AH} should document more efficient methods, such as a single form carried by the Junior Member for showing to the Assurer, rather than the Parent's signature over each individual CAP form.
 = 4 The Junior Assurer =
 
 4.1 Assurer status may only be granted if the user is at least 14 years old. Other preliminaries for the Assurer status set up by other policies are untouched. Combining {&AP} and this policy, a Junior Assurer is a CAcert member with 100 Assurance Points, has passed the CAcert Assurer Challenge, and is between the ages of 14 and 18 years.
 
 4.2 A Junior Assurer can issue a maximum of 10 Assurance Points to an assuree, independent of how many Experience Points the Junior already has. The Experience Points awarded to the Junior Assurer are untouched.
 
-4.3 The {&&AH} should stipulate the convention as to how the Junior Assurer establishes bona fides.
+4.3 The {&AH} should stipulate the convention as to how the Junior Assurer establishes bona fides.
 = 5 Arbitration =
 
 Arbitration with Juniors needs to take into account that a local court may find the {&CCA} to be improperly imposed. Some understanding of this risk should be taken, but Arbitrators should be careful not to weaken the web of trust on this basis. Therefore, more care should be taken in explaining and ensuring the spirit of the {&CCA} is maintained.

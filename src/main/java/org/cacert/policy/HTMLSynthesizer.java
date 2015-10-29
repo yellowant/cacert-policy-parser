@@ -178,11 +178,7 @@ public class HTMLSynthesizer implements PolicyTarget {
 				anchor = "#s" + parts[1];
 				hrefName = " Section " + parts[1];
 			}
-			if (parts[0].startsWith("&&")) {
-				parts[0] = parts[0].substring(2);
-			} else if (parts[0].startsWith("&")) {
-				parts[0] = parts[0].substring(1);
-			}
+			parts[0] = parts[0].substring(1);
 			Entity refDoc;
 			if (parts[0].isEmpty()) {
 				refDoc = myDoc;

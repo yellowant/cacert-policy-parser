@@ -11,7 +11,7 @@ Editor: Jens Paul
 
 This policy describes how Organisation Assurers ("OAs") conduct Assurances on Organisations. It fits within the overall web-of-trust or Assurance process of CAcert.
 
-This policy is not a Controlled document, for purposes of {&&CCS}.
+This policy is not a Controlled document, for purposes of {&CCS}.
 = 1 Purpose =
 
 Organisations with assured status can issue certificates directly with their own domains within.

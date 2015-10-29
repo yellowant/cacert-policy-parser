@@ -7,7 +7,7 @@ Comment-OAP: See §3 for Subsidiary Policies under OAP. Decision not properly re
 Comment-RDL: Agreement for distribution of Root
 Comment-OAP.EU: This is not for the European Union, but Europe region.
 
-The {&&CCS} mandates the creation and management of a list of all 
+The {&CCS} mandates the creation and management of a list of all 
 documents controlled for formal audit and policy purposes ({&CCS#1.1}).
 This list is located at svn.cacert.org/CAcert/Policies/ControlledDocumentList.html.
 
