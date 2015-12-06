@@ -29,7 +29,7 @@ public class COD extends Entity {
 		if (abbrev.equals("TTP") || abbrev.equals("PoJAM")) {
 			abbrev = "AP-" + abbrev;
 		}
-		return LINK_PREFIX + abbrev.replace("-", "/") + ".html";
+		return "/" + abbrev.replace("-", "/") + ".html";
 	}
 
 	@Override
@@ -77,8 +77,7 @@ public class COD extends Entity {
 				+ HTMLSynthesizer.escape(PolicyGenerator.getEntities()
 						.get("PoP").getLink()) + "\">");
 		out.println("  <img src=\""
-				+ LINK_PREFIX
-				+ "static/cacert-"
+				+ "/static/cacert-"
 				+ status.toLowerCase()
 				+ ".png\" alt=\"PoP Status - "
 				+ status
@@ -104,7 +103,8 @@ public class COD extends Entity {
 		target.newTableRow();
 		target.emitTableCell("" + COD);
 		target.emitTableCell(getAbbrev());
-		target.emitTableCellLink(new Link("http:" + getLink(), getLink()));
+		target.emitTableCellLink(new Link("http:" + LINK_PREFIX
+				+ getLink().substring(1), getLink()));
 		if (editor != null) {
 			target.emitTableCellLink(editor);
 		} else {
