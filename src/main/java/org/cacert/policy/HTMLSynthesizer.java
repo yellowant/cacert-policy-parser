@@ -306,7 +306,8 @@ public class HTMLSynthesizer implements PolicyTarget {
 	public String close() {
 		state(State.EMPTY);
 		realOut.println("<!DOCTYPE html><html><head><meta charset=\"utf-8\"><link rel=\"stylesheet\" type=\"text/css\" href=\""
-				+ "/static/policy.css\"><title>"
+				+ PolicyGenerator.REAL_LINK_PREFIX
+				+ "static/policy.css\"><title>"
 				+ myDoc.generateTitle()
 				+ "</title><body>");
 		realOut.println("<div class='TOC'>");

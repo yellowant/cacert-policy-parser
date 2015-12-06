@@ -29,7 +29,8 @@ public class COD extends Entity {
 		if (abbrev.equals("TTP") || abbrev.equals("PoJAM")) {
 			abbrev = "AP-" + abbrev;
 		}
-		return "/" + abbrev.replace("-", "/") + ".html";
+		return PolicyGenerator.REAL_LINK_PREFIX + abbrev.replace("-", "/")
+				+ ".html";
 	}
 
 	@Override
@@ -77,7 +78,8 @@ public class COD extends Entity {
 				+ HTMLSynthesizer.escape(PolicyGenerator.getEntities()
 						.get("PoP").getLink()) + "\">");
 		out.println("  <img src=\""
-				+ "/static/cacert-"
+				+ PolicyGenerator.REAL_LINK_PREFIX
+				+ "static/cacert-"
 				+ status.toLowerCase()
 				+ ".png\" alt=\"PoP Status - "
 				+ status
@@ -88,7 +90,6 @@ public class COD extends Entity {
 		emitBigTitle(out);
 
 	}
-
 	protected void emitBigTitle(PrintWriter out) {
 		out.println("<h1>" + generateTitle()
 				+ "</h1><h2>Table of Contents</h2>");
@@ -103,8 +104,7 @@ public class COD extends Entity {
 		target.newTableRow();
 		target.emitTableCell("" + COD);
 		target.emitTableCell(getAbbrev());
-		target.emitTableCellLink(new Link("http:" + LINK_PREFIX
-				+ getLink().substring(1), getLink()));
+		target.emitTableCellLink(new Link("http:" + getLink(), getLink()));
 		if (editor != null) {
 			target.emitTableCellLink(editor);
 		} else {

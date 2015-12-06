@@ -33,7 +33,12 @@ public class PolicyGenerator {
 	private static Logger LOG = Logger.getLogger(PolicyGenerator.class
 			.getCanonicalName());
 
+	public static String REAL_LINK_PREFIX = "//policy.cacert.org";
+
 	public static void main(String[] args) throws IOException {
+		if (args.length == 2 && args[0].equals("--prefix")) {
+			REAL_LINK_PREFIX = args[1];
+		}
 		try {
 			initEntities();
 			new File("policy").mkdir();
