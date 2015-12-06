@@ -51,11 +51,10 @@ public class COD extends Entity {
 		out.println("<td>");
 		out.println("Name: " + HTMLSynthesizer.escape(getAbbrev()) + " [COD"
 				+ COD + "]<br/>");
-		out.println("Status: TESTING, TECHNICAL PREVIEW (but would be "
+		out.println("Status: "
 				+ HTMLSynthesizer.escape(status)
 				+ (changes.size() != 0 ? "&nbsp;"
-						+ changes.get(changes.size() - 1) : "")
-				+ ", if voted for it)<br/>");
+						+ changes.get(changes.size() - 1) : "") + "<br/>");
 		if (editor != null) {
 			out.println("Editor: " + editor + "<br/>");
 		}
@@ -71,18 +70,17 @@ public class COD extends Entity {
 				+ " licensed openly under CC-by-sa with all disputes resolved under DRP. "
 				+ "More at wiki.cacert.org/Policy\">CC-by-sa+DRP</a>");
 		out.println("<br/>");
-		out.println("This is a rendering of the official policy document text available <a href='"
-				+ getLink().replace(".html", ".txt") + "'>here</a>.");
+		//out.println("This is a rendering of the official policy document text available <a href='"
+		//		+ getLink().replace(".html", ".txt") + "'>here</a>.");
 		out.println("</td><td align=\"right\" valign=\"top\">");
 		out.println("<a href=\""
 				+ HTMLSynthesizer.escape(PolicyGenerator.getEntities()
-						.get("PoP").getLink())
-				+ "\">TECHNICAL PREIVEW (but would be ");
+						.get("PoP").getLink()) + "\">");
 		out.println("  <img src=\"//cacert.org/policy/images/cacert-"
 				+ status.toLowerCase()
 				+ ".png\" alt=\"PoP Status - "
 				+ status
-				+ "\" style=\"border-style: none;\" height=\"31\" width=\"88\">)");
+				+ "\" style=\"border-style: none;\" height=\"31\" width=\"88\">");
 		out.println("</a>");
 		out.println("</td></tr></tbody></table>");
 
@@ -91,7 +89,6 @@ public class COD extends Entity {
 	}
 
 	protected void emitBigTitle(PrintWriter out) {
-		out.println("<h1>(THIS IS A TECHNICAL PREVIEW AND NOT A CURRENTLY VALID POLICY DOCUMENT)</h1>");
 		out.println("<h1>" + generateTitle()
 				+ "</h1><h2>Table of Contents</h2>");
 	}
@@ -105,7 +102,7 @@ public class COD extends Entity {
 		target.newTableRow();
 		target.emitTableCell("" + COD);
 		target.emitTableCell(getAbbrev());
-		target.emitTableCellLink(new Link(getLink(), getLink()));
+		target.emitTableCellLink(new Link("http:" + getLink(), getLink()));
 		if (editor != null) {
 			target.emitTableCellLink(editor);
 		} else {

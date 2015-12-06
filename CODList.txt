@@ -9,7 +9,7 @@ Comment-OAP.EU: This is not for the European Union, but Europe region.
 
 The {&CCS} mandates the creation and management of a list of all 
 documents controlled for formal audit and policy purposes ({&CCS#1.1}).
-This list is located at svn.cacert.org/CAcert/Policies/ControlledDocumentList.html.
+This list is located at policy.cacert.org/index.html.
 
 This list is managed by the Policy Officer according to the Change provisions of {&CCS#1.2}.
 
