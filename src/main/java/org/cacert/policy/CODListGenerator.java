@@ -1,6 +1,7 @@
 package org.cacert.policy;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,7 +19,7 @@ import org.cacert.policy.HTMLSynthesizer.Link;
 
 public class CODListGenerator {
 	PolicyTarget target;
-	public CODListGenerator(PolicyTarget target) {
+	public CODListGenerator(PolicyTarget target, File targetPath) {
 		this.target = target;
 		List<COD> cods = new ArrayList<>(PolicyGenerator.getCODs());
 
@@ -26,7 +27,8 @@ public class CODListGenerator {
 		StringBuffer content = new StringBuffer();
 		String line;
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(
-				new FileInputStream("CODList.txt"), "UTF-8"))) {
+				new FileInputStream(new File(targetPath, "CODList.txt")),
+				"UTF-8"))) {
 			boolean inHeader = true;
 			while ((line = br.readLine()) != null) {
 				if (line.startsWith("Comment-") && inHeader) {
@@ -87,17 +89,18 @@ public class CODListGenerator {
 		}
 		target.endTable();
 	}
-	public static void generateIndexDocument() throws IOException {
+	public static void generateIndexDocument(File targetPath)
+			throws IOException {
 		PolicyGenerator.initEntities();
 		new CODListGenerator(new HTMLSynthesizer(new PrintWriter(
-				new OutputStreamWriter(
-						new FileOutputStream("policy/index.html"), "UTF-8")),
-				new COD("CDL", "Controlled Document List", "", "", "POLICY",
-						new LinkedList<Link>(), null) {
-					@Override
-					public void printHeader(PrintWriter out) {
-						emitBigTitle(out);
-					}
-				}));
+				new OutputStreamWriter(new FileOutputStream(new File(
+						targetPath, "policy/index.html")), "UTF-8")), new COD(
+				"CDL", "Controlled Document List", "", "", "POLICY",
+				new LinkedList<Link>(), null) {
+			@Override
+			public void printHeader(PrintWriter out) {
+				emitBigTitle(out);
+			}
+		}), targetPath);
 	}
 }

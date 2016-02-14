@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.util.Collections;
@@ -35,43 +36,72 @@ public class PolicyGenerator {
 
 	public static String REAL_LINK_PREFIX = "//policy.cacert.org/";
 
+	private static final File TARGET_PATH = new File(".");
+
+	private static final boolean LOG_TO_FILE = false;
+
 	public static void main(String[] args) throws IOException {
-		if (args.length == 2 && args[0].equals("--prefix")) {
+		if (args.length >= 2 && args[0].equals("--prefix")) {
 			REAL_LINK_PREFIX = args[1];
+			String[] args2 = new String[args.length - 2];
+			System.arraycopy(args, 0, args2, 0, args2.length);
+			args = args2;
 		}
 		try {
 			initEntities();
-			new File("policy").mkdir();
-			CODListGenerator.generateIndexDocument();
-
-			//get file information from file
-			FileInputStream fstream;
-			fstream = new FileInputStream("index-def.txt");
-			BufferedReader br = new BufferedReader(new InputStreamReader(
-					fstream, "UTF-8"));
-			String strLine;
-
-			while ((strLine = br.readLine()) != null) {
-				String[] index = strLine.split(",");
-				if (index.length == 1) {
-					convert(index[0].trim());
-				} else if (index.length == 2) {
-					convert(index[0].trim(), index[1].trim());
-				}
+			if (LOG_TO_FILE) {
+				PrintStream ps = new PrintStream(new File(TARGET_PATH,
+						"output-file.txt"));
+				System.setOut(ps);
+				System.setErr(ps);
 			}
 
-			br.close();
+			if (args.length > 0) {
+				if (args.length == 1) {
+					convert(args[0]);
+				} else if (args.length == 2) {
+					convert(args[0], args[1]);
+				} else {
+					System.err.println("Warning: Wrong arguments syntax");
+				}
+
+			} else {
+
+				convertAllPolicies();
+			}
 
 		} catch (AssertionError ae) {
 			LOG.severe(String.format("unexpected runtime condition: %s",
 					ae.getMessage()));
 		}
 	}
+	private static void convertAllPolicies() throws IOException {
+		new File(TARGET_PATH, "policy").mkdir();
+		CODListGenerator.generateIndexDocument(TARGET_PATH);
+
+		//get file information from file
+		FileInputStream fstream;
+		fstream = new FileInputStream("index-def.txt");
+		BufferedReader br = new BufferedReader(new InputStreamReader(fstream,
+				"UTF-8"));
+		String strLine;
+
+		while ((strLine = br.readLine()) != null) {
+			String[] index = strLine.split(",");
+			if (index.length == 1) {
+				convert(index[0].trim());
+			} else if (index.length == 2) {
+				convert(index[0].trim(), index[1].trim());
+			}
+		}
+
+		br.close();
+	}
 	public static void initEntities() {
 		if (cods != null) {
 			return;
 		}
-		File policyDir = new File("policyText");
+		File policyDir = new File(TARGET_PATH, "policyText");
 		if (!policyDir.isDirectory()) {
 			throw new AssertionError(
 					"no directory policyText found, probably started from the wrong directory.");
@@ -132,7 +162,7 @@ public class PolicyGenerator {
 
 		}
 		try (BufferedReader addEntities = new BufferedReader(new FileReader(
-				"entities.txt"))) {
+				new File(TARGET_PATH, "entities.txt")))) {
 			String line;
 			while ((line = addEntities.readLine()) != null) {
 				String[] parts = line.split(";", 3);
@@ -208,7 +238,7 @@ public class PolicyGenerator {
 	}
 	private static void convert(String path, String name) throws IOException {
 		Reader r = new InputStreamReader(new FileInputStream(new File(
-				"policyText/" + path + ".txt")), "UTF-8");
+				TARGET_PATH, "policyText/" + path + ".txt")), "UTF-8");
 		System.out.println("Converting: " + path);
 		StringBuffer buf = new StringBuffer();
 		char[] buffer = new char[4096];
@@ -225,7 +255,7 @@ public class PolicyGenerator {
 		}
 		buf.delete(0, firstEmptyLine + 2);
 		String document = buf.toString();
-		File target = new File("policy/" + path + ".html");
+		File target = new File(TARGET_PATH, "policy/" + path + ".html");
 		target.getAbsoluteFile().getParentFile().mkdirs();
 		new PolicyGenerator(document, target, (COD) PolicyGenerator
 				.getEntities().get(name), count);
