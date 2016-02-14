@@ -185,6 +185,10 @@ public class HTMLSynthesizer implements PolicyTarget {
 			} else {
 				refDoc = PolicyGenerator.getEntities().get(parts[0]);
 			}
+			if (refDoc == null){
+				System.err.println("Problem with link, no refernce found for {" + content +"}");
+				return "-- INVALID -- ";
+			}
 			if (longReferenced.contains(refDoc)) {
 				return refDoc.getShortLink(anchor, hrefName);
 			} else {

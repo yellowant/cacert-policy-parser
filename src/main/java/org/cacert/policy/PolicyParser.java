@@ -82,6 +82,11 @@ public class PolicyParser {
 				out.emitOrderedListItem(parts[1], depth);
 			} else if (line.startsWith("[")) {
 				String[] parts = line.substring(1).split("] ", 2);
+				if (parts.length != 2) {
+					System.err.println("Wrong format for description in line "
+							+ lineN);
+					return;
+				}
 				out.emitDescriptionItem(parts[0], parts[1], 1);
 			} else if (line.startsWith("* ")) {
 				out.emitUnorderedListItem(line.substring(2), 1);
