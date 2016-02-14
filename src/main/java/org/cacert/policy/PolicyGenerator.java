@@ -60,45 +60,29 @@ public class PolicyGenerator {
 				} else if (args.length == 2){
 					convert(args[0], args[1]);
 				} else {
-					System.out.println("Wrong arguments syntax");
+					System.out.println("Warning: Wrong arguments syntax");
 				}
 
 			} else {
-				CODListGenerator.generateIndexDocument();
-				convert("AP");
-				convert("AP/PoJAM", "PoJAM");
-				convert("AP/TTP", "TTP");
+				
+				//get file information from file
+				FileInputStream fstream;
+				fstream = new FileInputStream("index-def.txt");
+				BufferedReader br = new BufferedReader(new InputStreamReader(
+						fstream, "UTF-8"));
+				String strLine;
 	
-				convert("OAP/DE", "OAP-DE");
-				convert("OAP/AU", "OAP-AU");
-				convert("CCA");
-				convert("CCS");
-				convert("DRP");
-				convert("OAP");
-				convert("PoP");
-				convert("PP");
-				convert("RDL");
-				convert("SP");
-			}
-		} catch (AssertionError ae) {
-			//get file information from file
-			FileInputStream fstream;
-			fstream = new FileInputStream("index-def.txt");
-			BufferedReader br = new BufferedReader(new InputStreamReader(
-					fstream, "UTF-8"));
-			String strLine;
-
-			while ((strLine = br.readLine()) != null) {
-				String[] index = strLine.split(",");
-				if (index.length == 1) {
-					convert(index[0].trim());
-				} else if (index.length == 2) {
-					convert(index[0].trim(), index[1].trim());
+				while ((strLine = br.readLine()) != null) {
+					String[] index = strLine.split(",");
+					if (index.length == 1) {
+						convert(index[0].trim());
+					} else if (index.length == 2) {
+						convert(index[0].trim(), index[1].trim());
+					}
 				}
+	
+				br.close();
 			}
-
-			br.close();
-
 		} catch (AssertionError ae) {
 			LOG.severe(String.format("unexpected runtime condition: %s",
 					ae.getMessage()));
