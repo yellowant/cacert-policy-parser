@@ -15,7 +15,7 @@ public class COD extends Entity {
 	public COD(String abbrev, String name, String COD, String link,
 			String status, LinkedList<Link> changes, Link editor) {
 		super(abbrev, name, linkof(abbrev));
-		if (!status.equals("POLICY") && !status.equals("DRAFT")) {
+		if (!status.equals("POLICY") && !status.equals("DRAFT") && !status.equals("WIP")) {
 			throw new Error("Invalid status of COD " + abbrev + ": " + status);
 		}
 		this.COD = COD;
@@ -79,7 +79,7 @@ public class COD extends Entity {
 						.get("PoP").getLink()) + "\">");
 		out.println("  <img src=\""
 				+ PolicyGenerator.REAL_LINK_PREFIX
-				+ "static/cacert-"
+				+ "/static/cacert-"
 				+ status.toLowerCase()
 				+ ".png\" alt=\"PoP Status - "
 				+ status
