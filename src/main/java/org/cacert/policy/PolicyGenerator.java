@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.util.Collections;
@@ -29,6 +30,9 @@ public class PolicyGenerator {
 		parser.parse(templateDoc, headerLen);
 		out.close();
 	}
+	public static String workingPath = "";
+	public static Boolean output = false;
+		
 	private static Map<String, Entity> cods;
 	private static Logger LOG = Logger.getLogger(PolicyGenerator.class
 			.getCanonicalName());
@@ -36,22 +40,40 @@ public class PolicyGenerator {
 	public static void main(String[] args) throws IOException {
 		try {
 			initEntities();
-			new File("policy").mkdir();
-			CODListGenerator.generateIndexDocument();
-			convert("AP");
-			convert("AP/PoJAM", "PoJAM");
-			convert("AP/TTP", "TTP");
+			new File(workingPath + "policy").mkdir();
 
-			convert("OAP/DE", "OAP-DE");
-			convert("OAP/AU", "OAP-AU");
-			convert("CCA");
-			convert("CCS");
-			convert("DRP");
-			convert("OAP");
-			convert("PoP");
-			convert("PP");
-			convert("RDL");
-			convert("SP");
+			if (output == true){
+				PrintStream ps = new PrintStream(new File(workingPath + "output-file.txt"));
+				System.setOut(ps);	
+				System.setErr(ps);	
+			}
+			
+			if (args.length > 0) {
+				if (args.length == 1) {
+					convert(args[0]);
+				} else if (args.length == 2){
+					convert(args[0], args[1]);
+				} else {
+					System.out.println("Wrong arguments syntax");
+				}
+
+			} else {
+				CODListGenerator.generateIndexDocument();
+				convert("AP");
+				convert("AP/PoJAM", "PoJAM");
+				convert("AP/TTP", "TTP");
+	
+				convert("OAP/DE", "OAP-DE");
+				convert("OAP/AU", "OAP-AU");
+				convert("CCA");
+				convert("CCS");
+				convert("DRP");
+				convert("OAP");
+				convert("PoP");
+				convert("PP");
+				convert("RDL");
+				convert("SP");
+			}
 		} catch (AssertionError ae) {
 			LOG.severe(String.format("unexpected runtime condition: %s",
 					ae.getMessage()));
@@ -61,7 +83,7 @@ public class PolicyGenerator {
 		if (cods != null) {
 			return;
 		}
-		File policyDir = new File("policyText");
+		File policyDir = new File(workingPath + "policyText");
 		if (!policyDir.isDirectory()) {
 			throw new AssertionError(
 					"no directory policyText found, probably started from the wrong directory.");
@@ -122,7 +144,7 @@ public class PolicyGenerator {
 
 		}
 		try (BufferedReader addEntities = new BufferedReader(new FileReader(
-				"entities.txt"))) {
+				workingPath + "entities.txt"))) {
 			String line;
 			while ((line = addEntities.readLine()) != null) {
 				String[] parts = line.split(";", 3);
@@ -198,7 +220,7 @@ public class PolicyGenerator {
 	}
 	private static void convert(String path, String name) throws IOException {
 		Reader r = new InputStreamReader(new FileInputStream(new File(
-				"policyText/" + path + ".txt")), "UTF-8");
+				workingPath +"policyText/" + path + ".txt")), "UTF-8");
 		System.out.println("Converting: " + path);
 		StringBuffer buf = new StringBuffer();
 		char[] buffer = new char[4096];
@@ -215,7 +237,7 @@ public class PolicyGenerator {
 		}
 		buf.delete(0, firstEmptyLine + 2);
 		String document = buf.toString();
-		File target = new File("policy/" + path + ".html");
+		File target = new File(workingPath + "policy/" + path + ".html");
 		target.getAbsoluteFile().getParentFile().mkdirs();
 		new PolicyGenerator(document, target, (COD) PolicyGenerator
 				.getEntities().get(name), count);

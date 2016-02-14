@@ -26,7 +26,7 @@ public class CODListGenerator {
 		StringBuffer content = new StringBuffer();
 		String line;
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(
-				new FileInputStream("CODList.txt"), "UTF-8"))) {
+				new FileInputStream(PolicyGenerator.workingPath + "CODList.txt"), "UTF-8"))) {
 			boolean inHeader = true;
 			while ((line = br.readLine()) != null) {
 				if (line.startsWith("Comment-") && inHeader) {
@@ -91,7 +91,7 @@ public class CODListGenerator {
 		PolicyGenerator.initEntities();
 		new CODListGenerator(new HTMLSynthesizer(new PrintWriter(
 				new OutputStreamWriter(
-						new FileOutputStream("policy/index.html"), "UTF-8")),
+						new FileOutputStream(PolicyGenerator.workingPath + "policy/index.html"), "UTF-8")),
 				new COD("CDL", "Controlled Document List", "", "", "POLICY",
 						new LinkedList<Link>(), null) {
 					@Override
