@@ -124,7 +124,7 @@ public class COD extends Entity {
 			target.emitTableCell(""); // TODO maybe colspan?
 			target.emitTableCellLink(changes.get(changes.size() - 1));
 		} catch (Exception ex) {
-			System.err.println("WARNING: Problem with index for" + COD);
+			System.err.println("WARNING: Problem with index for " + COD);
 		}
 	}
 
