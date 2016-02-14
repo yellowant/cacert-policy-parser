@@ -33,7 +33,7 @@ public class PolicyGenerator {
 	private static Logger LOG = Logger.getLogger(PolicyGenerator.class
 			.getCanonicalName());
 
-	public static String REAL_LINK_PREFIX = "//policy.cacert.org";
+	public static String REAL_LINK_PREFIX = "//policy.cacert.org/";
 
 	public static void main(String[] args) throws IOException {
 		if (args.length == 2 && args[0].equals("--prefix")) {
@@ -43,15 +43,16 @@ public class PolicyGenerator {
 			initEntities();
 			new File("policy").mkdir();
 			CODListGenerator.generateIndexDocument();
-			
+
 			//get file information from file
 			FileInputStream fstream;
 			fstream = new FileInputStream("index-def.txt");
-			BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					fstream, "UTF-8"));
 			String strLine;
 
-			while ((strLine = br.readLine()) != null)   {
-				String[] index =  strLine.split(",");
+			while ((strLine = br.readLine()) != null) {
+				String[] index = strLine.split(",");
 				if (index.length == 1) {
 					convert(index[0].trim());
 				} else if (index.length == 2) {
@@ -60,7 +61,7 @@ public class PolicyGenerator {
 			}
 
 			br.close();
-			
+
 		} catch (AssertionError ae) {
 			LOG.severe(String.format("unexpected runtime condition: %s",
 					ae.getMessage()));
