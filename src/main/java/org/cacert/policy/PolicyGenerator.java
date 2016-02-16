@@ -36,16 +36,25 @@ public class PolicyGenerator {
 
 	public static String REAL_LINK_PREFIX = "//policy.cacert.org/";
 
-	private static final File TARGET_PATH = new File(".");
+	private static File TARGET_PATH = new File(".");
 
-	private static final boolean LOG_TO_FILE = false;
+	private static boolean LOG_TO_FILE = false;
+
+	private static String[] single = null;
 
 	public static void main(String[] args) throws IOException {
-		if (args.length >= 2 && args[0].equals("--prefix")) {
-			REAL_LINK_PREFIX = args[1];
-			String[] args2 = new String[args.length - 2];
-			System.arraycopy(args, 0, args2, 0, args2.length);
-			args = args2;
+		for (int i = 0; i < args.length; i++) {
+			if (args[i].equals("--prefix") && i + 1 < args.length) {
+				REAL_LINK_PREFIX = args[++i];
+			} else if (args[i].equals("--logToFile")) {
+				LOG_TO_FILE = true;
+			} else if (args[i].equals("--targetPath") && i + 1 < args.length) {
+				TARGET_PATH = new File(args[++i]);
+			} else if (args[i].equals("--convert") && i + 1 < args.length) {
+				single = new String[]{args[++i]};
+			} else if (args[i].equals("--convertTo") && i + 2 < args.length) {
+				single = new String[]{args[++i], args[++i]};
+			}
 		}
 		try {
 			initEntities();
@@ -56,17 +65,15 @@ public class PolicyGenerator {
 				System.setErr(ps);
 			}
 
-			if (args.length > 0) {
-				if (args.length == 1) {
-					convert(args[0]);
-				} else if (args.length == 2) {
-					convert(args[0], args[1]);
+			if (single != null) {
+				if (single.length == 1) {
+					convert(single[0]);
+				} else if (single.length == 2) {
+					convert(single[0], single[1]);
 				} else {
 					System.err.println("Warning: Wrong arguments syntax");
 				}
-
 			} else {
-
 				convertAllPolicies();
 			}
 
