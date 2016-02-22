@@ -19,9 +19,12 @@ import org.cacert.policy.HTMLSynthesizer.Link;
 
 public class CODListGenerator {
 	PolicyTarget target;
-	public CODListGenerator(PolicyTarget target, File targetPath) {
+	private PolicyGenerator generator;
+	public CODListGenerator(PolicyGenerator generator, PolicyTarget target,
+			File targetPath) {
+		this.generator = generator;
 		this.target = target;
-		List<COD> cods = new ArrayList<>(PolicyGenerator.getCODs());
+		List<COD> cods = new ArrayList<>(generator.getCODs());
 
 		HashMap<String, String> comments = new HashMap<>();
 		StringBuffer content = new StringBuffer();
@@ -63,7 +66,7 @@ public class CODListGenerator {
 			}
 		});
 		target.emitHeading(1, "1 Introduction", "1");
-		PolicyParser pp = new PolicyParser(target);
+		PolicyParser pp = new PolicyParser(generator, target);
 		pp.parse(content.toString(), 0);
 
 		target.emitHeading(1, "2 List of Documents", "2");
@@ -85,22 +88,28 @@ public class CODListGenerator {
 		target.emitTableCell("");
 		target.emitTableCell("last Update");
 		for (COD cod : cods) {
-			cod.emitCODIndexLines(target, comments);
+			try {
+				cod.emitCODIndexLines(target, comments);
+			} catch (Exception ex) {
+				generator.reportError("WARNING: Problem with index for "
+						+ cod.getId());
+			}
 		}
 		target.endTable();
 	}
-	public static void generateIndexDocument(File targetPath)
-			throws IOException {
-		PolicyGenerator.initEntities();
-		new CODListGenerator(new HTMLSynthesizer(new PrintWriter(
-				new OutputStreamWriter(new FileOutputStream(new File(
-						targetPath, "policy/index.html")), "UTF-8")), new COD(
-				"CDL", "Controlled Document List", "", "", "POLICY",
-				new LinkedList<Link>(), null) {
-			@Override
-			public void printHeader(PrintWriter out) {
-				emitBigTitle(out);
-			}
-		}), targetPath);
+	public static void generateIndexDocument(PolicyGenerator entityResolver,
+			File targetPath) throws IOException {
+		new CODListGenerator(entityResolver, new HTMLSynthesizer(
+				entityResolver, new PrintWriter(new OutputStreamWriter(
+						new FileOutputStream(new File(targetPath,
+								"policy/index.html")), "UTF-8")), new COD(
+						"CDL", "Controlled Document List", "", "", "POLICY",
+						new LinkedList<Link>(), null) {
+					@Override
+					public void printHeader(PolicyGenerator resolver,
+							PrintWriter out) {
+						emitBigTitle(out);
+					}
+				}), targetPath);
 	}
 }

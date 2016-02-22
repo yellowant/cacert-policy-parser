@@ -71,7 +71,10 @@ public class HTMLSynthesizer implements PolicyTarget {
 
 	private HashSet<Entity> longReferenced = new HashSet<>();
 
-	public HTMLSynthesizer(PrintWriter out, COD doc) {
+	private PolicyGenerator generator;
+
+	public HTMLSynthesizer(PolicyGenerator generator, PrintWriter out, COD doc) {
+		this.generator = generator;
 		this.realOut = out;
 		this.out = new PrintWriter(content = new StringWriter());
 		this.headS = new PrintWriter(head = new StringWriter());
@@ -161,9 +164,9 @@ public class HTMLSynthesizer implements PolicyTarget {
 		return resolved.toString();
 	}
 	private String formatPlain(String escape) {
-		for (Entity e : PolicyGenerator.getEntities().values()) {
+		for (Entity e : generator.getEntities().values()) {
 			if (escape.matches("(^|.*[^A-Z])" + e.getAbbrev() + "([^A-Z].*|$)")) {
-				System.err.println("WARNING: possible unlinked entity "
+				generator.reportError("WARNING: possible unlinked entity "
 						+ e.getAbbrev() + " in " + escape);
 			}
 		}
@@ -183,10 +186,12 @@ public class HTMLSynthesizer implements PolicyTarget {
 			if (parts[0].isEmpty()) {
 				refDoc = myDoc;
 			} else {
-				refDoc = PolicyGenerator.getEntities().get(parts[0]);
+				refDoc = generator.getEntities().get(parts[0]);
 			}
-			if (refDoc == null){
-				System.err.println("Problem with link, no refernce found for {" + content +"}");
+			if (refDoc == null) {
+				generator
+						.reportError("Problem with link, no refernce found for {"
+								+ content + "}");
 				return "-- INVALID -- ";
 			}
 			if (longReferenced.contains(refDoc)) {
@@ -223,7 +228,7 @@ public class HTMLSynthesizer implements PolicyTarget {
 				e.printStackTrace();
 			}
 		}
-		System.out.println(error + parts);
+		generator.reportError(error + parts);
 	}
 	@Override
 	public void endParagraph() {
@@ -315,7 +320,7 @@ public class HTMLSynthesizer implements PolicyTarget {
 				+ myDoc.generateTitle()
 				+ "</title><body>");
 		realOut.println("<div class='TOC'>");
-		myDoc.printHeader(realOut);
+		myDoc.printHeader(generator, realOut);
 		while (0 < TOCDepth) {
 			headS.print("</li></ul>");
 			TOCDepth--;

@@ -47,7 +47,7 @@ public class COD extends Entity {
 				+ HTMLSynthesizer.escape(hrefName) + ")";
 
 	}
-	public void printHeader(PrintWriter out) {
+	public void printHeader(PolicyGenerator entityResolver, PrintWriter out) {
 		out.println("<table id=\"header\"><tbody><tr>");
 		out.println("<td>");
 		out.println("Name: " + HTMLSynthesizer.escape(getAbbrev()) + " [COD"
@@ -75,7 +75,7 @@ public class COD extends Entity {
 		//		+ getLink().replace(".html", ".txt") + "'>here</a>.");
 		out.println("</td><td align=\"right\" valign=\"top\">");
 		out.println("<a href=\""
-				+ HTMLSynthesizer.escape(PolicyGenerator.getEntities()
+				+ HTMLSynthesizer.escape(entityResolver.getEntities()
 						.get("PoP").getLink()) + "\">");
 		out.println("  <img src=\""
 				+ PolicyGenerator.REAL_LINK_PREFIX
@@ -101,31 +101,27 @@ public class COD extends Entity {
 
 	public void emitCODIndexLines(PolicyTarget target,
 			HashMap<String, String> comments) {
-		try {
-			target.newTableRow();
-			target.emitTableCell("" + COD);
-			target.emitTableCell(getAbbrev());
-			target.emitTableCellLink(new Link("http:" + getLink(), getLink()));
-			if (editor != null) {
-				target.emitTableCellLink(editor);
-			} else {
-				target.emitTableCell("");
-			}
-			target.emitTableCellLink(changes.get(0));
-			target.newTableRow();
-			target.emitTableCell(status);
-			target.emitTableCell(getName());
-			String comment = comments.get(getAbbrev());
-			if (comment != null) {
-				target.emitTableCell(comment);
-			} else {
-				target.emitTableCell("");
-			}
-			target.emitTableCell(""); // TODO maybe colspan?
-			target.emitTableCellLink(changes.get(changes.size() - 1));
-		} catch (Exception ex) {
-			System.err.println("WARNING: Problem with index for " + COD);
+		target.newTableRow();
+		target.emitTableCell("" + COD);
+		target.emitTableCell(getAbbrev());
+		target.emitTableCellLink(new Link("http:" + getLink(), getLink()));
+		if (editor != null) {
+			target.emitTableCellLink(editor);
+		} else {
+			target.emitTableCell("");
 		}
+		target.emitTableCellLink(changes.get(0));
+		target.newTableRow();
+		target.emitTableCell(status);
+		target.emitTableCell(getName());
+		String comment = comments.get(getAbbrev());
+		if (comment != null) {
+			target.emitTableCell(comment);
+		} else {
+			target.emitTableCell("");
+		}
+		target.emitTableCell(""); // TODO maybe colspan?
+		target.emitTableCellLink(changes.get(changes.size() - 1));
 	}
 
 	public String getId() {

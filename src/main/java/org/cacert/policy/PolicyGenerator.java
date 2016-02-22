@@ -3,6 +3,7 @@ package org.cacert.policy;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,6 +12,7 @@ import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.Reader;
+import java.io.UnsupportedEncodingException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -21,35 +23,42 @@ import java.util.logging.Logger;
 import org.cacert.policy.HTMLSynthesizer.Link;
 
 public class PolicyGenerator {
-	public PolicyGenerator(String templateDoc, File target, COD doc,
-			int headerLen) throws IOException {
-		PolicyTarget out = new HTMLSynthesizer(new PrintWriter(
-				new OutputStreamWriter(new FileOutputStream(target), "UTF-8")),
-				doc);
-		final PolicyParser parser = new PolicyParser(out);
+	private File targetPath;
+	private PrintStream warningStream;
+
+	public PolicyGenerator(File targetPath, PrintStream warningStream)
+			throws IOException {
+		this.targetPath = targetPath;
+		this.warningStream = warningStream;
+		initEntities();
+	}
+	private void generate(String templateDoc, PrintWriter tgt, COD doc,
+			int headerLen) throws UnsupportedEncodingException,
+			FileNotFoundException {
+		PolicyTarget out = new HTMLSynthesizer(this, tgt, doc);
+		PolicyParser parser = new PolicyParser(this, out);
 		parser.parse(templateDoc, headerLen);
 		out.close();
 	}
-	private static Map<String, Entity> cods;
+	private Map<String, Entity> cods;
 	private static Logger LOG = Logger.getLogger(PolicyGenerator.class
 			.getCanonicalName());
 
 	public static String REAL_LINK_PREFIX = "//policy.cacert.org/";
 
-	private static File TARGET_PATH = new File(".");
-
-	private static boolean LOG_TO_FILE = false;
-
-	private static String[] single = null;
-
 	public static void main(String[] args) throws IOException {
+		File targetPath = new File(".");
+
+		boolean logToFile = false;
+
+		String[] single = null;
 		for (int i = 0; i < args.length; i++) {
 			if (args[i].equals("--prefix") && i + 1 < args.length) {
 				REAL_LINK_PREFIX = args[++i];
 			} else if (args[i].equals("--logToFile")) {
-				LOG_TO_FILE = true;
+				logToFile = true;
 			} else if (args[i].equals("--targetPath") && i + 1 < args.length) {
-				TARGET_PATH = new File(args[++i]);
+				targetPath = new File(args[++i]);
 			} else if (args[i].equals("--convert") && i + 1 < args.length) {
 				single = new String[]{args[++i]};
 			} else if (args[i].equals("--convertTo") && i + 2 < args.length) {
@@ -57,24 +66,20 @@ public class PolicyGenerator {
 			}
 		}
 		try {
-			initEntities();
-			if (LOG_TO_FILE) {
-				PrintStream ps = new PrintStream(new File(TARGET_PATH,
-						"output-file.txt"));
-				System.setOut(ps);
-				System.setErr(ps);
-			}
+			PolicyGenerator pg = new PolicyGenerator(targetPath, logToFile
+					? new PrintStream(new File(targetPath, "output-file.txt"))
+					: System.out);
 
 			if (single != null) {
 				if (single.length == 1) {
-					convert(single[0]);
+					pg.convert(single[0]);
 				} else if (single.length == 2) {
-					convert(single[0], single[1]);
+					pg.convert(single[0], single[1]);
 				} else {
 					System.err.println("Warning: Wrong arguments syntax");
 				}
 			} else {
-				convertAllPolicies();
+				pg.convertAllPolicies();
 			}
 
 		} catch (AssertionError ae) {
@@ -82,9 +87,9 @@ public class PolicyGenerator {
 					ae.getMessage()));
 		}
 	}
-	private static void convertAllPolicies() throws IOException {
-		new File(TARGET_PATH, "policy").mkdir();
-		CODListGenerator.generateIndexDocument(TARGET_PATH);
+	private void convertAllPolicies() throws IOException {
+		new File(targetPath, "policy").mkdir();
+		CODListGenerator.generateIndexDocument(this, targetPath);
 
 		//get file information from file
 		FileInputStream fstream;
@@ -104,11 +109,11 @@ public class PolicyGenerator {
 
 		br.close();
 	}
-	public static void initEntities() {
+	public void initEntities() {
 		if (cods != null) {
 			return;
 		}
-		File policyDir = new File(TARGET_PATH, "policyText");
+		File policyDir = new File(targetPath, "policyText");
 		if (!policyDir.isDirectory()) {
 			throw new AssertionError(
 					"no directory policyText found, probably started from the wrong directory.");
@@ -129,22 +134,20 @@ public class PolicyGenerator {
 							pref = "OAP-";
 							if (!doc.getId().startsWith("11.")) {// OAP COD
 																	// number
-								System.err
-										.println("Policy with wrong COD reference "
-												+ policy.getName());
+								reportError("Policy with wrong COD reference "
+										+ policy.getName());
 							}
 						} else if (policy.getName().equals("AP")) {
 							Integer.parseInt(doc.getId().substring(3));
 							if (!doc.getId().startsWith("13.")) {// AP COD
 								// number
-								System.err
-										.println("Policy with wrong COD reference "
-												+ policy.getName());
+								reportError("Policy with wrong COD reference "
+										+ policy.getName());
 							}
 						}
 						if (!(doc.getAbbrev() + ".txt").equals(pref
 								+ subpolicy.getName())) {
-							System.err.println("Policy in wrong file: in "
+							reportError("Policy in wrong file: in "
 									+ subpolicy.getName() + " is "
 									+ doc.getAbbrev());
 						}
@@ -158,7 +161,7 @@ public class PolicyGenerator {
 					COD doc = parseHeader(br);
 					Integer.parseInt(doc.getId());
 					if (!(doc.getAbbrev() + ".txt").equals(policy.getName())) {
-						System.err.println("Policy in wrong file: in "
+						reportError("Policy in wrong file: in "
 								+ policy.getName() + " is " + doc.getAbbrev());
 					}
 					codsm.put(doc.getAbbrev(), doc);
@@ -169,7 +172,7 @@ public class PolicyGenerator {
 
 		}
 		try (BufferedReader addEntities = new BufferedReader(new FileReader(
-				new File(TARGET_PATH, "entities.txt")))) {
+				new File(targetPath, "entities.txt")))) {
 			String line;
 			while ((line = addEntities.readLine()) != null) {
 				String[] parts = line.split(";", 3);
@@ -181,11 +184,11 @@ public class PolicyGenerator {
 		}
 		cods = Collections.unmodifiableMap(codsm);
 	}
-	public static Map<String, Entity> getEntities() {
+	public Map<String, Entity> getEntities() {
 		return cods;
 	}
 
-	public static List<COD> getCODs() {
+	public List<COD> getCODs() {
 		LinkedList<COD> c = new LinkedList<>();
 		for (Entity e : cods.values()) {
 			if (e instanceof COD) {
@@ -195,7 +198,7 @@ public class PolicyGenerator {
 		return Collections.unmodifiableList(c);
 	}
 
-	public static COD parseHeader(BufferedReader br) throws IOException, Error {
+	private static COD parseHeader(BufferedReader br) throws IOException, Error {
 		String id = null;
 		String abbrev = null, name = null, link = null, status = null;
 		LinkedList<Link> changes = new LinkedList<>();
@@ -240,13 +243,22 @@ public class PolicyGenerator {
 		COD fixedLink = new COD(abbrev, name, id, link, status, changes, editor);
 		return fixedLink;
 	}
-	private static void convert(String name) throws IOException {
+	private void convert(String name) throws IOException {
 		convert(name, name);
 	}
-	private static void convert(String path, String name) throws IOException {
+	private void convert(String path, String name) throws IOException {
 		Reader r = new InputStreamReader(new FileInputStream(new File(
-				TARGET_PATH, "policyText/" + path + ".txt")), "UTF-8");
-		System.out.println("Converting: " + path);
+				targetPath, "policyText/" + path + ".txt")), "UTF-8");
+		reportError("Converting: " + path);
+		File target = new File(targetPath, "policy/" + path + ".html");
+		target.getAbsoluteFile().getParentFile().mkdirs();
+		PrintWriter tgt = new PrintWriter(new OutputStreamWriter(
+				new FileOutputStream(target), "UTF-8"));
+
+		doConversion(name, r, tgt);
+	}
+	public void doConversion(String name, Reader r, PrintWriter tgt)
+			throws IOException {
 		StringBuffer buf = new StringBuffer();
 		char[] buffer = new char[4096];
 		int len;
@@ -262,10 +274,10 @@ public class PolicyGenerator {
 		}
 		buf.delete(0, firstEmptyLine + 2);
 		String document = buf.toString();
-		File target = new File(TARGET_PATH, "policy/" + path + ".html");
-		target.getAbsoluteFile().getParentFile().mkdirs();
-		new PolicyGenerator(document, target, (COD) PolicyGenerator
-				.getEntities().get(name), count);
+		generate(document, tgt, (COD) getEntities().get(name), count);
 		r.close();
+	}
+	public void reportError(String string) {
+		warningStream.println(string);
 	}
 }

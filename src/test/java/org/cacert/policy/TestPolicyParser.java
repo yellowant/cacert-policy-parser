@@ -2,6 +2,9 @@ package org.cacert.policy;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.File;
+import java.io.IOException;
+
 import org.cacert.policy.HTMLSynthesizer.Link;
 import org.junit.Test;
 
@@ -79,7 +82,15 @@ public class TestPolicyParser {
 
 	}
 	DummyTarget dt = new DummyTarget();
-	PolicyParser pp = new PolicyParser(dt);
+	PolicyParser pp;
+	public TestPolicyParser() {
+		try {
+			PolicyGenerator pg = new PolicyGenerator(new File("."), System.out);
+			pp = new PolicyParser(pg, dt);
+		} catch (IOException e) {
+			throw new Error(e);
+		}
+	}
 	private void finish(String string) {
 		dt.close();
 		assertEquals(string, dt.buffer.toString());

@@ -3,20 +3,26 @@ package org.cacert.policy;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class TestHTMLSynthesizer {
 	StringWriter sw = new StringWriter();
-	PolicyTarget hs = new HTMLSynthesizer(new PrintWriter(sw),
-			(COD) PolicyGenerator.getEntities().get("CCA"));
-	@BeforeClass
-	public static void setClassUp() {
-		PolicyGenerator.initEntities();
+	PolicyGenerator pg;
+	PolicyTarget hs;
+	public TestHTMLSynthesizer() {
+		try {
+			pg = new PolicyGenerator(new File("."), System.out);
+		} catch (IOException e) {
+			throw new Error(e);
+		}
+		hs = new HTMLSynthesizer(pg, new PrintWriter(sw), (COD) pg
+				.getEntities().get("CCA"));
 	}
 	@Before
 	public void setUp() throws Exception {

@@ -16,6 +16,7 @@ public class PolicyParser {
 			Pattern.compile("([0-9]+[a-z]?)\\.([0-9]+[a-z]?)\\.([0-9]+[a-z]?)"),
 			Pattern.compile("([0-9]+[a-z]?)\\.([0-9]+[a-z]?)\\.([0-9]+[a-z]?)\\.([0-9]+[a-z]?)")};
 	String[] headingCounter = new String[3];
+	private PolicyGenerator generator;
 
 	/**
 	 * Creates a new PolicyParser.
@@ -23,7 +24,8 @@ public class PolicyParser {
 	 * @param out
 	 *            the target to deliver the document to.
 	 */
-	public PolicyParser(PolicyTarget out) {
+	public PolicyParser(PolicyGenerator generator, PolicyTarget out) {
+		this.generator = generator;
 		this.out = out;
 	}
 
@@ -53,7 +55,7 @@ public class PolicyParser {
 				} else if (line.startsWith("==== ") && line.endsWith(" ====")) {
 					handleHeading(line, 4, lineN);
 				} else {
-					System.err.println("Crappy header in line: " + lineN);
+					generator.reportError("Crappy header in line: " + lineN);
 					return;
 				}
 			} else if (line.startsWith("#")) {
@@ -74,7 +76,6 @@ public class PolicyParser {
 						parts[0].length() - 1));
 				parts[1] = parts[1].trim();
 				if (num != out.getListCounter(depth) + 1) {
-					System.out.println(line);
 					throw new Error("Invalid numbering in line " + lineN
 							+ " is " + num + " should be "
 							+ (out.getListCounter(depth) + 1));
@@ -83,8 +84,9 @@ public class PolicyParser {
 			} else if (line.startsWith("[")) {
 				String[] parts = line.substring(1).split("] ", 2);
 				if (parts.length != 2) {
-					System.err.println("Wrong format for description in line "
-							+ lineN);
+					generator
+							.reportError("Wrong format for description in line "
+									+ lineN);
 					return;
 				}
 				out.emitDescriptionItem(parts[0], parts[1], 1);
