@@ -1,0 +1,101 @@
+Id: 13.3
+Abbrev: NAP
+Name: Nucleus Assurance Programme Policy
+Link: 
+Status: WIP
+
+
+Editor: INOPIAE
+
+
+= 0 Preliminaries =
+
+== 0.1 Authority ==
+
+This sub-policy extends the {&AP} by specifying how seeding a local CAcert Assurer Community can done by 2 Assurers.
+
+== 0.2 Terms ==
+
+[AO] Assurance Officer
+[Assuree] CAcert Community Member who is asking for an assurance
+[CAP form] CAcert Assurance Programme (CAP) form containing the elements actual needed for an assurance
+[Desert] Area with no or just a few CAcert Assurer, defined by AO
+[Experienced Assurer] Experienced Assurer as defined by AO
+[Member] CAcert Community Member
+[Nucleus Assurance] An assurance done according to this policy
+[Nucleus Assurance ] Programme to do assurance according to this policy (NAP)
+[Nucleus Assurer] Assurer who is trained for the Nucleus Assurance Programme
+[Senior Assurer] as defined by AO
+
+= 1 Scope =
+
+This sub-policy is restricted to members located in areas not well-served with Assurers. It serves a goal of promoting both Assurers and Members in those areas.
+
+= 2 Roles =
+
+== 2.1 Nucleus Assuree ==
+
+An Assuree (Member) who is located in a place not well-served by Assurers with less than 30 Assurance Points.
+
+== 2.2 Nucleus Assurer ==
+
+An Experienced Assurer or even better a Senior Assurer who is trained to act as Nucleus Assurer and who is nominated by the Assurance Officer.
+
+= 3 The Nucleus Assurance Programme =
+
+The basic idea is to have 2 Nucleus Assurer who are able to grant temporary 50 Assurance Points. These 50 Assurance Points are calculated by 35 normal Assurance Points and 15 temporary Nucleus Assurance Points which are only valid for 4 weeks after entering the Nucleus Assurance to the system. In the meantime the attendees of the event do cross assurances and enter these assurances to the system so they still have 100 Assurance Points.
+
+The Nucleus Assurers educate and train the member as well as they perform assurances with the members. The aim is that there should be enough Assurer in the area to grant a minimum of 100 Assurance points.
+
+The Nucleus Assurance Programme consists out of two steps an educational part and an assurance part.
+
+For a successful event a minimum of 7 better at least 10 and not more than 20 attendees are required.
+
+== 3.1 Education Part ==
+
+The Nucleus Assurers hold a lecture of approx. 90 minutes covering the basic ideas and principles of CAcert and CAcert Assurances.
+
+== 3.2 Assurance Part ==
+
+The Nucleus Assurer must make sure that they assure all present members. He adds the text Nucleus Assurance in the assurer statement section of the CAP form.
+
+All present members need to assure each other with a minimum of 5 assurances each.
+
+After the event the Nucleus Assurer enter the Nucleus Assurance with 35 Assurance Points and 15 temporary Nucleus Assurance Points.
+
+The members do the CATS test. Once they reached assurer status (100 Assurance Points + CATS test) they enter the assurance they did within a period of 4 weeks after the event.
+
+== 3.3 Recommendation ==
+
+It is recommended to split the event on two days in a short time span:
+1st day Educational part and assurance done by Nucleus Assurer
+2nd day Assurance part with cross assurance of all members with supervision of the Assurances by the Nucleus Assurer
+
+= 4 Software =
+
+The software team needs to implement a way to grant the Nucleus Assurer status for a time period of 4 weeks. During this period the Nucleus Assurer is able to enter a "Nucleus Assurance". A Nucleus Assurance consists out of a permanent 35 point assurance and a temporary 15 point assurance that is automatically revoked after 4 weeks from the entering of the Nucleus Assurance.
+
+= 5 Assurance Officer =
+
+The Board routinely delegates its responsibilities to the Assurance Officer (and this section assumes that, but does not require it).
+
+A report is requested annually from the Assurance Officer on performance of this policy for the association's annual report.
+
+== 5.1 Practice ==
+
+Assurance Officer should prepare a detailed documentation under AH that meets the needs of this policy, including:
+
+* Guide for Nucleus Assurer.
+* Defines the training for Nucleus Assurer
+* Material for lecture
+* Definition of Senior Assurer
+
+Assurance Officer nominates Nucleus Assurer for a certain event and asks support to grant the Nucleus Assurer flag with a period of 4 weeks starting with the date of the Nucleus Assurance Event.
+
+== 5.2 Deserts ==
+
+The Assurance Officer maintains a list of regions that are designated as 'deserts,' being areas that are so short of Assurers as to render face-to-face Assurance impractical.
+
+== 5.3 Changes to this policy ==
+
+In coordination with internal and external auditors, the Assurance Officer shall design and implement a suitable programme to meet the needs of audit. Where approved by auditors or Board, the Assurance Officer may document and implement minor variations to this policy.
